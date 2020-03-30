@@ -23,6 +23,7 @@ export default {
   ** Global CSS
   */
   css: [
+    '@/assets/scss/main.scss'
   ],
   /*
   ** Plugins to load before mounting the App
@@ -38,7 +39,14 @@ export default {
   ** Nuxt.js modules
   */
   modules: [
+    '@nuxtjs/style-resources' // To make sass variables (etc) avaliable from all components
   ],
+
+  styleResources: {
+    // your settings here
+    scss: ['assets/scss/_variables.scss']
+  },
+
   /*
   ** Build configuration
   */
@@ -46,6 +54,7 @@ export default {
     /*
     ** You can extend webpack config here
     */
+    extractCSS: true,
     extend (config, ctx) {
     }
   }
