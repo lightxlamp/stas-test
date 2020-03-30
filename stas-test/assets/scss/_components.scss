@@ -1,0 +1,16 @@
+.logged-in-user {
+    &__photo{
+        //margin-right: 1rem;
+        height: 1.6rem; // 3rem on desktop
+        width: 1.6rem; // 3rem on desktop
+        border-radius: 50%;
+    }
+}
+
+.main-article {
+    background-image: url(../img/mountains_road.jpeg);
+
+    img {
+        width: 100%;
+    }
+}
