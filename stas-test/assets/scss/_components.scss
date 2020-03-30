@@ -8,9 +8,24 @@
 }
 
 .main-article {
-    background-image: url(../img/mountains_road.jpeg);
+    background-image: url(../img/mountain.jpg);
+    background-size: cover;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px;
 
     img {
         width: 100%;
+        
+    }
+
+    &__text {
+        text-align: left;
+        margin-bottom: .5rem;
+    }
+
+    &__title {
+        font-size: 2.4rem;
     }
 }
