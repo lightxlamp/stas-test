@@ -26,14 +26,8 @@ body{
     flex-direction: column;
     text-align: center;
     border: 1px solid red;
-  }
-  
-  .header {
-    display: flex;
-    justify-content: space-between;
-    padding: 0 20px;
-    border: 1px solid blue;
-    width: 100%;
+    background-color: $color-secondary;
+    background-color: #fff;
   }
   
   .more-news {
@@ -46,6 +40,8 @@ body{
   
     &__title {
       font: Bold 24px/20px Helvetica;
+      text-transform: uppercase;
+      color: $color-black;
     }
   }
   

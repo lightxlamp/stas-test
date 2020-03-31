@@ -4,7 +4,7 @@
       <header class="header">
         <div class="header__logo">Logo</div>
         <div class="nav">
-            <button class="nav__btn">_</button>
+            <button class="nav-btn"></button>
               <!-- <ul class="nav">
                 <li class="nav__item"><a href="#" class="nav__link">Home</a></li>
                 <li class="nav__item"><a href="#" class="nav__link">Discovery</a></li>
@@ -52,9 +52,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss">
-  .container {
-    background-color: $color-secondary !important;
-  }
-</style>
