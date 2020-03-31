@@ -15,7 +15,7 @@
         <div class="header__logo">Logo</div>
     
         <div class="logged-in-user"> 
-          <img src="../assets/img/user-s.jpeg" alt="User photo" class="logged-in-user__photo">
+          <img src="../assets/img/blonde_girl.jpg" alt="User photo" class="logged-in-user__photo">
         </div>
 
       </header>
@@ -38,6 +38,8 @@
             </div>
           </div>
         </div>
+
+        <div class="divide-line"></div>
 
         <div class="more-news-article">
           <div class="more-news-article__category">Travel</div>

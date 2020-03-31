@@ -1,7 +1,7 @@
 .btn {
     background-color: $color-primary;
     color: white;
-    border-radius: .5rem;
+    border-radius: 6px;
     border: none;
     //font-family: $font-display;
     //font-size: 1.1rem;
@@ -11,8 +11,10 @@
     cursor: pointer;
     transition: all .2s;
     align-self: flex-start;
+    font-weight: bold;
+    //filter: brightness(80%);
 
     &:hover {
-        background-color: $color-primary;
+        background-color: $color-primary; // тут эффект можно и поставить
     }
 }
