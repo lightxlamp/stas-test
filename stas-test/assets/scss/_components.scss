@@ -121,9 +121,9 @@
         }
 
         &--happening-now  {
-            position: absolute;
-            top: 32px; 
-            left: 24px;
+            // position: absolute;
+            // top: 32px; 
+            // left: 24px;
             padding-top: 0px; // Don't need this. Because of absolute position
             color: $color-white;
      
@@ -142,9 +142,6 @@
 
         &--happening-now  {
             color: $color-white;
-            position: absolute;
-            bottom: 120px;
-            left: 40px;
         }
     }
 
@@ -158,21 +155,12 @@
 
         &--happening-now  {
             color: $color-white;
-            position: absolute;
-            bottom: 65px;
-            left: 40px;
-            padding-right: 40px; // to compensate "left 40px"
         }
     }
 
     &__image {
         width: 100%;
-       
-        
-        &--trending {
-         
-        }
-
+    
         &--happening-now {
             min-height: 300px;
             background-position: center;
@@ -183,10 +171,34 @@
         }
     }
 
-    &__content {
+    &__info {
+
+        &--happening-now {
+       
+        }
+    }
+
+    &__wrap {
 
         &--trending {
             padding: 0 24px 34px 24px;
+        }
+
+        &--happening-now {
+
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            //border: 5px solid red;
+            height: 100%;
+            position: absolute;
+            // bottom: 40px;
+            // left: 40px;
+            top: 0;
+            left: 0;
+            padding: 40px;
+            //padding-right: 40px; // to compensate "left 40px"
+            text-align: left;
         }
     }
 }
@@ -204,14 +216,6 @@
     align-items: center;
     font: Oblique 13px/26px Helvetica;
     padding-top: 4px;
-    //z-index: 999;
-
-    &--happening-now {
-        z-index: 999;
-        position: absolute;
-        bottom: 30px;
-        left: 40px;
-    }
 
     &__icon {
         height: 1rem;

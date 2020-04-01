@@ -100,7 +100,7 @@
               class="article__image article__image--trending"
             />
           </div>
-          <div class="article__content--trending">
+          <div class="article__wrap--trending">
             <div class="article__category article__category--trending">Travel</div>
             <div class="article__title article__title--trending">Dolore magna aliqua</div>
             <div
@@ -121,7 +121,7 @@
               class="article__image article__image--trending"
             />
           </div>
-          <div class="article__content--trending">
+          <div class="article__wrap--trending">
             <div class="article__category article__category--trending">Travel</div>
             <div class="article__title article__title--trending">Dolore magna aliqua</div>
             <div
@@ -148,7 +148,7 @@
       </div>
 
       <div class="happening-now__content">
-
+       
         <div class="article article--happening-now">
           <div class="article__image">
             <img
@@ -157,15 +157,17 @@
               class="article__image article__image--happening-now"
             />
           </div>
-          <div class="article__content--happening-now">
+          <div class="article__wrap article__wrap--happening-now">
             <div class="article__category article__category--happening-now">City</div>
-            <div class="article__title article__title--happening-now">Large article title</div>
-            <div
-              class="article__text article__text--happening-now"
-            >Lorem ipsum dolor sit amet, in eam odio amet, vix id nullam detracto, vidit vituperatoribus duo id. Affert detraxit voluptatum vis eu, inermis</div>
-            <div class="date-time date-time--happening-now">
-              <div class="date-time__icon"></div>
-              <div class="date-time__time">2m ago</div>
+            <div class="article__info article__info--happening-now">
+              <div class="article__title article__title--happening-now">Large article title</div>
+              <div
+                class="article__text article__text--happening-now"
+              >Lorem ipsum dolor sit amet, in eam odio amet, vix id nullam detracto, vidit vituperatoribus duo id. Affert detraxit voluptatum vis eu, inermis</div>
+              <div class="date-time date-time--happening-now">
+                <div class="date-time__icon"></div>
+                <div class="date-time__time">2m ago</div>
+              </div>
             </div>
           </div>
         </div>
@@ -178,19 +180,17 @@
               class="article__image article__image--happening-now"
             />
           </div>
-          <div class="article__content--happening-now">
+          <div class="article__wrap article__wrap--happening-now">
             <div class="article__category article__category--happening-now">Travel</div>
-            <!-- <div class="article__info--happening-now">
-
-            </div> -->
-
-            <div class="article__title article__title--happening-now">Large article title</div>
-            <div
-              class="article__text article__text--happening-now"
-            >Lorem ipsum dolor sit amet, in eam odio amet, vix id nullam detracto, vidit vituperatoribus duo id. Affert detraxit voluptatum vis eu, inermis</div>
-            <div class="date-time date-time--happening-now">
-              <div class="date-time__icon"></div>
-              <div class="date-time__time">2m ago</div>
+            <div class="article__info article__info--happening-now">
+              <div class="article__title article__title--happening-now">Large article title</div>
+              <div
+                class="article__text article__text--happening-now"
+              >Lorem ipsum dolor sit amet, in eam odio amet, vix id nullam detracto, vidit vituperatoribus duo id. Affert detraxit voluptatum vis eu, inermis</div>
+              <div class="date-time date-time--happening-now">
+                <div class="date-time__icon"></div>
+                <div class="date-time__time">2m ago</div>
+              </div>
             </div>
           </div>
         </div>
