@@ -1,82 +1,151 @@
 <template>
   <div class="container">
-      <!-- <header /> Потом можно будет вынести в компоненты все-->
-      <header class="header">
-        <div class="nav">
-            <button class="nav-btn"></button>
-              <!-- <ul class="nav">
-                <li class="nav__item"><a href="#" class="nav__link">Home</a></li>
-                <li class="nav__item"><a href="#" class="nav__link">Discovery</a></li>
-                <li class="nav__item"><a href="#" class="nav__link">Photos</a></li>
-                <li class="nav__item"><a href="#" class="nav__link">Contact</a></li>
-              </ul> -->
+    <!-- <header /> Потом можно будет вынести в компоненты все-->
+    <header class="header">
+      <div class="button-or-menu">
+        <button class="nav-btn"></button>
+        <ul class="nav">
+          <li class="nav__item nav__item--active">
+            <a href="#" class="nav__link">Home</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">Discovery</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">Photos</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">Contact</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="header__logo">Logo</div>
+
+      <div class="logged-in-user">
+        <img src="../assets/img/blonde_girl.jpg" alt="User photo" class="logged-in-user__photo" />
+      </div>
+    </header>
+
+    <section class="main-article">
+      <div class="main-article__category">World News</div>
+      <div class="main-article__title">Amazing places in America to visit.</div>
+      <div class="main-article__text">
+        For some reason — this country, this city, this neighborhood, this
+        particular street — is the place you are living a majority of your life in.
+      </div>
+      <button class="btn main-article__btn">Learn more</button>
+    </section>
+
+    <section class="news">
+      <div class="block-head">
+        <div class="block-head__title">More news</div>
+        <div class="block-head__navigation">
+          <div class="items-navigation">
+            <div class="items-navigation__left-arrow"></div>
+            <div class="items-navigation__right-arrow"></div>
+          </div>
         </div>
+      </div>
 
-        <div class="header__logo">Logo</div>
-    
-        <div class="logged-in-user"> 
-          <img src="../assets/img/blonde_girl.jpg" alt="User photo" class="logged-in-user__photo">
-        </div>
+      <div class="divide-line"></div>
 
-      </header>
-
-      <section class="main-article">
-        <div class="main-article__category">World News</div>
-        <div class="main-article__title">Amazing places in America to visit.</div>
-        <div class="main-article__text">For some reason — this country, this city, this neighborhood, this
-          particular street —  is the place you are living a majority of your life in.</div>
-        <button class="btn main-article__btn">Learn more</button>
-      </section>
-
-      <section class="news">
-        
-        <div class="block-head">
-            <div class="block-head__title">More news</div>
-            <div class="block-head__navigation">
-              <div class="items-navigation">
-                <div class="items-navigation__left-arrow"></div>
-                <div class="items-navigation__right-arrow"></div>
-              </div>
-            </div>
-        </div>
-
-        <div class="divide-line"></div>
-
-        <div class="news-article">
-          <div class="news-article__category">Travel</div>
-          <div class="news-article__title">Article Title</div>
-          <div class="news-article__text">It's that time of the day again. Blog time . Time to catch up on 
-            another 24 hours of similar news. </div>
+      <div class="news__content">
+        <div class="article">
+          <div class="article__category">Travel</div>
+          <div class="article__title">Article Title</div>
+          <div class="article__text">
+            It's that time of the day again. Blog time. Time to catch up on
+            another 24 hours of similar news.
+          </div>
           <div class="date-time">
             <div class="date-time__icon"></div>
             <div class="date-time__time">2m ago</div>
           </div>
-        </div> 
-        
-        <div class="news-article">
-          <div class="news-article__category">Technology</div>
-          <div class="news-article__title">Article Title</div>
-          <div class="news-article__text">In the same place , sitting in the same chair perhaps we think we 
-            ought to sleep in Gabby tonight. I have lost a sock in the washing.</div>
+        </div>
+
+        <div class="article">
+          <div class="article__category">Technology</div>
+          <div class="article__title">Article Title</div>
+          <div class="article__text">
+            In the same place, sitting in the same chair perhaps we think we
+            ought to sleep in Gabby tonight. I have lost a sock in the washing.
+          </div>
           <div class="date-time">
-            <div class="date-time__icon"></div> <!-- It is always empty.. Do we need it? :P ::before? -->
+            <div class="date-time__icon"></div>
+            <!-- It is always empty.. Do we need it? :P ::before? -->
             <div class="date-time__time">1h ago</div>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section class="trending">
-        
-      </section>
+    <section class="trending">
+      <div class="block-head">
+        <div class="block-head__title">Trending</div>
+        <div class="block-head__navigation">
+          <div class="items-navigation">
+            <div class="items-navigation__left-arrow"></div>
+            <div class="items-navigation__right-arrow"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="trending__content">
+        <div class="article article--trending">
+          <div class="article__image">
+            <img
+              src="../assets/img/green_lake.jpg"
+              alt="Green lake"
+              class="article__image article__image--trending"
+            />
+          </div>
+          <div class="article__content--trending">
+            <div class="article__category article__category--trending">Travel</div>
+            <div class="article__title article__title--trending">Dolore magna aliqua</div>
+            <div
+              class="article__text article__text--trending"
+            >Lorem ipsum dolor sit amet, ipsum labitur lucilius mel id, ad has appareat.</div>
+            <div class="date-time">
+              <div class="date-time__icon"></div>
+              <div class="date-time__time">1h ago</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="article article--trending">
+          <div class="article__image">
+            <img
+              src="../assets/img/umbrellas.jpg"
+              alt="Green lake"
+              class="article__image article__image--trending"
+            />
+          </div>
+          <div class="article__content--trending">
+            <div class="article__category article__category--trending">Travel</div>
+            <div class="article__title article__title--trending">Dolore magna aliqua</div>
+            <div
+              class="article__text article__text--trending"
+            >Lorem ipsum dolor sit amet, ipsum labitur lucilius mel id, ad has appareat.</div>
+            <div class="date-time">
+              <div class="date-time__icon"></div>
+              <div class="date-time__time">1h ago</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="happening-now"></section>
   </div>
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
+import Logo from "~/components/Logo.vue";
 
 export default {
   components: {
     Logo
   }
-}
+};
 </script>

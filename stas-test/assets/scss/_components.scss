@@ -15,6 +15,12 @@
     flex-direction: column;
     padding: 40px 20px;
 
+    @media only screen and (min-width: $bp-tablet) {
+        & {
+            padding: 80px;
+        }
+    }
+
     &__category {
         text-transform: uppercase;
         font-weight: bold;
@@ -44,6 +50,38 @@
 
 .news {
     background-color: $color-white;
+
+    @media only screen and (min-width: $bp-tablet) {
+        &__content{
+            display: flex;
+            flex-direction: row;
+        }
+
+        &__content > div { // to set equal width to both news-blocks  
+            flex-grow: 1;
+            flex-basis: 0;
+        }
+
+        &__content > div:not(:first-child){ 
+            margin-left: 40px;
+        }
+    }
+}
+
+.trending {
+
+    @media only screen and (min-width: $bp-tablet) {
+        &__content > div:not(:first-child){ // nicuuu :P Первый раз осознанно применил, not
+            margin-left: 40px;
+        }
+
+        &__content{
+            display: flex;
+            flex-direction: row;
+            //flex: wrap;
+            align-items: start; // just for test flex param. 
+        }
+    }
 }
 
 .block-head {
@@ -60,25 +98,70 @@
     }
 }
 
-
-.news-article {
+.article {
     color: $color-grey-dark-2;
+    position: relative;
+    margin-bottom: 40px;
+
+    &--trending {
+        background-color: $color-white;
+        border-radius: 6px;
+        overflow: hidden; 
+    }
 
     &__category {
         color: $color-primary;
         text-transform: uppercase;
         font: Bold 16px/20px Helvetica;
         padding-top: 40px;
+
+        &--trending{
+            padding-top: 0px;
+            display: none;
+        }
     }
 
     &__title {
         padding-top: 20px;
         color: $color-black;
         font: Bold 16px/20px Helvetica;
+        position: relative;
+        z-index: 1;
     }
 
     &__text {
         padding-top: 10px;
+        position: relative;
+        z-index: 1;
+
+        @media only screen and (min-width: $bp-tablet) {
+           //width: 90%; // to have some space between two articles text
+        }
+    }
+
+    &__image {
+        width: 100%;
+        
+
+        &--trending {
+            //position: absolute;
+            //background-position: center;
+            //background-repeat: no-repeat;
+            //background-size: cover;
+            background-size: 50% 50%;
+            //height: 154px;
+            //width: 100%;
+            //height: 450px;
+            z-index: 1;
+            opacity: 1;      
+        }
+    }
+
+    &__content {
+
+        &--trending {
+            padding: 0 24px 34px 24px;
+        }
     }
 }
 
