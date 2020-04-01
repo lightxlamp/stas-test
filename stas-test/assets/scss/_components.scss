@@ -79,7 +79,7 @@
             display: flex;
             flex-direction: row;
             //flex: wrap;
-            align-items: start; // just for test flex param. 
+            align-items: flex-start; // just for test flex param. 
         }
     }
 }
@@ -119,41 +119,67 @@
             padding-top: 0px;
             display: none;
         }
+
+        &--happening-now  {
+            color: $color-white;
+            position: absolute;
+            top: 40px; 
+            left: 40px;
+        }
     }
 
     &__title {
         padding-top: 20px;
         color: $color-black;
         font: Bold 16px/20px Helvetica;
-        position: relative;
         z-index: 1;
+
+        &--happening-now  {
+            color: $color-white;
+            position: absolute;
+            bottom: 120px;
+            left: 40px;
+        }
     }
 
     &__text {
         padding-top: 10px;
-        position: relative;
         z-index: 1;
 
         @media only screen and (min-width: $bp-tablet) {
            //width: 90%; // to have some space between two articles text
+        }
+
+        &--happening-now  {
+            color: $color-white;
+            position: absolute;
+            bottom: 65px;
+            left: 40px;
         }
     }
 
     &__image {
         width: 100%;
         
-
         &--trending {
             //position: absolute;
             //background-position: center;
             //background-repeat: no-repeat;
             //background-size: cover;
-            background-size: 50% 50%;
+            //background-size: 50% 50%;
             //height: 154px;
             //width: 100%;
             //height: 450px;
-            z-index: 1;
-            opacity: 1;      
+            //z-index: 1;
+            //opacity: 1;      
+        }
+
+        &--happening-now {
+            // position: absolute;
+            // top: 0;
+            // left: 0;
+            // max-width: 100%;
+            // max-height: 100%;
         }
     }
 
@@ -178,6 +204,14 @@
     align-items: center;
     font: Oblique 13px/26px Helvetica;
     padding-top: 4px;
+    //z-index: 999;
+
+    &--happening-now {
+        z-index: 999;
+        position: absolute;
+        bottom: 30px;
+        left: 40px;
+    }
 
     &__icon {
         height: 1rem;
