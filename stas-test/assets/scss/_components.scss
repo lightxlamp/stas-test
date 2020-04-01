@@ -105,7 +105,7 @@
 
     &--trending {
         background-color: $color-white;
-        border-radius: 6px;
+        border-radius: $border-radius;
         overflow: hidden; 
     }
 
@@ -121,10 +121,16 @@
         }
 
         &--happening-now  {
-            color: $color-white;
             position: absolute;
-            top: 40px; 
-            left: 40px;
+            top: 32px; 
+            left: 24px;
+            padding-top: 0px; // Don't need this. Because of absolute position
+            color: $color-white;
+     
+            @media only screen and (min-width: $bp-tablet) {
+                top: 40px; 
+                left: 40px;
+            }
         }
     }
 
@@ -155,31 +161,25 @@
             position: absolute;
             bottom: 65px;
             left: 40px;
+            padding-right: 40px; // to compensate "left 40px"
         }
     }
 
     &__image {
         width: 100%;
+       
         
         &--trending {
-            //position: absolute;
-            //background-position: center;
-            //background-repeat: no-repeat;
-            //background-size: cover;
-            //background-size: 50% 50%;
-            //height: 154px;
-            //width: 100%;
-            //height: 450px;
-            //z-index: 1;
-            //opacity: 1;      
+         
         }
 
         &--happening-now {
-            // position: absolute;
-            // top: 0;
-            // left: 0;
-            // max-width: 100%;
-            // max-height: 100%;
+            min-height: 300px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-size: 50% 50%;
+            border-radius: $border-radius;
         }
     }
 

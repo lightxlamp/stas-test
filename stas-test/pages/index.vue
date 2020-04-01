@@ -170,7 +170,7 @@
           </div>
         </div>
 
-        <!-- <div class="article article--happening-now">
+        <div class="article article--happening-now">
           <div class="article__image">
             <img
               src="../assets/img/forest.jpg"
@@ -179,17 +179,21 @@
             />
           </div>
           <div class="article__content--happening-now">
-            <div class="article__category article__category--happening-now">City</div>
+            <div class="article__category article__category--happening-now">Travel</div>
+            <!-- <div class="article__info--happening-now">
+
+            </div> -->
+
             <div class="article__title article__title--happening-now">Large article title</div>
             <div
               class="article__text article__text--happening-now"
             >Lorem ipsum dolor sit amet, in eam odio amet, vix id nullam detracto, vidit vituperatoribus duo id. Affert detraxit voluptatum vis eu, inermis</div>
-            <div class="date-time">
+            <div class="date-time date-time--happening-now">
               <div class="date-time__icon"></div>
               <div class="date-time__time">2m ago</div>
             </div>
           </div>
-        </div> -->
+        </div>
 
       </div>
     </section>
