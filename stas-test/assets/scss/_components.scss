@@ -1,3 +1,5 @@
+@import url(//db.onlinewebfonts.com/c/4eea0b56eeb6549def65619b1957eb8d?family=Acumin+Pro);
+
 .main-article {
     background:
                 // top, transparent black, faked with gradient 
@@ -24,7 +26,8 @@
     &__category {
         text-transform: uppercase;
         font-weight: bold;
-        font-size: 1.5rem; // 24px - 2.4rem, but in my case 24px = 1.5rem 
+        //font-size: 1.5rem; // 24px - 2.4rem, but in my case 24px = 1.5rem 
+        font-size: 2.4rem; // fixed now
 
         &::after {
             content: "";
@@ -36,15 +39,16 @@
     }
 
     &__title {
-        font-size: 1.5rem;
+        font-size: 2.4rem;
         font-weight: bold;
         margin-bottom: 2rem;
-        margin-top: 4rem;
+        margin-top: 3rem;
     }
 
     &__text {
+        font-size: 1.6rem;
         text-align: left;
-        margin-bottom: 2rem;
+        margin-bottom: 3rem;
     }
 }
 
@@ -124,6 +128,7 @@
     color: $color-grey-dark-2;
     position: relative;
     margin-bottom: 4rem;
+    font-family: "Acumin Pro"; 
 
     &--trending {
         background-color: $color-white;
@@ -178,6 +183,8 @@
 
     &__text {
         padding-top: 1rem;
+        font-size: 1.6rem;
+        line-height: 2.6rem;
         z-index: 1;
 
         @media only screen and (min-width: $bp-tablet) {
@@ -237,12 +244,12 @@
 
 .date-time {
     color: $color-grey-dark-2; 
-    //border: 1px solid red;
     display: flex;
     align-items: center;
-    //font: Oblique 1.3rem/2.6rem Helvetica;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
     font-size: 1.3rem;
     line-height: 2.6rem;
+    font-style: italic;
 
     padding-top: 4px;
 
