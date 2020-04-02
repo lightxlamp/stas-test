@@ -5,8 +5,8 @@
       <div class="button-or-menu">
         <button class="nav-btn"></button>
         <ul class="nav">
-          <li class="nav__item nav__item--active">
-            <a href="#" class="nav__link">Home</a>
+          <li class="nav__item">
+            <a href="#" class="nav__link nav__link--active">Home</a>
           </li>
           <li class="nav__item">
             <a href="#" class="nav__link">Discovery</a>
@@ -116,8 +116,8 @@
         <div class="article article--trending">
           <div class="article__image">
             <img
-              src="../assets/img/umbrellas.jpg"
-              alt="Green lake"
+              src="../assets/img/umbrellas_small.jpg"
+              alt="Umbrellas"
               class="article__image article__image--trending"
             />
           </div>
@@ -147,23 +147,23 @@
         </div>
       </div>
 
-      <div class="happening-now__content">
-       
+      <div class="happening-now__column-1">
+
         <div class="article article--happening-now">
           <div class="article__image">
             <img
               src="../assets/img/bridge.jpg"
-              alt="Bridge"
+              alt="golden gate bridge"
               class="article__image article__image--happening-now"
             />
           </div>
           <div class="article__wrap article__wrap--happening-now">
             <div class="article__category article__category--happening-now">City</div>
             <div class="article__info article__info--happening-now">
-              <div class="article__title article__title--happening-now">Large article title</div>
+              <div class="article__title article__title--happening-now">Golden Gate Bridge Facts</div>
               <div
                 class="article__text article__text--happening-now"
-              >Lorem ipsum dolor sit amet, in eam odio amet, vix id nullam detracto, vidit vituperatoribus duo id. Affert detraxit voluptatum vis eu, inermis</div>
+              >When the Golden Gate Bridge Flattened by 7 Feet—and Other Facts About the San Francisco Icon. The 1.7-mile-long bridge has endured earthquakes</div>
               <div class="date-time date-time--happening-now">
                 <div class="date-time__icon"></div>
                 <div class="date-time__time">2m ago</div>
@@ -183,10 +183,11 @@
           <div class="article__wrap article__wrap--happening-now">
             <div class="article__category article__category--happening-now">Travel</div>
             <div class="article__info article__info--happening-now">
-              <div class="article__title article__title--happening-now">Large article title</div>
+              <div class="article__title article__title--happening-now">We need to safeguard our forests</div>
               <div
                 class="article__text article__text--happening-now"
-              >Lorem ipsum dolor sit amet, in eam odio amet, vix id nullam detracto, vidit vituperatoribus duo id. Affert detraxit voluptatum vis eu, inermis</div>
+              >The importance of forests cannot be underestimated. We depend on forests for our survival, from the air we breathe to the wood we use. 
+              </div>
               <div class="date-time date-time--happening-now">
                 <div class="date-time__icon"></div>
                 <div class="date-time__time">2m ago</div>
@@ -194,9 +195,53 @@
             </div>
           </div>
         </div>
+      </div>
 
+      <div class="happening-now__column-2">
+        <div class="article article--trending">
+          <div class="article__image">
+            <img
+              src="../assets/img/elephant.jpg"
+              alt="Green lake"
+              class="article__image article__image--trending"
+            />
+          </div>
+          <div class="article__wrap--trending">
+            <div class="article__category article__category--trending">Travel</div>
+            <div class="article__title article__title--trending">Desert Elephants</div>
+            <div
+              class="article__text article__text--trending"
+            >Lorem ipsum dolor sit amet, ipsum labitur lucilius mel id, ad has appareat.</div>
+            <div class="date-time">
+              <div class="date-time__icon"></div>
+              <div class="date-time__time">1h ago</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="article article--trending">
+          <div class="article__image">
+            <img
+              src="../assets/img/parrot_small.jpg"
+              alt="Green lake"
+              class="article__image article__image--trending"
+            />
+          </div>
+          <div class="article__wrap--trending">
+            <div class="article__category article__category--trending">Travel</div>
+            <div class="article__title article__title--trending">Jungle Parrots</div>
+            <div
+              class="article__text article__text--trending"
+            >Lorem ipsum dolor sit amet, ipsum labitur lucilius mel id, ad has appareat.</div>
+            <div class="date-time">
+              <div class="date-time__icon"></div>
+              <div class="date-time__time">1h ago</div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
+    
   </div>
 </template>
 

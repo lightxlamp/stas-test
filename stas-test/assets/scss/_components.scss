@@ -13,7 +13,7 @@
     color: #fff;
     display: flex;
     flex-direction: column;
-    padding: 40px 20px;
+    padding: 4rem 2rem;
 
     @media only screen and (min-width: $bp-tablet) {
         & {
@@ -31,20 +31,20 @@
             height: 2px;
             display: block;
             background-color: #fff;
-            margin-top: 40px;
+            margin-top: 4rem;
         }
     }
 
     &__title {
         font-size: 1.5rem;
         font-weight: bold;
-        margin-bottom: 20px;
-        margin-top: 40px;
+        margin-bottom: 2rem;
+        margin-top: 4rem;
     }
 
     &__text {
         text-align: left;
-        margin-bottom: 20px;
+        margin-bottom: 2rem;
     }
 }
 
@@ -63,7 +63,7 @@
         }
 
         &__content > div:not(:first-child){ 
-            margin-left: 40px;
+            margin-left: 4rem;
         }
     }
 }
@@ -72,7 +72,7 @@
 
     @media only screen and (min-width: $bp-tablet) {
         &__content > div:not(:first-child){ // nicuuu :P Первый раз осознанно применил, not
-            margin-left: 40px;
+            margin-left: 4rem;
         }
 
         &__content{
@@ -84,15 +84,37 @@
     }
 }
 
+.happening-now {
+    &__column-2{
+        display: flex;
+        flex-direction: column;
+
+
+        @media only screen and (min-width: $bp-tablet) {
+            & > div:not(:first-child){ // nicuuu :P Первый раз осознанно применил, not
+                margin-left: 4rem;
+            }
+
+            & {
+                flex-direction: row;
+            }
+        }
+    }
+}
+
 .block-head {
     display: flex;
     justify-content: space-between;
     //border: 1px solid red;
 
-    padding: 40px 0;
+    padding: 4rem 0;
 
     &__title {
-        font: Bold 24px/20px Helvetica;
+        //font: Bold 2.4rem/2rem Helvetica;
+        font-size: 2.4rem;
+        font-weight: bold;
+        line-height: 2rem;
+        
         text-transform: uppercase;
         color: $color-black;
     }
@@ -101,7 +123,7 @@
 .article {
     color: $color-grey-dark-2;
     position: relative;
-    margin-bottom: 40px;
+    margin-bottom: 4rem;
 
     &--trending {
         background-color: $color-white;
@@ -112,8 +134,12 @@
     &__category {
         color: $color-primary;
         text-transform: uppercase;
-        font: Bold 16px/20px Helvetica;
-        padding-top: 40px;
+        //font: Bold 1.6rem/2rem Helvetica;
+        font-size: 1.6rem;
+        font-weight: bold;
+        line-height: 2rem;
+
+        padding-top: 4rem;
 
         &--trending{
             padding-top: 0px;
@@ -121,32 +147,37 @@
         }
 
         &--happening-now  {
-            // position: absolute;
-            // top: 32px; 
-            // left: 24px;
             padding-top: 0px; // Don't need this. Because of absolute position
             color: $color-white;
      
             @media only screen and (min-width: $bp-tablet) {
-                top: 40px; 
-                left: 40px;
+                top: 4rem; 
+                left: 4rem;
             }
         }
     }
 
     &__title {
-        padding-top: 20px;
+        padding-top: 2rem;
         color: $color-black;
-        font: Bold 16px/20px Helvetica;
+       // font: Bold 2.4rem/3.4rem Helvetica;
+        font-size: 2.4rem;
+        font-weight: bold;
+        line-height: 3.4rem;
+
         z-index: 1;
 
         &--happening-now  {
             color: $color-white;
         }
+
+        @media only screen and (min-width: $bp-tablet) {
+            //font-size: 24px;
+        }
     }
 
     &__text {
-        padding-top: 10px;
+        padding-top: 1rem;
         z-index: 1;
 
         @media only screen and (min-width: $bp-tablet) {
@@ -171,17 +202,10 @@
         }
     }
 
-    &__info {
-
-        &--happening-now {
-       
-        }
-    }
-
     &__wrap {
 
         &--trending {
-            padding: 0 24px 34px 24px;
+            padding: 0 2.4rem 3.4rem 2.4rem;
         }
 
         &--happening-now {
@@ -192,13 +216,15 @@
             //border: 5px solid red;
             height: 100%;
             position: absolute;
-            // bottom: 40px;
-            // left: 40px;
             top: 0;
             left: 0;
-            padding: 40px;
+            padding: 2.4rem;
             //padding-right: 40px; // to compensate "left 40px"
             text-align: left;
+
+            @media only screen and (min-width: $bp-tablet) {
+                padding: 4rem;
+            }
         }
     }
 }
@@ -214,7 +240,10 @@
     //border: 1px solid red;
     display: flex;
     align-items: center;
-    font: Oblique 13px/26px Helvetica;
+    //font: Oblique 1.3rem/2.6rem Helvetica;
+    font-size: 1.3rem;
+    line-height: 2.6rem;
+
     padding-top: 4px;
 
     &__icon {

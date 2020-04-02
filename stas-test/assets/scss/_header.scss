@@ -11,7 +11,8 @@
     &__logo {
         text-transform: uppercase;
         color: $color-grey-dark-2;
-        font-size: 1.3rem/2.0rem;
+        font-size: 1.3rem; 
+        line-height: 2.0rem;
         font-family: Arial, Helvetica, sans-serif;
         font-weight: bold;
 
@@ -98,8 +99,12 @@
 
     &__link:link,
     &__link:visited {
-        font: Bold 11px/20px Helvetica;
-        color: #343638;
+        //font: Bold 11px/20px Helvetica;
+        font-size: 1.1rem;
+        font-weight: bold;
+        line-height: 2rem;
+        
+        color: $color-menu-links;
         text-decoration: none;
         //font-family: $font-display;
         text-transform: uppercase;
@@ -117,14 +122,22 @@
         opacity: 100%;
     }
 
-    // &__link--active {
-    //     opacity: 100%;
-    // }
+    &__link {
+        &--active{
+            opacity: 100% !important;
+        }
+    }
 }
 
 
 .nav__item--active {
     opacity: 100%;
+    
+}
+
+.nav__item--active::before {
+    transform: scaleY(1);
+    width: 100%;
 }
 
 .logged-in-user {
