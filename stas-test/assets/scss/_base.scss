@@ -32,11 +32,8 @@ html {
 
   & > * {
       padding: 0 2rem;
-  }
-
-  @media only screen and (min-width: $bp-tablet) {
-      & > * {
-          padding: 0 8rem;
-      }
-  }
+      @media only screen and (min-width: $bp-tablet) {
+            padding: 0 8rem;
+        }
+    }
 }

@@ -24,7 +24,7 @@
         // for newer browsers 
         @supports(-webkit-mask-image: url()) or (mask-image: url())
         {
-            background-color: $color-grey-dark-1; 
+            background-color: $color-black; 
             -webkit-mask-image: url('../img/navigate_before.svg'); 
             mask-image: url('../img/navigate_before.svg'); // after 3 years mask-image, without prefix, still does not work in chrome
             @include support-settings;

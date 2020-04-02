@@ -20,7 +20,7 @@
         </ul>
       </div>
 
-      <div class="header__logo">Logo</div>
+      <div class="logo logo--header">Logo</div>
 
       <div class="logged-in-user">
         <img src="../assets/img/blonde_girl.jpg" alt="User photo" class="logged-in-user__photo" />
@@ -241,6 +241,67 @@
         </div>
       </div>
     </section>
+
+   
+    <footer class="footer">
+        <div class="footer__column-1">
+            <div class="logo logo--footer">Logo</div>
+            <div class="footer__nav">
+              <ul class="nav nav--footer">
+                <li class="nav__item"><a href="#" class="nav__link nav__link--footer">Home</a></li>
+                <li class="nav__item"><a href="#" class="nav__link nav__link--footer">Discovery</a></li>
+                <li class="nav__item"><a href="#" class="nav__link nav__link--footer">Photos</a></li>
+                <li class="nav__item"><a href="#" class="nav__link nav__link--footer">Contact</a></li>
+               </ul>
+
+               <ul class="nav nav--footer">
+                <li class="nav__item"><a href="#" class="nav__link nav__link--footer">About</a></li>
+                <li class="nav__item"><a href="#" class="nav__link nav__link--footer">Help</a></li>
+                <li class="nav__item"><a href="#" class="nav__link nav__link--footer">Terms</a></li>
+                <li class="nav__item"><a href="#" class="nav__link nav__link--footer">Guidlines</a></li>
+              </ul>
+     
+              <ul class="nav nav--footer">
+                <li class="nav__item"><a href="#" class="nav__link nav__link--footer">Testimonials</a></li>
+                <li class="nav__item"><a href="#" class="nav__link nav__link--footer">Advertise</a></li>
+                <li class="nav__item"><a href="#" class="nav__link nav__link--footer">Integrations</a></li>
+                <li class="nav__item"><a href="#" class="nav__link nav__link--footer">Careers</a></li>
+              </ul>
+            </div>
+        </div>
+
+        <div class="footer__column-2">
+          <!-- <div class="email-box">
+            <form action="#">
+              <label for="email">Stay in touch with us for the freshest products!</label>
+              <input class="form-field" type="email" placeholder="Email" id="email" name="email">
+              <span>ICON</span>
+            </form>
+          </div>  -->
+
+          <div class="email-box">
+            <div class="form-group">
+              <input class="form-field" type="email" placeholder="Email">
+              <span>ICON</span>
+            </div>
+            <p class="email-box__text">Stay in touch with us for the freshest products!</p>
+          </div>
+         
+          
+          <div class="social-networks"> <!-- TODO change to UL later -->
+              <div class="social-networks__instagram"></div>
+              <div class="social-networks__twitter"></div>
+              <div class="social-networks__facebook"></div>
+              <div class="social-networks__web"></div>
+          </div>
+          <!-- <ul class="social-networks"> 
+              <li class="social-networks__instagram"></li>
+              <li class="social-networks__twitter"></li>
+              <li class="social-networks__facebook"></li>
+              <li class="social-networks__web"></li>
+          </ul> -->
+      </div>
+    </footer>
     
   </div>
 </template>
