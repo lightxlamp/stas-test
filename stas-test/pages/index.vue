@@ -102,10 +102,10 @@
           </div>
           <div class="article__wrap--trending">
             <div class="article__category article__category--trending">Travel</div>
-            <div class="article__title article__title--trending">Dolore magna aliqua</div>
+            <div class="article__title article__title--trending">Mountain Lake Hotel</div>
             <div
               class="article__text article__text--trending"
-            >Lorem ipsum dolor sit amet, ipsum labitur lucilius mel id, ad has appareat.</div>
+            >LMountain Lake Hotel was the site for much of the on-location filming of the 1987</div>
             <div class="date-time">
               <div class="date-time__icon"></div>
               <div class="date-time__time">1h ago</div>
@@ -123,10 +123,10 @@
           </div>
           <div class="article__wrap--trending">
             <div class="article__category article__category--trending">Travel</div>
-            <div class="article__title article__title--trending">Dolore magna aliqua</div>
+            <div class="article__title article__title--trending">The Best Beach Umbrellas</div>
             <div
               class="article__text article__text--trending"
-            >Lorem ipsum dolor sit amet, ipsum labitur lucilius mel id, ad has appareat.</div>
+            >One of the worst things about going to the beach is the imminent sunburn.</div>
             <div class="date-time">
               <div class="date-time__icon"></div>
               <div class="date-time__time">1h ago</div>
@@ -163,7 +163,7 @@
               <div class="article__title article__title--happening-now">Golden Gate Bridge Facts</div>
               <div
                 class="article__text article__text--happening-now"
-              >When the Golden Gate Bridge Flattened by 7 Feet—and Other Facts About the San Francisco Icon. The 1.7-mile-long bridge has endured earthquakes</div>
+              >When the Golden Gate Bridge Flattened by 7 Feet—and Other Facts About the San Francisco Icon.</div>
               <div class="date-time date-time--happening-now">
                 <div class="date-time__icon"></div>
                 <div class="date-time__time">2m ago</div>
@@ -202,7 +202,7 @@
           <div class="article__image">
             <img
               src="../assets/img/elephant.jpg"
-              alt="Green lake"
+              alt="Elephants"
               class="article__image article__image--trending"
             />
           </div>
@@ -211,7 +211,7 @@
             <div class="article__title article__title--trending">Desert Elephants</div>
             <div
               class="article__text article__text--trending"
-            >Lorem ipsum dolor sit amet, ipsum labitur lucilius mel id, ad has appareat.</div>
+            >Desert-adapted elephants are not a distinct species of elephant but are African bush elephants</div>
             <div class="date-time">
               <div class="date-time__icon"></div>
               <div class="date-time__time">1h ago</div>
@@ -232,7 +232,7 @@
             <div class="article__title article__title--trending">Jungle Parrots</div>
             <div
               class="article__text article__text--trending"
-            >Lorem ipsum dolor sit amet, ipsum labitur lucilius mel id, ad has appareat.</div>
+            >So where is the circling jungle parrot? Well, it turns out the bird is flying in a small circle east of the Sky Platform</div>
             <div class="date-time">
               <div class="date-time__icon"></div>
               <div class="date-time__time">1h ago</div>
