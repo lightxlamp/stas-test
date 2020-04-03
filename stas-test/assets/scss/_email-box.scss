@@ -1,6 +1,33 @@
 .email-box {
+    @mixin icon-box-settings {
+        height: 1.6rem;
+        width: 1.6rem;
+        background-size: cover;
+    }
+
+    @mixin support-settings {
+        -webkit-mask-size: cover; // this allowed us to change height and width from 2 px to 1px and icon still visible
+        mask-size: cover; // mask allow us to see background. (throught specified shape (mask-image))
+        background-image: none;
+    }
+    
     &__text {
         color: $color-grey-dark-1;
+    }
+
+    &__icon {
+        @include icon-box-settings;
+        // We can't change color of icon when we adding it this way. So just leave this for older browsers
+        background-image: url('../img/location-arrow.svg');
+
+        // for newer browsers 
+        @supports(-webkit-mask-image: url()) or (mask-image: url())
+        {
+            background-color: $color-white; 
+            -webkit-mask-image: url('../img/location-arrow.svg'); 
+            mask-image: url('../img/location-arrow.svg'); // after 3 years mask-image, without prefix, still does not work in chrome
+            @include support-settings;
+        }
     }
 }
 
@@ -13,7 +40,8 @@
 
     --group-color: var(--input-color);
     --group-border: var(--input-border);
-    --group-background: #EEF4FF;
+    //--group-background: #EEF4FF;
+    --group-background: yellow;
 
     --group-color-focus: #fff;
     --group-border-focus: var(--input-border-focus);

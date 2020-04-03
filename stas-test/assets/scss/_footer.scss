@@ -6,7 +6,11 @@
     @media only screen and (min-width: $bp-tablet) {
         display: flex;
         flex-direction: column;
-        
+    }  
+    
+    @media only screen and (min-width: $bp-desktop) {
+        display: flex;
+        flex-direction: row;
     }
 
     &__column-1 {

@@ -11,7 +11,13 @@ $color-grey-light-1: #EBEDED;
 $color-grey-dark-1: #CBD0D3;
 $color-grey-dark-2: #A6ADB4;
 
-$bp-tablet: "768px";
+//$bp-tablet: "768px";
+//$bp-desktop: "1440px";
+//$bp-large-desktop: "1800px";
+
+$bp-tablet: "48em"; // 768px / 16 = 48em
+$bp-desktop: "90em"; // 1440px / 16 = 90em
+$bp-large-desktop: "117.5em"; // 1800px / 16 = 117.5em
 
 $border-radius: 6px;
 

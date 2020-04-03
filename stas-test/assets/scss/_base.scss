@@ -21,19 +21,12 @@ html {
 }
 
 .container {
-  margin: 0 auto;
-  min-height: 100vh;
-  max-width: 180rem;
-  
-  display: flex;
-  flex-direction: column;
-  border: 1px solid black;
-  background-color: $color-secondary;
+    margin: 0 auto;
+    min-height: 100vh;
+    max-width: 180rem;
 
-  & > * {
-      padding: 0 2rem;
-      @media only screen and (min-width: $bp-tablet) {
-            padding: 0 8rem;
-        }
-    }
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    background-color: $color-secondary;
 }
