@@ -1,31 +1,6 @@
 <template>
   <div class="container">
-    <!-- <header /> Потом можно будет вынести в компоненты все-->
-    <header class="header">
-      <div class="button-or-menu">
-        <button class="nav-btn"></button>
-        <ul class="nav">
-          <li class="nav__item">
-            <a href="#" class="nav__link nav__link--active">Home</a>
-          </li>
-          <li class="nav__item">
-            <a href="#" class="nav__link">Discovery</a>
-          </li>
-          <li class="nav__item">
-            <a href="#" class="nav__link">Photos</a>
-          </li>
-          <li class="nav__item">
-            <a href="#" class="nav__link">Contact</a>
-          </li>
-        </ul>
-      </div>
-
-      <div class="logo logo--header">Logo</div>
-
-      <div class="logged-in-user">
-        <img src="../assets/img/blonde_girl.jpg" alt="User photo" class="logged-in-user__photo" />
-      </div>
-    </header>
+    <Header />
 
     <section class="main-article-and-news">
       <div class="main-article">
@@ -39,15 +14,7 @@
      </div>
 
       <div class="news">
-        <div class="block-head">
-          <div class="block-head__title">More news</div>
-          <div class="block-head__navigation">
-            <div class="items-navigation">
-              <div class="items-navigation__left-arrow"></div>
-              <div class="items-navigation__right-arrow"></div>
-            </div>
-          </div>
-        </div>
+        <SectionTitleAndNavigation title="More news" />
 
         <div class="divide-line"></div>
 
@@ -84,37 +51,10 @@
 
     <body class="middle-content">
       <section class="trending">
-          <div class="block-head">
-            <div class="block-head__title">Trending</div>
-            <div class="block-head__navigation">
-              <div class="items-navigation">
-                <div class="items-navigation__left-arrow"></div>
-                <div class="items-navigation__right-arrow"></div>
-              </div>
-            </div>
-          </div>
+        <SectionTitleAndNavigation title="Trending" />
 
           <div class="trending__content">
-            <div class="article article--trending">
-              <div class="article__image">
-                <img
-                  src="../assets/img/green_lake.jpg"
-                  alt="Green lake"
-                  class="article__image article__image--trending"
-                />
-              </div>
-              <div class="article__wrap--trending">
-                <div class="article__category article__category--trending">Travel</div>
-                <div class="article__title article__title--trending">Mountain Lake Hotel</div>
-                <div
-                  class="article__text article__text--trending"
-                >LMountain Lake Hotel was the site for much of the on-location filming of the 1987</div>
-                <div class="date-time">
-                  <div class="date-time__icon"></div>
-                  <div class="date-time__time">1h ago</div>
-                </div>
-              </div>
-            </div>
+            <Article />
 
             <div class="article article--trending">
               <div class="article__image">
@@ -162,15 +102,7 @@
         </section>
 
         <section class="happening-now">
-          <div class="block-head">
-            <div class="block-head__title">Happening Now</div>
-            <div class="block-head__navigation">
-              <div class="items-navigation">
-                <div class="items-navigation__left-arrow"></div>
-                <div class="items-navigation__right-arrow"></div>
-              </div>
-            </div>
-          </div>
+          <SectionTitleAndNavigation title="Happening Now" />
 
           <div class="happening-now__content-wrapper">
             <div class="happening-now__column-1"> 
@@ -273,6 +205,7 @@
                     class="article__image article__image--trending"
                   />
                 </div>
+
                 <div class="article__wrap--trending">
                   <div class="article__category article__category--trending">Travel</div>
                   <div class="article__title article__title--trending">Highest roads of Kyrgyzstan</div>
@@ -280,16 +213,16 @@
                     class="article__text article__text--trending"
                   >Kyrgyzstan is a high mountain country located in Central Asia. Over ninety percent of the country is mountainous territory </div>
                   <div class="date-time">
-                    <div class="date-time__icon"></div>
-                    <div class="date-time__time">1h ago by <span class="article__author">Days</span></div>
-                  </div>
+                  <div class="date-time__icon"></div>
+                  <div class="date-time__time">1h ago by <span class="article__author">Days</span></div>
                 </div>
               </div>
             </div>
-
           </div>
+
+        </div>
      
-        </section>
+      </section>
     </body>
 
     <footer class="footer">
@@ -348,11 +281,15 @@
 </template>
 
 <script>
-import Logo from "~/components/Logo.vue";
+import Header from "~/components/Header";
+import SectionTitleAndNavigation from "~/components/SectionTitleAndNavigation";
+import Article from "~/components/Article";
 
 export default {
   components: {
-    Logo
+    Header, 
+    SectionTitleAndNavigation, 
+    Article
   }
 };
 </script>
