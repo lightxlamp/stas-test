@@ -173,7 +173,7 @@
           </div>
 
           <div class="happening-now__content-wrapper">
-            <div class="happening-now__column-1">
+            <div class="happening-now__column-1"> 
               <div class="article article--happening-now">
                 <div class="article__image">
                   <img
@@ -239,7 +239,7 @@
                   >Desert-adapted elephants are not a distinct species of elephant but are African bush elephants</div>
                   <div class="date-time">
                     <div class="date-time__icon"></div>
-                    <div class="date-time__time">1h ago</div>
+                    <div class="date-time__time">1h ago by <span class="article__author">Worldnews</span></div>
                   </div>
                 </div>
               </div>
@@ -260,7 +260,28 @@
                   >So where is the circling jungle parrot? Well, it turns out the bird is flying in a small circle east of the Sky Platform</div>
                   <div class="date-time">
                     <div class="date-time__icon"></div>
-                    <div class="date-time__time">1h ago</div>
+                    <div class="date-time__time">1h ago by <span class="article__author">Days</span></div>
+                  </div>
+                </div>
+              </div>        
+              
+              <div class="article article--trending">
+                <div class="article__image">
+                  <img
+                    src="../assets/img/mountain_road.jpg"
+                    alt="Mountain Road"
+                    class="article__image article__image--trending"
+                  />
+                </div>
+                <div class="article__wrap--trending">
+                  <div class="article__category article__category--trending">Travel</div>
+                  <div class="article__title article__title--trending">Highest roads of Kyrgyzstan</div>
+                  <div
+                    class="article__text article__text--trending"
+                  >Kyrgyzstan is a high mountain country located in Central Asia. Over ninety percent of the country is mountainous territory </div>
+                  <div class="date-time">
+                    <div class="date-time__icon"></div>
+                    <div class="date-time__time">1h ago by <span class="article__author">Days</span></div>
                   </div>
                 </div>
               </div>

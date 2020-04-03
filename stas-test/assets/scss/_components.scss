@@ -25,6 +25,12 @@
         padding: 14rem;
         flex-basis: 0;
         flex-grow: 6;
+    }  
+    
+    @media only screen and (min-width: $bp-large-desktop) {
+        padding: 17rem 24rem 17rem 32rem;
+        flex-basis: 0;
+        flex-grow: 6;
     }
 
     &__category {
@@ -70,7 +76,6 @@
     }  
     
     @media only screen and (min-width: $bp-desktop) {
-        //padding: 0 14rem;
         padding: 10rem 6rem 10rem 10rem;
         flex-basis: 0;
         flex-grow: 4;
@@ -107,7 +112,11 @@
     
     @media only screen and (min-width: $bp-desktop) {
         margin: 0 14rem;
-    }
+    }  
+    
+    @media only screen and (min-width: $bp-large-desktop) {
+        margin: 0 32rem;
+    } 
 }
 
 .trending {
@@ -158,10 +167,20 @@
 
         @media only screen and (min-width: $bp-desktop) {
             flex-direction: column;
+            flex-basis: 0;
+            flex-grow: 1;
+
 
             & > div{ 
                 margin-left: 4rem;
             }
+        }
+    }
+
+    &__column-1{
+        @media only screen and (min-width: $bp-desktop) {
+            flex-basis: 0;
+            flex-grow: 2;
         }
     }
 }
@@ -253,6 +272,7 @@
 
         &--happening-now  {
             color: $color-white;
+            display: none; // we don't need text of article in "Happening section " section
         }
     }
 
@@ -269,10 +289,14 @@
         }
     }
 
+    &__author {
+        text-decoration: underline;
+    }
+
     &__wrap {
 
         &--trending {
-            padding: 0 2.4rem 3.4rem 2.4rem;
+            padding: 0 2.4rem 0.4rem 2.4rem;
         }
 
         &--happening-now {
