@@ -56,47 +56,9 @@
           <div class="trending__content">
             <Article />
 
-            <div class="article article--trending">
-              <div class="article__image">
-                <img
-                  src="../assets/img/umbrellas_small.jpg"
-                  alt="Umbrellas"
-                  class="article__image article__image--trending"
-                />
-              </div>
-              <div class="article__wrap--trending">
-                <div class="article__category article__category--trending">Travel</div>
-                <div class="article__title article__title--trending">The Best Beach Umbrellas</div>
-                <div
-                  class="article__text article__text--trending"
-                >One of the worst things about going to the beach is the imminent sunburn.</div>
-                <div class="date-time">
-                  <div class="date-time__icon"></div>
-                  <div class="date-time__time">1h ago</div>
-                </div>
-              </div>
-            </div>   
+            <Article />
             
-            <div class="article article--trending">
-              <div class="article__image">
-                <img
-                  src="../assets/img/medics.jpg"
-                  alt="Umbrellas"
-                  class="article__image article__image--trending"
-                />
-              </div>
-              <div class="article__wrap--trending">
-                <div class="article__category article__category--trending">Travel</div>
-                <div class="article__title article__title--trending">American Red Cross Desert</div>
-                <div
-                  class="article__text article__text--trending"
-                >The American Red Cross Desert to the Sea Region serves Orange</div>
-                <div class="date-time">
-                  <div class="date-time__icon"></div>
-                  <div class="date-time__time">1h ago</div>
-                </div>
-              </div>
-            </div>
+            <Article />
 
           </div> <!-- end of trending content -->
         </section>

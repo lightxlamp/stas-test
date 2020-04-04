@@ -2,9 +2,6 @@
     <div class="article article--trending">
 
         <div class="article__image">
-            <!-- <img :src="require(`../assets/doggos/${selectedDog.toLowerCase()}.jpg`)" :alt="selectedDog"> -->
-            <!-- <img :src="dogImage" :alt="selectedDog"> -->
-            <!-- https://codesandbox.io/s/how-to-load-dynamic-images-in-vue-3eu3x?from-embed -->
             <img
                 :src="imgSrc"
                 :alt="imgAlt"
@@ -31,6 +28,11 @@
 import { mapMutations } from 'vuex' 
 
 export default {
+    data() {
+        return {
+            path: this.$store.state.trending_articles[0][0]
+        };
+    },
     computed: {
         myName () {
             return this.$store.state.stas
@@ -42,12 +44,8 @@ export default {
             return this.trending_articles[0][1];
         },
         imgSrc(){
-            //const fileName = this.trending_articles[0][0];
-            //let path = `../assets/img/${fileName}.jpg`;
-            let path = this.trending_articles[0][0];
-
-            //return require(path);
-            return require(`../assets/img/green_lake.jpg`);
+            const fileName = this.trending_articles[0][0];
+            return require(`../assets/img/${fileName}.jpg`);
         }
     }
 }
