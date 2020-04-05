@@ -34,13 +34,6 @@ export default {
         trending_articles () {
             console.log(this.$store.state.trending_articles);
             return this.$store.state.trending_articles
-        },
-        imgAlt() {
-            return this.trending_articles[0][1];
-        },
-        imgSrc(){
-            const fileName = this.trending_articles[0][0];
-            return require(`../assets/img/${fileName}.jpg`);
         }
     }
 }

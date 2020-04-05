@@ -14,7 +14,11 @@
         }
     }
 
-    &--footer {
+    &--white {
         color: $color-white;
+    }
+
+    &--red {
+        color: $color-primary;
     }
 }

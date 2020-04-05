@@ -46,6 +46,7 @@
     background-color: $color-black;
     height: 1.2px;
     width: 1rem; 
+    cursor: pointer;
 
     @media only screen and (min-width: $bp-tablet) {
         & {
