@@ -96,34 +96,10 @@
 
       <div class="divide-line"></div>
 
-      <div class="news__content">
-        <div class="article">
-          <div class="article__category">Travel</div>
-          <div class="article__title">Article Title</div>
-          <div class="article__text">
-            It's that time of the day again. Blog time. Time to catch up on
-            another 24 hours of similar news.
-          </div>
-          <div class="date-time">
-            <div class="date-time__icon"></div>
-            <div class="date-time__time">2m ago</div>
-          </div>
-        </div>
-
-        <div class="article">
-          <div class="article__category">Technology</div>
-          <div class="article__title">Article Title</div>
-          <div class="article__text">
-            In the same place, sitting in the same chair perhaps we think we
-            ought to sleep in Gabby tonight. I have lost a sock in the washing.
-          </div>
-          <div class="date-time">
-            <div class="date-time__icon"></div>
-            <!-- It is always empty.. Do we need it? :P ::before? -->
-            <div class="date-time__time">1h ago</div>
-          </div>
-        </div>
-      </div>
+      <ArticlesList :articles="more_news_articles"
+                  modifier="" 
+                  withImage=false
+                  containerClass="news__content"/>
     </div>
   </section>
 
@@ -131,137 +107,25 @@
     
     <section class="trending">
       <SectionTitleAndNavigation title="Trending" />
-      <ArticlesList />
+      <ArticlesList :articles="trending_articles"
+                     modifier="trending" 
+                     withImage=true
+                     containerClass="trending__content"/>
     </section>
 
     <section class="happening-now">
       <SectionTitleAndNavigation title="Happening Now" />
 
       <div class="happening-now__content-wrapper">
-        <div class="happening-now__column-1">
-          <div class="article article--happening-now">
-            <div class="article__image">
-              <img
-                src="../assets/img/bridge.jpg"
-                alt="golden gate bridge"
-                class="article__image article__image--happening-now"
-              />
-            </div>
-            <div class="article__wrap article__wrap--happening-now">
-              <div class="article__category article__category--happening-now">City</div>
-              <div class="article__info article__info--happening-now">
-                <div class="article__title article__title--happening-now">Golden Gate Bridge Facts</div>
-                <div
-                  class="article__text article__text--happening-now"
-                >When the Golden Gate Bridge Flattened by 7 Feet—and Other Facts About the San Francisco Icon.</div>
-                <div class="date-time date-time--happening-now">
-                  <div class="date-time__icon"></div>
-                  <div class="date-time__time">2m ago</div>
-                </div>
-              </div>
-            </div>
-          </div>
+        <ArticlesList :articles="happening_now_articles_column_1"
+                       modifier="trending" 
+                       withImage=true
+                       containerClass="happening-now__column-1"/>
 
-          <div class="article article--happening-now">
-            <div class="article__image">
-              <img
-                src="../assets/img/forest.jpg"
-                alt="Bridge"
-                class="article__image article__image--happening-now"
-              />
-            </div>
-            <div class="article__wrap article__wrap--happening-now">
-              <div class="article__category article__category--happening-now">Travel</div>
-              <div class="article__info article__info--happening-now">
-                <div
-                  class="article__title article__title--happening-now"
-                >We need to safeguard our forests</div>
-                <div
-                  class="article__text article__text--happening-now"
-                >The importance of forests cannot be underestimated. We depend on forests for our survival, from the air we breathe to the wood we use.</div>
-                <div class="date-time date-time--happening-now">
-                  <div class="date-time__icon"></div>
-                  <div class="date-time__time">2m ago</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="happening-now__column-2">
-          <div class="article article--trending">
-            <div class="article__image">
-              <img
-                src="../assets/img/elephant.jpg"
-                alt="Elephants"
-                class="article__image article__image--trending"
-              />
-            </div>
-            <div class="article__wrap--trending">
-              <div class="article__category article__category--trending">Travel</div>
-              <div class="article__title article__title--trending">Desert Elephants</div>
-              <div
-                class="article__text article__text--trending"
-              >Desert-adapted elephants are not a distinct species of elephant but are African bush elephants</div>
-              <div class="date-time">
-                <div class="date-time__icon"></div>
-                <div class="date-time__time">
-                  1h ago by
-                  <span class="article__author">Worldnews</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="article article--trending">
-            <div class="article__image">
-              <img
-                src="../assets/img/parrot_small.jpg"
-                alt="Green lake"
-                class="article__image article__image--trending"
-              />
-            </div>
-            <div class="article__wrap--trending">
-              <div class="article__category article__category--trending">Travel</div>
-              <div class="article__title article__title--trending">Jungle Parrots</div>
-              <div
-                class="article__text article__text--trending"
-              >So where is the circling jungle parrot? Well, it turns out the bird is flying in a small circle east of the Sky Platform</div>
-              <div class="date-time">
-                <div class="date-time__icon"></div>
-                <div class="date-time__time">
-                  1h ago by
-                  <span class="article__author">Days</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="article article--trending">
-            <div class="article__image">
-              <img
-                src="../assets/img/mountain_road.jpg"
-                alt="Mountain Road"
-                class="article__image article__image--trending"
-              />
-            </div>
-
-            <div class="article__wrap--trending">
-              <div class="article__category article__category--trending">Travel</div>
-              <div class="article__title article__title--trending">Highest roads of Kyrgyzstan</div>
-              <div
-                class="article__text article__text--trending"
-              >Kyrgyzstan is a high mountain country located in Central Asia. Over ninety percent of the country is mountainous territory</div>
-              <div class="date-time">
-                <div class="date-time__icon"></div>
-                <div class="date-time__time">
-                  1h ago by
-                  <span class="article__author">Days</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        <ArticlesList :articles="happening_now_articles_column_2"
+                       modifier="trending" 
+                       withImage=true
+                       containerClass="happening-now__column-2"/>
       </div>
     </section>
   </body>
@@ -342,6 +206,8 @@ import Article from "~/components/Article";
 import ArticlesList from "~/components/ArticlesList";
 import SocialNetworks from "~/components/SocialNetworks";
 
+import { mapMutations } from 'vuex' 
+
 export default {
   components: {
     Header,
@@ -354,10 +220,24 @@ export default {
     title: 'My first mobile-first web site :P'
   },
 
+  computed: {
+      trending_articles () {
+        return this.$store.state.trending_articles;
+      },
+      happening_now_articles_column_1 () {
+        return this.$store.state.happening_now_articles_column_1;
+      },
+      happening_now_articles_column_2() {
+        return this.$store.state.happening_now_articles_column_2;
+      },
+      more_news_articles () {
+        return this.$store.state.more_news_articles;
+      }
+  },
+
   data: () => ({
-    isSideBarVisible: false,
+    isSideBarVisible: false
   }),
 };
-
 
 </script>
