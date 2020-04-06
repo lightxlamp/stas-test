@@ -1,6 +1,6 @@
 <template>
-<div class="container">
-  <div class="side-bar">
+<div class="container" id="container">
+  <div class="side-bar" v-show="isSideBarVisible">
     <div class="side-bar__body">
       <div class="logo logo--red">Logo</div>
 
@@ -82,7 +82,7 @@
 
   <section class="main-article-and-news">
     <div class="main-article">
-      <div class="main-article__category">World News</div>
+      <div class="main-article__category" v-on:click="isSideBarVisible = !isSideBarVisible">World News</div>
       <div class="main-article__title">Amazing places in America to visit.</div>
       <div class="main-article__text">
         For some reason — this country, this city, this neighborhood, this
@@ -333,6 +333,7 @@
 </div>
 </template>
 
+
 <script>
 import Header from "~/components/Header";
 import SectionTitleAndNavigation from "~/components/SectionTitleAndNavigation";
@@ -347,6 +348,15 @@ export default {
     Article,
     ArticlesList,
     SocialNetworks
-  }
+  },
+  head: {
+    title: 'My first mobile-first web site :P'
+  },
+
+  data: () => ({
+    isSideBarVisible: false,
+  }),
 };
+
+
 </script>

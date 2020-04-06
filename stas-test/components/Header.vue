@@ -4,7 +4,7 @@
         
         <div class="button-or-menu">
         
-            <button class="nav-btn"></button>
+            <button v-on:click="isSideBarVisible = !isSideBarVisible" class="nav-btn"></button>
 
             <ul class="nav">
                 <li class="nav__item">
