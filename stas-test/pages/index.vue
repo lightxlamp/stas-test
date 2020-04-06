@@ -128,6 +128,7 @@
   </section>
 
   <body class="middle-content">
+    
     <section class="trending">
       <SectionTitleAndNavigation title="Trending" />
       <ArticlesList />

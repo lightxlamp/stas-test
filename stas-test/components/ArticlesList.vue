@@ -33,7 +33,7 @@ export default {
     computed: {
         trending_articles () {
             console.log(this.$store.state.trending_articles);
-            return this.$store.state.trending_articles
+            return this.$store.state.trending_articles;
         }
     }
 }

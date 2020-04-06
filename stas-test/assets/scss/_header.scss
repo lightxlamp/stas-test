@@ -1,13 +1,12 @@
 .header {
     display: flex;
     justify-content: space-between;
-    padding: 0 20px;
+    padding: 1.2rem 2rem;
     //border: 1px solid blue;
     width: 100%;
     align-items: center;
     background-color: $color-secondary;
 
-    padding-top: .2rem;
     &__logo {
         text-transform: uppercase;
         color: $color-grey-dark-2;

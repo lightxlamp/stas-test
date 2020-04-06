@@ -45,15 +45,14 @@
     &__button {
         background-color: $color-secondary;
         height: 2rem;
-        width: 2rem;
-        border-radius: 50%;
-        position: fixed;
-        top: 0rem;
-        left: 1.6rem;
-        z-index: 1001;
-        box-shadow: 0 1rem 3rem rgba($color-black, .1);
+        width: 1.7rem;
         //text-align: center; // to center hamburger menu icons
         cursor: pointer;
+        display: block;
+
+        @media only screen and (min-width: $bp-tablet) {
+            display: none;
+        }
     }
 
     // Functionality
