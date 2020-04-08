@@ -338,8 +338,8 @@
     padding-top: 4px;
 
     &__icon {
-        height: 1rem;
-        width: 1rem;
+        height: 1.6rem;
+        width: 1.6rem;
         background-size: cover;
         margin-right: .5rem;
 
@@ -357,8 +357,6 @@
         }
     }
 }
-
-
 
 @mixin icon-box-settings {
     height: 1.6rem;
@@ -414,10 +412,6 @@
         display: flex;
         justify-content: space-between;
     } 
-    
-    &__author {
-        
-    } 
 }
 
 .next-story {
@@ -451,6 +445,8 @@
 }
 
 .author {
+    display: flex;
+
     &__photo {
         background-image: url('../img/boy.jpg');
         border-radius: 50%;
@@ -459,6 +455,12 @@
         background-position: center;
         background-size: cover;
         border: 2px solid $color-white;
+
+        &--story {
+            width: 4rem;
+            height: 4rem;
+            border: none;
+        }
     }
 
     &__name {
@@ -467,6 +469,16 @@
         font-size: 1.6rem;
         line-height: 2rem;
         font-weight: bold;
+
+        &--story {
+            display: inline-block;
+            color: $color-black;
+            font-size: 2.4rem;
+            line-height: 4.2rem;
+            font-weight: bold;
+            text-align: left;
+            margin-left: 2rem;
+        }
     }
 }
 
@@ -515,3 +527,47 @@
     }
 }
 
+.text-only-stories {
+    padding: 2.4rem;
+    padding-top: 4rem;
+} 
+
+.text-only-story {
+    &__title {
+        color: $color-black;
+        font-size: 3.2rem;
+        line-height: 4.2rem;
+        font-family: "Acumin Pro"; 
+        text-align: left;
+        font-weight: bold;
+    }
+
+    &__text {
+        padding: 2.4rem 0;
+        color: $color-grey-dark-2;
+        font-size: 1.4rem;
+        line-height: 2.6rem;
+        text-align: left;
+        border-bottom: 2px solid $color-grey-light-1;
+    }
+}
+
+.stories {
+    padding: 2.4rem;
+    padding-top: 1rem;
+    background-color: #F6F8F9;
+} 
+
+.story {
+    margin-bottom: 3.4rem;
+
+    &__text {
+        font-size: 1.6rem;
+        line-height: 3rem;
+        text-align: left;
+        color: $color-black;
+        font-style: italic;
+        font-weight: 400;
+        margin-top: 1rem;
+    }
+}
