@@ -4,8 +4,8 @@
     background:
                 // top, transparent black, faked with gradient 
                 linear-gradient(
-                 rgba(0, 0, 0, 0.3), 
-                 rgba(0, 0, 0, 0.3)
+                 rgba(0, 0, 0, 0.2), 
+                 rgba(0, 0, 0, 0.2)
                ),
                // instead of filter: brightness
                url(../img/mountain.jpg);
@@ -376,8 +376,11 @@
     background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url(../img/parrot.jpg);
     background-size: cover;
     background-position: center;
-    padding: 2.4rem;
-    padding-top: 14rem;
+    padding: 14rem 2.4rem 4rem 2.4rem;
+
+    @media only screen and (min-width: $bp-tablet) {
+        padding: 11rem 4rem 4rem 4rem;
+    }
     //margin-top: 22rem;
 
     &__title {
@@ -403,7 +406,7 @@
         justify-content: center;
 
         & > :first-child {
-            margin-right: 2rem;
+            margin-right: 4rem;
         }
     } 
     
@@ -411,13 +414,42 @@
         margin-top: 6rem;
         display: flex;
         justify-content: space-between;
+        align-items: flex-end;
     } 
 }
 
 .next-story {
+    display: flex;
+    justify-content: space-between;
 
-    &__top {
+    @media only screen and (min-width: $bp-tablet) {
+        border: 2px dashed rgba($color-white, .5);
+        border-radius: $border-radius;
+        padding: 2rem;
+        width: 28.4rem;
+    }
+
+    @media only screen and (min-width: $bp-desktop) {
+        padding: 3rem;
+        width: 36rem;
+    }    
+    
+    @media only screen and (min-width: $bp-large-desktop) {
+        width: 44rem;
+    }
+
+    &__left {
         display: flex;
+        flex-direction: column;
+    }
+
+    &__right {
+        display: flex;
+        align-items: center;
+
+        @media only screen and (min-width: $bp-desktop) {
+            align-items: flex-start;
+        } 
     }
 
     &__next {
@@ -442,10 +474,34 @@
             @include support-settings;
         }
     }
+
+    &__title {
+        display: none;
+        
+        @media only screen and (min-width: $bp-tablet) {
+            display: inline-block;
+            color: $color-white;
+            font-size: 1.6rem;
+            line-height: 2rem;
+            font-weight: bold;
+        }
+    }
+
+    &__text {
+        display: none;
+
+        @media only screen and (min-width: $bp-desktop) {
+            display: inline-block;
+            color: $color-white;
+            font-size: 1.6rem;
+            line-height: 2.6rem;
+        }
+    }
 }
 
 .author {
     display: flex;
+    align-items: center;
 
     &__photo {
         background-image: url('../img/boy.jpg');
@@ -455,6 +511,11 @@
         background-position: center;
         background-size: cover;
         border: 2px solid $color-white;
+
+        @media only screen and (min-width: $bp-tablet) {
+            width: 4rem;
+            height: 4rem;
+        }
 
         &--story {
             width: 4rem;
@@ -469,6 +530,11 @@
         font-size: 1.6rem;
         line-height: 2rem;
         font-weight: bold;
+        margin-left: 2rem;
+
+        @media only screen and (min-width: $bp-tablet) {
+          display: inline-block;
+        }
 
         &--story {
             display: inline-block;
@@ -477,7 +543,7 @@
             line-height: 4.2rem;
             font-weight: bold;
             text-align: left;
-            margin-left: 2rem;
+           
         }
     }
 }
@@ -533,6 +599,16 @@
 } 
 
 .text-only-story {
+
+    @media only screen and (min-width: $bp-tablet) {
+        display: flex;
+        align-items: flex-start;
+    }  
+    
+    @media only screen and (min-width: $bp-desktop) {
+        flex-direction: column;
+    }
+
     &__title {
         color: $color-black;
         font-size: 3.2rem;
@@ -548,7 +624,15 @@
         font-size: 1.4rem;
         line-height: 2.6rem;
         text-align: left;
-        border-bottom: 2px solid $color-grey-light-1;
+    }
+
+    &__col-1-of-2 {
+        margin-right: 40px;
+        
+    }
+
+    &__col-2-of-2 {
+        border-bottom: 2px dashed $color-grey-light-1;
     }
 }
 

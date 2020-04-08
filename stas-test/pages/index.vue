@@ -11,7 +11,8 @@
       <div class="news">
         <SectionTitleAndNavigation title="More news" />
 
-        <div class="divide-line"></div>
+        <!-- can I just style HR? TODO -->
+        <div class="divide-line"></div> 
 
         <ArticlesList :articles="more_news_articles"
                     modifier="" 
