@@ -43,7 +43,8 @@
           <ArticlesList :articles="happening_now_articles_column_2"
                         modifier="trending" 
                         withImage=true
-                        containerClass="happening-now__column-2"/>
+                        containerClass="happening-now__column-2"
+                        haveAuthor="true"/>
         </div>
       </section>
     </body>
@@ -62,7 +63,6 @@
   import MainArticle from "~/components/MainArticle";
   import SectionTitleAndNavigation from "~/components/SectionTitleAndNavigation";
   import SideBar from "~/components/SideBar";
-  import SocialNetworks from "~/components/SocialNetworks";
 
   import { mapMutations } from 'vuex' 
 
@@ -73,8 +73,7 @@
       Header,
       MainArticle,
       SectionTitleAndNavigation,
-      SideBar,
-      SocialNetworks
+      SideBar
     },
 
     computed: {

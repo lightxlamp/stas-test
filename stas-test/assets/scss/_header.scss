@@ -32,7 +32,7 @@
         }
     }
 
-    @media only screen and (min-width: $bp-desktop) {
+    @media only screen and (min-width: $bp-tablet) {
         & > :nth-child(1) {
             margin-left: auto; // to move footer-navigation to right side. To user avatar
         } 

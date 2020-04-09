@@ -79,9 +79,13 @@
 </template>
 
 <script>
+import SocialNetworks from "~/components/SocialNetworks";
 export default {
     data: () => ({
         isSideBarVisible: false
     }),
+    components: {
+      SocialNetworks
+    }
 }
 </script>

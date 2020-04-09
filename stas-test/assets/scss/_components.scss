@@ -128,11 +128,20 @@
             margin-left: 4rem;
         }
 
-        &__content{
+        &__content {
             display: flex;
             flex-direction: row;
             //flex: wrap;
             align-items: flex-start; // just for test flex param. 
+
+            & > div:last-child
+            {
+                display: none; // To hide a third card on a lower resolutions
+
+                @media only screen and (min-width: $bp-desktop) {
+                    display: block;
+                } 
+            }
         }
     }
 }
@@ -156,6 +165,15 @@
     &__column-2{
         display: flex;
         flex-direction: column;
+
+        & > div:last-child
+        {
+            display: none; // To hide a third card on a lower resolutions
+
+            @media only screen and (min-width: $bp-desktop) {
+                display: block;
+            } 
+        }
 
         @media only screen and (min-width: $bp-tablet) {
             flex-direction: row;
@@ -255,6 +273,11 @@
             color: $color-white;
         }
 
+        &--story {
+            font-size: 1.6rem;
+            font-family: "Acumin Pro"; 
+        }
+
         @media only screen and (min-width: $bp-tablet) {
             //font-size: 24px;
         }
@@ -295,6 +318,10 @@
 
     &__wrap {
 
+        &--story {
+            //border-bottom: 2px dashed $color-grey-light-1;
+        }
+
         &--trending {
             padding: 0 2.4rem 0.4rem 2.4rem;
         }
@@ -326,16 +353,25 @@
     width: 100%;
 }
 
-.date-time {
+.date-time-author {
     color: $color-grey-dark-2; 
     display: flex;
     align-items: center;
     font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
     font-size: 1.3rem;
     line-height: 2.6rem;
-    font-style: italic;
+    font-style: oblique;
 
     padding-top: 4px;
+
+    --story {
+        display: none;
+
+        @media only screen and (min-width: $bp-tablet) {
+            display: block;
+            padding-top: 3rem;
+        }
+    }
 
     &__icon {
         height: 1.6rem;
@@ -356,6 +392,10 @@
             background-image: none;
         }
     }
+
+    &__author {
+        text-decoration: underline;
+    }
 }
 
 @mixin icon-box-settings {
@@ -372,6 +412,10 @@
 }
 
 .stories-block {
+    @media only screen and (min-width: $bp-tablet) {
+        padding: 8rem;
+        padding-top: 6rem;
+    }  
     @media only screen and (min-width: $bp-desktop) {
         display: flex;
         padding: 10rem 14rem;
@@ -425,6 +469,10 @@
         display: flex;
         justify-content: space-between;
         align-items: flex-end;
+
+        @media only screen and (min-width: $bp-tablet) {
+            margin-top: 11rem;
+        } 
     } 
 }
 
@@ -494,6 +542,7 @@
             font-size: 1.6rem;
             line-height: 2rem;
             font-weight: bold;
+            padding-top: .5rem;
         }
     }
 
@@ -514,12 +563,11 @@
     align-items: center;
 
     &__photo {
-        background-image: url('../img/boy.jpg');
         border-radius: 50%;
         width: 2.8rem;
         height: 2.8rem;
-        background-position: center;
-        background-size: cover;
+        object-fit: cover;
+        object-position: 50% 50%;
         border: 2px solid $color-white;
 
         @media only screen and (min-width: $bp-tablet) {
@@ -607,12 +655,23 @@
     padding: 2.4rem;
     padding-top: 4rem;
 
+    @media only screen and (min-width: $bp-tablet) {
+        padding: 0;
+        padding-bottom: 2.4rem;
+        border-bottom: 2px solid $color-grey-light-1;
+
+        @media only screen and (min-width: $bp-desktop) {
+           border: none;
+        }  
+    }
+
     @media only screen and (min-width: $bp-desktop) {
         display: flex;
         flex-direction: column;
         flex-basis: 0;
         flex-grow: 1;
         border-right: 2px solid $color-grey-light-1;
+        padding-right: 3rem;
     }
 } 
 
@@ -642,15 +701,37 @@
         font-size: 1.4rem;
         line-height: 2.6rem;
         text-align: left;
+        font-weight: 400;
+
+        @media only screen and (min-width: $bp-desktop) {
+            padding-bottom: 0;
+        }
     }
 
     &__col-1-of-2 {
-        margin-right: 40px;
-        
+        @media only screen and (min-width: $bp-tablet) {
+            margin-right: 4rem;
+            flex-basis: 0;
+            flex-grow: 1;
+        }     
+        @media only screen and (min-width: $bp-desktop) {
+            margin-right: 0;
+        }
     }
 
     &__col-2-of-2 {
-        border-bottom: 2px dashed $color-grey-light-1;
+        flex-basis: 0;
+        flex-grow: 1;
+
+        & {
+            @media only screen and (min-width: $bp-desktop) {
+                padding-bottom: 2.4rem;
+            }
+        }
+
+        & > :first-child {
+            border-bottom: 2px dashed $color-grey-light-1;
+        }
     }
 }
 
@@ -674,6 +755,15 @@ iframe{
     flex-basis: 0;
     flex-grow: 2;
 
+    @media only screen and (min-width: $bp-tablet) {
+        padding: 0;
+        padding-top: 2.4rem;
+    }    
+
+    @media only screen and (min-width: $bp-desktop) {
+        padding: 0;
+        padding-left: 4rem;
+    }  
 } 
 
 .story {
@@ -684,7 +774,7 @@ iframe{
         line-height: 3rem;
         text-align: left;
         color: $color-black;
-        font-style: italic;
+        font-style: oblique;
         font-weight: 400;
         margin-top: 1rem;
     }

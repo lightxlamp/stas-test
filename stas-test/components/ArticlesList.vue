@@ -16,8 +16,11 @@
                     <div :class="articleTitle">{{article.title}}</div>
                     <div :class="articleText">{{article.text}}</div>
                     <div :class="dateTime">
-                        <div class="date-time__icon"></div>
-                        <div class="date-time__time">{{article.dateTime}}</div>
+                        <div class="date-time-author__icon"></div>
+                        <div class="date-time-author__time">{{article.dateTime}}&nbsp;</div>
+                        <span 
+                            v-if="haveAuthor == 'true'"
+                            class="date-time-author__author">{{article.author}}</span>
                     </div>
                 </div>
             </div>
@@ -33,7 +36,8 @@ export default {
         articles: Array,
         modifier: String,
         containerClass: String,
-        withImage: String
+        withImage: String,
+        haveAuthor: String
     },
     computed: {
         articleClass() {
@@ -58,7 +62,7 @@ export default {
             return 'article__info article__info--' + this.modifier;
         }, 
         dateTime() { 
-            return 'date-time date-time--' + this.modifier;
+            return 'date-time-author date-time-author--' + this.modifier;
         },
     }  
 }
