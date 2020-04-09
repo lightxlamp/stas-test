@@ -56,7 +56,6 @@
 
 <script>
 
-  import Article from "~/components/Article";
   import ArticlesList from "~/components/ArticlesList";
   import Header from "~/components/Header";
   import Footer from "~/components/Footer";
@@ -69,7 +68,6 @@
 
   export default {
     components: {
-      Article,
       ArticlesList,
       Footer,
       Header,

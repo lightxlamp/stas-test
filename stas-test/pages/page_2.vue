@@ -37,7 +37,7 @@
     </div>
   </section>
 
-  <body class="middle-content">
+  <section class="stories-block">
     <section class="text-only-stories">
       <div class="text-only-story">
         <div class="text-only-story__col-1-of-2">
@@ -76,7 +76,8 @@
 
         <div
           class="story__text"
-        >In hac habitasse platea dictumst. Sed nec venenatis odio. Nulla faucibus ipsum sed faucibus accumsan…</div>
+        >In hac habitasse platea dictumst. Sed nec venenatis odio. Nulla faucibus ipsum sed faucibus accumsan. 
+        Donec rhoncus luctus massa vitae lobortis. Duis consequat, nunc a pretium imperdiet, neque est rhoncus massa</div>
 
         <div class="date-time">
           <div class="date-time__icon"></div>
@@ -92,7 +93,8 @@
 
         <div
           class="story__text"
-        >Nulla faucibus ipsum sed faucibus accumsan. Donec rhoncus luctus massa vitae lobortis. Duis consequat, nunc a pretim…</div>
+        >In hac habitasse platea dictumst. Sed nec venenatis odio. Nulla faucibus ipsum sed faucibus accumsan. 
+        Donec rhoncus luctus massa vitae lobortis. Duis consequat, nunc a pretium imperdiet.</div>
 
         <div class="date-time">
           <div class="date-time__icon"></div>
@@ -103,7 +105,7 @@
       <div class="video-story">
         <iframe
           width="100%"
-          height="315"
+          height="100%"
           src="https://www.youtube.com/embed/oSmUI3m2kLk"
           frameborder="0"
           allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
@@ -111,7 +113,7 @@
         ></iframe>
       </div>
     </section>
-  </body>
+  </section>
 
   <Footer />
 </div>
@@ -119,7 +121,6 @@
 
 
 <script>
-import Article from "~/components/Article";
 import ArticlesList from "~/components/ArticlesList";
 import Header from "~/components/Header";
 import Footer from "~/components/Footer";
@@ -132,7 +133,6 @@ import { mapMutations } from "vuex";
 
 export default {
   components: {
-    Article,
     ArticlesList,
     Footer,
     Header,
