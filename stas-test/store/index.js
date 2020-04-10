@@ -42,6 +42,7 @@ export const state = () => ({
                     "Golden Gate Bridge Facts", 
                     "When the Golden Gate Bridge Flattened by 7 Feet—and Other Facts About the San Francisco Icon.",
                     "2m ago",
+                    "",
                     "--happening-now"
         ),
 
@@ -51,6 +52,7 @@ export const state = () => ({
                     "We need to safeguard our forests", 
                     "The importance of forests cannot be underestimated. We depend on forests for our survival, from the air we breathe to the wood we use.",
                     "2m ago",
+                    "",
                     "--happening-now"
         )],
 
@@ -62,7 +64,7 @@ export const state = () => ({
                     "Desert-adapted elephants are not a distinct species of elephant but are African bush elephants",
                     "1h ago by",
                     "Worldnews", 
-                    "--trending"
+                    "--happening-now-2"
         ),
 
         new Article("parrot_small",
@@ -72,7 +74,7 @@ export const state = () => ({
                     "So where is the circling jungle parrot? Well, it turns out the bird is flying in a small circle east of the Sky Platform",
                     "1h ago by",
                     "Days", 
-                    "--trending"
+                    "--happening-now-2"
         ),
 
         new Article("mountain_road",
@@ -82,7 +84,7 @@ export const state = () => ({
                     "Kyrgyzstan is a high mountain country located in Central Asia. Over ninety percent of the country is mountainous territory",
                     "1h ago by",
                     "Days", 
-                    "--trending"
+                    "--happening-now-2"
         )
     ],
 

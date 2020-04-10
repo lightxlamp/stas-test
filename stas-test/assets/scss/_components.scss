@@ -123,25 +123,29 @@
 
     @include section-margin;
 
-    @media only screen and (min-width: $bp-tablet) {
+    @media only screen and (min-width: $bp-tablet) 
+    {
         &__content > div:not(:first-child){ // nicuuu :P Первый раз осознанно применил, not
             margin-left: 4rem;
         }
+    }
 
-        &__content {
+    &__content {
+        @media only screen and (min-width: $bp-tablet) 
+        {
             display: flex;
             flex-direction: row;
             //flex: wrap;
             align-items: flex-start; // just for test flex param. 
+        }
 
-            & > div:last-child
-            {
-                display: none; // To hide a third card on a lower resolutions
+        & > div:last-child
+        {
+            display: none; // To hide a third card on a lower resolutions
 
-                @media only screen and (min-width: $bp-desktop) {
-                    display: block;
-                } 
-            }
+            @media only screen and (min-width: $bp-desktop) {
+                display: block;
+            } 
         }
     }
 }
@@ -233,6 +237,10 @@
         overflow: hidden; 
     }
 
+    &--happening-now-2 {
+        background-color: transparent; // #F6F8F9
+    }
+
     &__category {
         color: $color-primary;
         text-transform: uppercase;
@@ -244,7 +252,10 @@
         padding-top: 4rem;
 
         &--trending{
-            padding-top: 0px;
+            display: none;
+        }
+
+        &--happening-now-2 {
             display: none;
         }
 
@@ -294,8 +305,11 @@
         }
 
         &--happening-now  {
-            color: $color-white;
-            display: none; // we don't need text of article in "Happening section " section
+            display: none; // we don't need text of an article in "Happening-now" section
+        }
+
+        &--happening-now-2 {
+            display: none;
         }
     }
 
@@ -310,6 +324,10 @@
             background-size: 50% 50%;
             border-radius: $border-radius;
         }
+
+        &--happening-now-2 {
+            border-radius: $border-radius;
+        }
     }
 
     &__author {
@@ -318,20 +336,18 @@
 
     &__wrap {
 
-        &--story {
-            //border-bottom: 2px dashed $color-grey-light-1;
-        }
-
         &--trending {
             padding: 0 2.4rem 0.4rem 2.4rem;
         }
 
-        &--happening-now {
+        &--happening-now-2 {
+            padding: 0;
+        }
 
+        &--happening-now {
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            //border: 5px solid red;
             height: 100%;
             position: absolute;
             top: 0;
@@ -361,10 +377,13 @@
     font-size: 1.3rem;
     line-height: 2.6rem;
     font-style: oblique;
-
     padding-top: 4px;
 
-    --story {
+    &--happening-now {
+        color: $color-grey-dark-1; 
+    }
+
+    &--story {
         display: none;
 
         @media only screen and (min-width: $bp-tablet) {

@@ -113,7 +113,7 @@
             Donec rhoncus luctus massa vitae lobortis. Duis consequat, nunc a pretium imperdiet.
           </div>
 
-          <div class="date-time-author date-time-author--story">
+          <div class="date-time-author">
             <div class="date-time-author__icon"></div>
             <div class="date-time-author__time">2m ago</div>
           </div>

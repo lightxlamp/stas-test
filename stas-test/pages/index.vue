@@ -36,12 +36,12 @@
 
         <div class="happening-now__content-wrapper">
           <ArticlesList :articles="happening_now_articles_column_1"
-                        modifier="trending" 
+                        modifier="happening-now" 
                         withImage=true
                         containerClass="happening-now__column-1"/>
 
           <ArticlesList :articles="happening_now_articles_column_2"
-                        modifier="trending" 
+                        modifier="happening-now-2" 
                         withImage=true
                         containerClass="happening-now__column-2"
                         haveAuthor="true"/>
@@ -53,7 +53,6 @@
 
   </div>
 </template>
-
 
 <script>
 

@@ -29,6 +29,8 @@
 </template>
 
 <script>
+// Переписать... Избавиться от this.modifier. И подставлять article.className (переименовать на article.prefix)
+// Все есть жж. Сам запутался, что не оттуда префикс берется. И это к ошибкам привело
 import { mapMutations } from 'vuex' 
 
 export default {
