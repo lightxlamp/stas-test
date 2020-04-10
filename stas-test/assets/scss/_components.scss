@@ -430,6 +430,80 @@
     background-image: none;
 }
 
+.breadcrumbs {
+    display: flex;
+    justify-content: space-between;
+    @media only screen and (min-width: $bp-tablet) {
+        padding: 8rem;
+        padding-top: 6rem;
+    }  
+    @media only screen and (min-width: $bp-desktop) {
+        display: flex;
+        padding: 10rem 14rem;
+    } 
+
+    font-size: 1.1rem;
+    line-height: 2rem;
+    color: $color-black;
+    font-weight: bold;
+    text-transform: uppercase;
+
+    &__settings-icon-wrapper {
+        padding: 1rem;
+        border-radius: $border-radius;
+        border: 2px solid $color-grey-light-1;
+    }
+
+    &__settings-icon {
+        height: 1.6rem;
+        width: 1.6rem;
+        background-size: cover;
+
+        // We can't change color of icon when we adding it this way. So just leave this for older browsers
+        background-image: url('../img/SVG/equalizer.svg');
+        background-position: center;
+
+        @supports(-webkit-mask-image: url()) or (mask-image: url())
+        {
+            background-color: #575F66; 
+            -webkit-mask-image: url('../img/SVG/equalizer.svg'); 
+            mask-image: url('../img/SVG/equalizer.svg'); 
+            -webkit-mask-size: cover; 
+            mask-size: cover; 
+            background-image: none;
+        }
+    }
+}
+
+.path-and-settings {
+    display: flex;
+    &__path--page {
+        color: $color-grey-dark-2;
+    }
+
+    &__icon {
+        height: 1.6rem;
+        width: 1.6rem;
+        background-size: cover;
+        margin-right: 3rem;
+
+        // We can't change color of icon when we adding it this way. So just leave this for older browsers
+        background-image: url('../img/SVG/home.svg');
+
+        @supports(-webkit-mask-image: url()) or (mask-image: url())
+        {
+            background-color: $color-black; 
+            -webkit-mask-image: url('../img/SVG/home.svg'); 
+            mask-image: url('../img/SVG/home.svg'); 
+            -webkit-mask-size: cover; 
+            mask-size: cover; 
+            background-image: none;
+        }
+    }
+
+
+}
+
 .stories-block {
     @media only screen and (min-width: $bp-tablet) {
         padding: 8rem;
