@@ -604,9 +604,33 @@
     border-top: 2px solid $color-grey-light-1;
     padding-top: 3rem;
     margin: 4rem 2.4rem;
-    
+
+    @media only screen and (min-width: $bp-tablet) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }  
+
+ 
+    &__col-1 {
+        @media only screen and (min-width: $bp-tablet) {
+            width: 56%;
+        }
+    }
+
+    &__col-2 {
+        @media only screen and (min-width: $bp-tablet) {
+            width: 45%;
+        }
+    }
+
     &__col-3 {
         margin-top: 2rem;
+
+        @media only screen and (min-width: $bp-tablet) {
+            margin-top: 0;
+            width: 45%;
+        }
     }
 
     &__col-3 > div:first-child {
@@ -623,8 +647,16 @@
         background-image: url('../img/elephant.jpg');
         background-position: center;
         background-size: cover;
+        position: relative;
         width: 100%;
         min-height: 18rem;
+        padding-top: 55.04%; /* Aspect Ratio */
+
+        @media only screen and (min-width: $bp-tablet) {
+            min-height: 26rem;
+            padding-top: 42.76%; /* Aspect Ratio */
+        }
+
         border-radius: $border-radius;
         overflow: hidden;
     }
@@ -663,6 +695,20 @@
 
     &__li {
         padding-bottom: 1rem;
+
+        &--more {
+            @include icon-box-settings;
+            background-image: url('../img/SVG/dots-three-horizontal.svg');
+            margin-top: 2px;
+    
+            @supports(-webkit-mask-image: url()) or (mask-image: url())
+            {
+                background-color: $color-black;
+                -webkit-mask-image: url('../img/SVG/dots-three-horizontal.svg'); 
+                mask-image: url('../img/SVG/dots-three-horizontal.svg'); 
+                @include support-settings;
+            }
+        }
     }
 
     &__li--active {
@@ -680,7 +726,7 @@ h2 {
     font-family: "Acumin Pro"; 
     font-weight: bold;
     text-align: left;
-    padding: 1.4rem 0;
+    padding: 1.4rem 0 4rem;
 }
 
 
