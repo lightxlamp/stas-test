@@ -1,10 +1,9 @@
 <template>
   <div class="container">
-    <SideBar />
-
     <Header />
 
     <div class="breadcrumbs">
+        <div class="back-btn"></div>
         <div class="path-and-settings">
             <div class="path-and-settings__icon"></div>
             <div class="path-and-settings__path">
@@ -16,6 +15,33 @@
             <div class="breadcrumbs__settings-icon"></div>
         </div>
     </div>
+
+    <section class="search-news">
+        <div class="search-news-main">
+            <div class="search-news-main__title">World news</div>
+            <div class="search-news-main__line"></div>
+            <div class="search-news-main__text">Stay informed without overdosing on the news <br/> vix id nullam detracto vidit.</div>
+            <div class="author">
+                <img src="../assets/img/boy.jpg" alt="Jonathan Walker" class="author__photo" />
+            </div>
+        </div>
+        <div class="search-news-fields">
+            <div class="input-box">
+                <div class="input-box__title">Select a date</div>
+                <input class="input-box__field" type="text" placeholder="Select..."/>
+                <div class="input-box__icon input-box__icon--down"></div>
+            </div>  
+            
+            <div class="input-box">
+                <div class="input-box__title">Enter the first keywords</div>
+                <input class="input-box__field" type="search"/>
+            </div>
+
+            <div class="search-news-fields__btn btn">Search</div>
+        </div>
+    </section>
+
+    
 
     <section class="stories-block">
       <section class="text-only-stories">
