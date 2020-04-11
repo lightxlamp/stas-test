@@ -1,142 +1,102 @@
 <template>
-  <div class="container">
+  <div class="container-world-news-page">
     <Header />
-
-    <div class="breadcrumbs">
-        <div class="back-btn"></div>
-        <div class="path-and-settings">
-            <div class="path-and-settings__icon"></div>
-            <div class="path-and-settings__path">
-                <span class="path-and-settings__path--root"> Story &nbsp; / &nbsp;</span>
-                <span class="path-and-settings__path--page"> World News </span>
-            </div>
-        </div>
-        <div class="breadcrumbs__settings-icon-wrapper">
-            <div class="breadcrumbs__settings-icon"></div>
-        </div>
-    </div>
-
-    <section class="search-news">
-        <div class="search-news-main">
-            <div class="search-news-main__title">World news</div>
-            <div class="search-news-main__line"></div>
-            <div class="search-news-main__text">Stay informed without overdosing on the news <br/> vix id nullam detracto vidit.</div>
-            <div class="author">
-                <img src="../assets/img/boy.jpg" alt="Jonathan Walker" class="author__photo" />
-            </div>
-        </div>
-        <div class="search-news-fields">
-            <div class="input-box">
-                <div class="input-box__title">Select a date</div>
-                <input class="input-box__field" type="text" placeholder="Select..."/>
-                <div class="input-box__icon input-box__icon--down"></div>
-            </div>  
-            
-            <div class="input-box">
-                <div class="input-box__title">Enter the first keywords</div>
-                <input class="input-box__field" type="search"/>
-            </div>
-
-            <div class="search-news-fields__btn btn">Search</div>
-        </div>
-    </section>
-
-    
-
-    <section class="stories-block">
-      <section class="text-only-stories">
-        <div class="text-only-story">
-          <div class="text-only-story__col-1-of-2">
-            <div class="text-only-story__title">Quisque viverra interdum velit?</div>
-            <div class="text-only-story__text">
-              Culpa qui officia deserunt mollit anim id esto polujimi laborum. Sed ut perspiciatis unde omnis iste
-              eropluk onatuspop error sit voluptartem accusantium wetrop doloremque laudantium, totam rem aperiam,
-              eaquep ipsa quaeer ab illo inventore veritatisy et quasi weth ropeior architecto beatae vitae dicta sunt
-              explicapbo. Nemo popul eniem ipsam yui voluptatem quialoperyi voluptas sit aspernatur aute odit aut fugit,
-              sed quiawi consequuntur joki erty magni dolores eosep quiklopii ratione wertyuil voluptatem sequi nesciunt.
-              Nequeop porro polu quisquam est, quepi dolorem ipsum quiat lopi dolor srit amet, consectetur adipisci
-              velit, topitop seid quia non numquam eiuris modij tempora poluko
-            </div>
-          </div>
-
-          <div class="text-only-story__col-2-of-2">
-            <div class="text-only-story__text">
-              incidunt ut labore et dolore magnam
-              aliquam mokeru quaerat iope voluptatem. Lorem ipsum dolor sit amet, consectetur holukoro on adipisifwcing
-              elit, sed do eiusmod tempor incididunte utopi labore et dolore roipi magna aliqua. Ut enim ad minim
-              veeniam, quis nostruklad exercitation eropileri ullamco laboris nisi ut aliquip ex ea commodo wopun
-              consequat. Duis aute irure dolor in reprehenderit inie tufpoy voluptate velit esse cillum dolore eu
-              fugiat holi nulla parieratur. Excepteur sint occaecat ropukuli uki cupidatat.
-            </div>
-            <div class="article__wrap">
-              <div class="article__info">
-                <div class="article__title article__title--story">Thought Experiment- VR Travel App</div>
-                <div class="date-time-author">
-                  <div class="date-time-author__icon"></div>
-                  <div class="date-time-author__time">3h ago &nbsp;</div>
-                  <span class="date-time-author__author">Worldnews</span>
+    <div class="container-world-news-page-top">
+        <div class="breadcrumbs">
+            <div class="back-btn"></div>
+            <div class="path-and-settings">
+                <div class="path-and-settings__icon"></div>
+                <div class="path-and-settings__path">
+                    <span class="path-and-settings__path--root"> Story &nbsp; / &nbsp;</span>
+                    <span class="path-and-settings__path--page"> World News </span>
                 </div>
-              </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="stories">
-        <div class="story">
-          <div class="author author--story">
-            <img
-              src="../assets/img/boy.jpg"
-              alt="Jonathan Walker"
-              class="author__photo author__photo--story"
-            />
-            <div class="author__name author__name--story">Jonathan Walker</div>
-          </div>
-
-          <div class="story__text">
-            In hac habitasse platea dictumst. Sed nec venenatis odio. Nulla faucibus ipsum sed faucibus accumsan.
-            Donec rhoncus luctus massa vitae lobortis. Duis consequat, nunc a pretium imperdiet, neque est rhoncus massa
-          </div>
-
-          <div class="date-time-author">
-            <div class="date-time-author__icon"></div>
-            <div class="date-time-author__time">2m ago</div>
-          </div>
+            <div class="breadcrumbs__settings-icon-wrapper">
+                <div class="breadcrumbs__settings-icon"></div>
+            </div>
         </div>
 
-        <div class="story">
-          <div class="author author--story">
-            <img
-              src="../assets/img/girl.jpg"
-              alt="Jonathan Walker"
-              class="author__photo author__photo--story"
-            />
-            <div class="author__name author__name--story">Brenda Mercer</div>
-          </div>
+        <section class="search-news">
+            <div class="search-news-main">
+                <div class="search-news-main__title">World news</div>
+                <div class="search-news-main__line"></div>
+                <div class="search-news-main__text">Stay informed without overdosing on the news vix id nullam detracto vidit.</div>
+                <div class="author">
+                    <img src="../assets/img/boy.jpg" alt="Jonathan Walker" class="author__photo" />
+                </div>
+            </div>
+            <div class="search-news-fields">
+                <div class="input-box">
+                    <div class="input-box__title">Select a date</div>
+                    <input class="input-box__field" type="text" placeholder="Select..."/>
+                    <div class="input-box__icon input-box__icon--down"></div>
+                </div>  
+                
+                <div class="input-box">
+                    <div class="input-box__title">Enter the first keywords</div>
+                    <input class="input-box__field" type="search"/>
+                </div>
 
-          <div class="story__text">
-            In hac habitasse platea dictumst. Sed nec venenatis odio. Nulla faucibus ipsum sed faucibus accumsan.
-            Donec rhoncus luctus massa vitae lobortis. Duis consequat, nunc a pretium imperdiet.
-          </div>
+                <div class="search-news-fields__btn btn">Search</div>
+            </div>
+        </section>
 
-          <div class="date-time-author">
-            <div class="date-time-author__icon"></div>
-            <div class="date-time-author__time">2m ago</div>
-          </div>
-        </div>
+        <section class="three-columns-section">
+            <div class="three-columns-section__col-1">
+                <div class="author author--story">
+                    <img
+                    src="../assets/img/boy.jpg"
+                    alt="Jonathan Walker"
+                    class="author__photo author__photo--story"
+                    />
+                </div>
 
-        <div class="video-story">
-          <iframe
-            width="100%"
-            height="100%"
-            src="https://www.youtube.com/embed/oSmUI3m2kLk"
-            frameborder="0"
-            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          ></iframe>
-        </div>
-      </section>
-    </section>
+                <h2>Phasellus eu nulla malesuada, luctus diam.</h2>
+            </div>
+            <div class="three-columns-section__col-2">Lorem ipsum dolor sit amet consectetur adipiscing elit suscipit, 
+                condimentum mauris convallis cras iaculis at tempus dignissim arcu, sollicitudin posuere porta non 
+                tellus dictumst penatibus. Commodo ante quis senectus quisque semper dapibus porttitor libero lacus
+                 hendrerit volutpat, in cras a himenaeos leo ridiculus taciti ultrices cursus mattis. Tempor mi 
+                 fames senectus taciti 
+            </div>
+            <div class="three-columns-section__col-3">
+                himenaeos leo ridiculus taciti ultrices cursus mattis. Tempor mi fames senectus taciti condimentum lacinia ante, 
+                non netus rhoncus eget habitant sollicitudin, cubilia luctus consequat pharetra natoque porta. Sodales tristique
+                habitasse massa ultrices ligula semper interdum dictumst.
+                <div class="date-time-author">
+                    <div class="date-time-author__icon"></div>
+                    <div class="date-time-author__time">2m ago</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="image-and-two-text-block-section">
+            <div class="image-and-two-text-block-section__col-1"></div>
+            <div class="image-and-two-text-block-section__col-2">
+                Lorem ipsum dolor sit amet, consectetur opikhfkseo adipisifwcing elit, sed do eiusmod temporeop 
+                iodkjnl incididunt ut labore et dolore roipi magnaropi aliquia. Ut enim ad minim veeniam, 
+                quiswepo nostruklad uio exercitation ullamco laboris nisi ut aliquip ex eawiopl commodo consequat. 
+                Duis ropil aute irure dolor inop reprehenderit in tufpoyiopy voluptate velit esse plijxn 
+                cillum dolore eu fugiatupi nulla parieratur. Excepteuri sint. <br /><br /> Culpa qui officia deserunt mollit 
+                anim id estio ropiluyl laborum. Sed ut perspiciatis unde omnis iste natuswi error sit voluptartem 
+                accusantium polu doloremquep laudantium, totam rem aperiam, eaque ipsa.
+            </div>
+            <div class="image-and-two-text-block-section__col-3">In hac habitasse platea dictumst. Sed nec 
+                venenatis odio. Nulla faucibus ipsum sed faucibus accumsan. Donec rhoncus luctus.</div>
+        </section>
+
+        <section class="pagination">
+            <ul class="pagination__ul">
+                <li class="pagination__li pagination__li--active">01</li>
+                <li class="pagination__li">02</li>
+                <li class="pagination__li">03</li>
+                <li class="pagination__li">04</li>
+                <li class="pagination__li">05</li>
+                <li class="pagination__li">06</li>
+                <li class="pagination__li pagination__li--more"></li>
+            </ul>
+        </section>
+    </div>
 
     <Footer />
   </div>
