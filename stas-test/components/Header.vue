@@ -5,10 +5,10 @@
         <div class="button-or-menu">
         
             <!-- <button class="nav-btn"></button> -->
-            <input type="checkbox" class="navigation__checkbox" id="navi-toggle" v-on:click="showSideBar">
+            <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
 
-            <label for="navi-toggle" class="navigation__button">
-                <span class="navigation__icon">&nbsp;</span>
+            <label for="navi-toggle" class="navigation__button" v-on:click="showSideBar">
+                <span class="navigation__icon">&nbsp;</span> 
             </label>
 
             <ul class="nav">
@@ -88,7 +88,7 @@
             content: "";
             position: absolute;
             left: 0;
-            transition: all .2s;
+            //transition: all .2s;
         }
 
         &::before {
@@ -100,23 +100,7 @@
         &::after {
             top: .6rem;
         }
-    }
-
-    &__checkbox:checked + &__button &__icon {
-        background-color: transparent;
-    }  
-    
-    &__checkbox:checked + &__button &__icon::before {
-        top: 0;
-        //transform: rotate(45deg); 
-        transform: rotate(135deg); 
-    }   
-    // Don't think that u have to able to code this really quickly like I am doing here, because that not a reality
-    &__checkbox:checked + &__button &__icon::after {
-        top: 0;
-        //transform: rotate(-45deg);
-        transform: rotate(-135deg);
-    }
+    } 
 }
     
 </style>
@@ -125,8 +109,10 @@
 export default {
     methods: {
       showSideBar () {
-        this.$store.commit('showSideBar');
-      }
+        if(this.$store.state.isSideBarVisible == false){          
+            this.$store.commit('showSideBar');
+          }
+      },
     }
 }
 </script>

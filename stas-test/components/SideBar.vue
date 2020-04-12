@@ -93,10 +93,11 @@ export default {
     },
 
     methods: {
-      closeSideBar () {
-        //alert('Hide SB');
-        this.$store.commit('hideSideBar');
-      }
+        closeSideBar () {
+            if(this.$store.state.isSideBarVisible == true){
+                this.$store.commit('hideSideBar');
+            }
+        }
     }
 }
 </script>
