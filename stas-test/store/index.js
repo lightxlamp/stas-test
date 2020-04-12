@@ -12,6 +12,8 @@ class Article {
 }
 
 export const state = () => ({
+    isSideBarVisible: false,
+
     trending_articles: [
         new Article("green_lake",
                     "Green lake", 
@@ -109,5 +111,14 @@ export const state = () => ({
             "",
             "",
         )
-    ]
+    ],
 })
+
+export const mutations = {
+    showSideBar (state) {
+      state.isSideBarVisible = true;
+    },
+    hideSideBar (state) {
+      state.isSideBarVisible = false;
+    }
+}

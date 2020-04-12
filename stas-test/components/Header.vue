@@ -5,7 +5,7 @@
         <div class="button-or-menu">
         
             <!-- <button class="nav-btn"></button> -->
-            <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
+            <input type="checkbox" class="navigation__checkbox" id="navi-toggle" v-on:click="showSideBar">
 
             <label for="navi-toggle" class="navigation__button">
                 <span class="navigation__icon">&nbsp;</span>
@@ -61,7 +61,7 @@
     }
     
     &__checkbox:checked ~ &__nav {
-        opacity: 100; // I've made mistake. But it still works.. 100 instead of 1
+        opacity: 1;
         width: 100%;
     }
 
@@ -118,6 +118,15 @@
         transform: rotate(-135deg);
     }
 }
-
     
 </style>
+
+<script>
+export default {
+    methods: {
+      showSideBar () {
+        this.$store.commit('showSideBar');
+      }
+    }
+}
+</script>

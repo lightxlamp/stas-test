@@ -1,5 +1,5 @@
 <template>
-    <div class="side-bar" v-show="isSideBarVisible">
+    <div class="side-bar" v-show="isSideBarVisible" v-click-outside="closeSideBar">
       <div class="side-bar__body">
         <div class="logo logo--red">Logo</div>
 
@@ -81,11 +81,22 @@
 <script>
 import SocialNetworks from "~/components/SocialNetworks";
 export default {
-    data: () => ({
-        isSideBarVisible: false
-    }),
+
     components: {
       SocialNetworks
+    }, 
+
+    computed: {
+      isSideBarVisible() {
+        return this.$store.state.isSideBarVisible;
+      }
+    },
+
+    methods: {
+      closeSideBar () {
+        //alert('Hide SB');
+        this.$store.commit('hideSideBar');
+      }
     }
 }
 </script>
