@@ -1,9 +1,10 @@
 <template>
   <div class="container">
-
+    
     <SideBar />
 
     <Header />
+ 
 
     <section class="main-article-and-news">
       <MainArticle />
@@ -11,7 +12,7 @@
       <div class="news">
         <SectionTitleAndNavigation title="More news" />
 
-        <!-- can I just style HR? TODO -->
+
         <div class="divide-line"></div> 
 
         <ArticlesList :articles="more_news_articles"
@@ -30,7 +31,8 @@
                       withImage=true
                       containerClass="trending__content"/>
       </section>
-
+    </body>
+      <!--
       <section class="happening-now">
         <SectionTitleAndNavigation title="Happening Now" />
 
@@ -49,8 +51,9 @@
       </section>
     </body>
 
+    
+ -->
     <Footer />
-
   </div>
 </template>
 
