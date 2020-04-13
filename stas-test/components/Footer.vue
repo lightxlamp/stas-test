@@ -51,13 +51,14 @@
     </div>
 
     <div class="footer__column-2">
-
       <div class="user-email-box">
         <div class="user-email-box__text-box">
           <input class="email-field" type="email" placeholder="Email" />
           <div class="user-email-box__icon-box"></div>
         </div>
-        <p class="user-email-box__text">Stay in touch with us for the freshest products!</p>
+        <p class="user-email-box__text">
+          Stay in touch with us for the freshest products!
+        </p>
       </div>
 
       <SocialNetworks />
@@ -72,7 +73,7 @@ import { mapMutations } from "vuex";
 
 export default {
   components: {
-    SocialNetworks
-  }
+    SocialNetworks,
+  },
 };
 </script>

@@ -26,6 +26,7 @@
     "@vue/test-utils": "^1.0.0-beta.27",
     "babel-jest": "^24.1.0",
     "jest": "^24.1.0",
+    "prettier": "2.0.4",
     "vue-jest": "^4.0.0-0"
   }
 }
