@@ -1,13 +1,13 @@
 @mixin icon-box-settings {
+  background-size: cover;
   height: 1.6rem;
   width: 1.6rem;
-  background-size: cover;
 }
 
 @mixin support-settings {
   -webkit-mask-size: cover; // this allowed us to change height and width from 2 px to 1px and icon still visible
-  mask-size: cover; // mask allow us to see background. (throught specified shape (mask-image))
   background-image: none;
+  mask-size: cover; // mask allow us to see background. (throught specified shape (mask-image))
 }
 
 .social-networks {
@@ -25,10 +25,10 @@
 
     // for newer browsers
     @supports (-webkit-mask-image: url()) or (mask-image: url()) {
-      background-color: $color-white;
       -webkit-mask-image: url("../img/instagram.svg");
-      mask-image: url("../img/instagram.svg"); // after 3 years mask-image, without prefix, still does not work in chrome
       @include support-settings;
+      background-color: $color-white;
+      mask-image: url("../img/instagram.svg"); // after 3 years mask-image, without prefix, still does not work in chrome
     }
   }
 
@@ -37,10 +37,10 @@
     background-image: url("../img/twitter.svg");
 
     @supports (-webkit-mask-image: url()) or (mask-image: url()) {
-      background-color: $color-white;
       -webkit-mask-image: url("../img/twitter.svg");
-      mask-image: url("../img/twitter.svg");
       @include support-settings;
+      background-color: $color-white;
+      mask-image: url("../img/twitter.svg");
     }
   }
 
@@ -49,10 +49,10 @@
     background-image: url("../img/facebook.svg");
 
     @supports (-webkit-mask-image: url()) or (mask-image: url()) {
-      background-color: $color-white;
       -webkit-mask-image: url("../img/facebook.svg");
-      mask-image: url("../img/facebook.svg");
       @include support-settings;
+      background-color: $color-white;
+      mask-image: url("../img/facebook.svg");
     }
   }
 
@@ -61,10 +61,10 @@
     background-image: url("../img/earth.svg");
 
     @supports (-webkit-mask-image: url()) or (mask-image: url()) {
-      background-color: $color-white;
       -webkit-mask-image: url("../img/earth.svg");
-      mask-image: url("../img/earth.svg");
       @include support-settings;
+      background-color: $color-white;
+      mask-image: url("../img/earth.svg");
     }
   }
 }

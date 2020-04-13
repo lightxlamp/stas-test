@@ -1,19 +1,18 @@
 .header {
+  align-items: center;
+  background-color: $color-secondary;
   display: flex;
   justify-content: space-between;
   padding: 1.2rem 2rem;
-  //border: 1px solid blue;
   width: 100%;
-  align-items: center;
-  background-color: $color-secondary;
 
   &__logo {
-    text-transform: uppercase;
     color: $color-grey-dark-2;
-    font-size: 1.3rem;
-    line-height: 2rem;
     font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.3rem;
     font-weight: bold;
+    line-height: 2rem;
+    text-transform: uppercase;
 
     @media only screen and (min-width: $bp-tablet) {
       & {
@@ -24,7 +23,6 @@
 
   @media only screen and (min-width: $bp-tablet) {
     & > :nth-child(1) {
-      // tricky error "&:nth-child(1)" without >. Broke order of my navigation
       order: 2;
     }
 
@@ -41,12 +39,12 @@
 }
 
 .nav-btn {
-  border: none;
-  border-radius: 0;
   background-color: $color-black;
+  border-radius: 0;
+  border: none;
+  cursor: pointer;
   height: 1.2px;
   width: 1rem;
-  cursor: pointer;
 
   @media only screen and (min-width: $bp-tablet) {
     & {
@@ -56,16 +54,16 @@
 
   &::before {
     content: "";
-    display: block;
     background-color: $color-black;
+    display: block;
     height: 1.2px;
     width: 0.6rem;
   }
 
   &::after {
     content: "";
-    display: block;
     background-color: $color-black;
+    display: block;
     height: 1.2px;
     width: 1rem;
   }
@@ -81,15 +79,10 @@
 
 .logged-in-user {
   &__photo {
-    //margin-right: 1rem;
-    // height: 1.6rem; // 3rem on desktop
-    // width: 1.6rem; // 3rem on desktop
-    width: 16px;
     border-radius: 50%;
-
-    max-width: 100%;
     height: auto;
-
+    max-width: 100%;
+    width: 1.6rem;
     @media only screen and (min-width: $bp-tablet) {
       width: 30px;
     }
@@ -103,15 +96,13 @@
 
   &__button {
     background-color: $color-secondary;
-    height: 2rem;
-    width: 1.7rem;
-    //text-align: center; // to center hamburger menu icons
     cursor: pointer;
     display: block;
-
     @media only screen and (min-width: $bp-tablet) {
       display: none;
     }
+    height: 2rem;
+    width: 1.7rem;
   }
 
   // Functionality
@@ -126,8 +117,8 @@
 
   // Icon
   &__icon {
-    position: relative;
     margin-top: 1rem;
+    position: relative;
 
     & {
       width: 1rem;
@@ -136,19 +127,19 @@
     &,
     &::before,
     &::after {
-      height: 2px; // width of hamburger menu single line
       background-color: $color-black;
       display: inline-block;
+      height: 2px; // width of hamburger menu single line
     }
 
     &::before,
     &::after {
       // in order to appear on the page ::before and ::after need their "content" property be defined
-      width: 1.6rem;
-      content: "";
-      position: absolute;
-      left: 0;
       //transition: all .2s;
+      content: "";
+      left: 0;
+      position: absolute;
+      width: 1.6rem;
     }
 
     &::before {

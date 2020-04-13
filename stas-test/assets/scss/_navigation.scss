@@ -1,39 +1,39 @@
 @mixin icon-box-settings {
+  background-size: cover;
   height: 1.6rem;
   width: 1.6rem;
-  background-size: cover;
 }
 
 @mixin support-settings {
   -webkit-mask-size: cover;
-  mask-size: cover; // mask allow us to see background. (throught specified shape (mask-image))
   background-image: none;
+  mask-size: cover; // mask allow us to see background. (throught specified shape (mask-image))
 }
 
 .side-bar {
-  position: fixed;
-  z-index: 10;
-  top: 0;
-  left: 0;
-  width: 29rem;
   background-color: #f6f8f9;
   box-shadow: 0px 0px 60px #00000099;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 29rem;
+  z-index: 10;
 
   @media only screen and (min-width: $bp-tablet) {
     display: none; // hides automatically at higher resolutions. 1 query is enough
   }
 
   &__body {
-    padding: 4rem;
     margin-bottom: 10rem;
+    padding: 4rem;
   }
 
   &__footer {
     background-color: $color-black;
-    opacity: 0.23;
-    padding: 4rem 0rem 4rem 4rem;
     display: flex;
     flex-direction: column;
+    opacity: 0.23;
+    padding: 4rem 0rem 4rem 4rem;
   }
 
   &__footer-links {
@@ -41,10 +41,10 @@
   }
 
   &__footer-social {
+    // Bad way. Ask about this. TODO
+    // и так решил
     margin-top: 6rem;
     padding-right: 8rem; // У компонента social justify-content стоит flex-end. И я не могу flex-start поставить
-    // и так решил
-    // Bad way. Ask about this. TODO
   }
 }
 
@@ -68,10 +68,10 @@
 
     // for newer browsers
     @supports (-webkit-mask-image: url()) or (mask-image: url()) {
-      background-color: $color-menu-links;
       -webkit-mask-image: url("../img/SVG/home.svg");
-      mask-image: url("../img/SVG/home.svg"); // after 3 years mask-image, without prefix, still does not work in chrome
       @include support-settings;
+      background-color: $color-menu-links;
+      mask-image: url("../img/SVG/home.svg"); // after 3 years mask-image, without prefix, still does not work in chrome
     }
   }
 
@@ -83,10 +83,10 @@
 
     // for newer browsers
     @supports (-webkit-mask-image: url()) or (mask-image: url()) {
-      background-color: $color-menu-links;
       -webkit-mask-image: url("../img/SVG/compass2.svg");
-      mask-image: url("../img/SVG/compass2.svg"); // after 3 years mask-image, without prefix, still does not work in chrome
       @include support-settings;
+      background-color: $color-menu-links;
+      mask-image: url("../img/SVG/compass2.svg"); // after 3 years mask-image, without prefix, still does not work in chrome
     }
   }
 
@@ -98,10 +98,10 @@
 
     // for newer browsers
     @supports (-webkit-mask-image: url()) or (mask-image: url()) {
-      background-color: $color-menu-links;
       -webkit-mask-image: url("../img/SVG/image.svg");
-      mask-image: url("../img/SVG/image.svg"); // after 3 years mask-image, without prefix, still does not work in chrome
       @include support-settings;
+      background-color: $color-menu-links;
+      mask-image: url("../img/SVG/image.svg"); // after 3 years mask-image, without prefix, still does not work in chrome
     }
   }
 
@@ -113,22 +113,21 @@
 
     // for newer browsers
     @supports (-webkit-mask-image: url()) or (mask-image: url()) {
-      background-color: $color-menu-links;
       -webkit-mask-image: url("../img/SVG/envelop.svg");
-      mask-image: url("../img/SVG/envelop.svg"); // after 3 years mask-image, without prefix, still does not work in chrome
       @include support-settings;
+      background-color: $color-menu-links;
+      mask-image: url("../img/SVG/envelop.svg"); // after 3 years mask-image, without prefix, still does not work in chrome
     }
   }
 }
 
 .nav {
-  list-style: none;
   display: none; // mobile first
-  flex-wrap: wrap;
-
   &__side-bar {
     display: flex;
   }
+  flex-wrap: wrap;
+  list-style: none;
 
   &--side-bar {
     display: flex !important;
@@ -141,9 +140,9 @@
     }
 
     &--footer {
+      align-items: flex-start;
       display: flex;
       flex-direction: column;
-      align-items: flex-start;
     }
   }
 
@@ -151,18 +150,17 @@
 
   &__link:link,
   &__link:visited {
-    text-decoration: none;
+    color: $color-menu-links;
+    display: block;
     font-size: 1.1rem;
     font-weight: bold;
     line-height: 2rem;
-    color: $color-menu-links;
-
-    text-transform: uppercase;
-    text-align: center;
-    padding: 11px;
-    display: block;
-    transition: all 0.2s;
     opacity: 0.5;
+    padding: 11px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all 0.2s;
   }
 
   @mixin common-link-settings-1 {
@@ -173,23 +171,23 @@
 
   @mixin common-link-settings-2 {
     background-color: rgba(#fff, 0.05);
-    transform: translateY(-3px);
     opacity: 1;
+    transform: translateY(-3px);
   }
 
   &__link--footer:link,
   &__link--footer:visited {
     @include common-link-settings-1;
-    padding: 0.2rem 1rem;
     font-size: 1.3rem;
+    padding: 0.2rem 1rem;
   }
 
   &__link--side-bar:link,
   &__link--side-bar:visited {
     @include common-link-settings-1;
-    text-transform: uppercase;
-    margin-bottom: 2rem;
     font-size: 1.1rem;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
   }
 
   &__link:hover,
