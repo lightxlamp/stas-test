@@ -48,7 +48,7 @@ export default {
     modifier: String,
     containerClass: String,
     withImage: String,
-    haveAuthor: String,
+    haveAuthor: String
   },
   computed: {
     articleClass() {
@@ -74,7 +74,7 @@ export default {
     },
     dateTime() {
       return "date-time-author date-time-author--" + this.modifier;
-    },
-  },
+    }
+  }
 };
 </script>

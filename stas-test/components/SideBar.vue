@@ -94,17 +94,17 @@ import vClickOutside from "v-click-outside";
 
 export default {
   components: {
-    SocialNetworks,
+    SocialNetworks
   },
 
   directives: {
-    clickOutside: vClickOutside.directive,
+    clickOutside: vClickOutside.directive
   },
 
   computed: {
     isSideBarVisible() {
       return this.$store.state.isSideBarVisible;
-    },
+    }
   },
 
   methods: {
@@ -112,7 +112,7 @@ export default {
       if (this.$store.state.isSideBarVisible == true) {
         this.$store.commit("hideSideBar");
       }
-    },
-  },
+    }
+  }
 };
 </script>

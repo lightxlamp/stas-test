@@ -73,7 +73,7 @@ import { mapMutations } from "vuex";
 
 export default {
   components: {
-    SocialNetworks,
-  },
+    SocialNetworks
+  }
 };
 </script>

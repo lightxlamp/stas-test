@@ -1,7 +1,8 @@
 .main-article {
   background-position: center; // lovely fix
   background-size: cover;
-  background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url("../img/mountain.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url("../img/mountain.jpg");
   color: #fff;
   display: flex;
   flex-direction: column;
@@ -24,7 +25,7 @@
   }
 
   &__category {
-    font-size: 2.4rem; 
+    font-size: 2.4rem;
     font-weight: bold;
     text-transform: uppercase;
 
@@ -240,7 +241,7 @@
 
     &--happening-now {
       color: $color-white;
-      padding-top: 0px; 
+      padding-top: 0px;
 
       @media only screen and (min-width: $bp-tablet) {
         left: 4rem;
@@ -352,7 +353,7 @@
   font-size: 1.3rem;
   font-style: oblique;
   line-height: 2.6rem;
-  padding-top: .4rem;
+  padding-top: 0.4rem;
 
   &--happening-now {
     color: $color-grey-dark-1;

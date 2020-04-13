@@ -50,7 +50,7 @@ export default {
       if (this.$store.state.isSideBarVisible == false) {
         this.$store.commit("showSideBar");
       }
-    },
-  },
+    }
+  }
 };
 </script>

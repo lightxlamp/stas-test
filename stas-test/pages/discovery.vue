@@ -172,7 +172,7 @@ export default {
     Header,
     MainArticle,
     SectionTitleAndNavigation,
-    SideBar,
+    SideBar
   },
 
   computed: {
@@ -187,11 +187,11 @@ export default {
     },
     trending_articles() {
       return this.$store.state.trending_articles;
-    },
+    }
   },
 
   head: {
-    title: "My first mobile-first web site :P",
-  },
+    title: "My first mobile-first web site :P"
+  }
 };
 </script>

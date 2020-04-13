@@ -17,7 +17,7 @@
 export default {
   name: "SectionTitleAndNavigation",
   props: {
-    title: String,
-  },
+    title: String
+  }
 };
 </script>
