@@ -1,28 +1,23 @@
 <template>
-  <div
-    class="side-bar"
-    v-show="isSideBarVisible"
-    v-click-outside="onClickOutside"
-  >
+  <div class="side-bar" v-show="isSideBarVisible" v-click-outside="onClickOutside">
     <div class="side-bar__body">
       <div class="logo logo--red">Logo</div>
 
       <nav class="side-nav">
         <div class="side-nav__item">
           <div class="side-nav__home"></div>
-          <a href="#" class="nav__link nav__link--active side-nav__link"
-            >Home</a
-          >
+          <nuxt-link class="nav__link nav__link--active side-nav__link" to="/">Home</nuxt-link>
         </div>
 
         <div class="side-nav__item">
           <div class="side-nav__discovery"></div>
           <a href="#" class="nav__link side-nav__link">Discovery</a>
+          <nuxt-link class="nav__link side-nav__link" to="/discovery">Discovery</nuxt-link>
         </div>
 
         <div class="side-nav__item">
           <div class="side-nav__photos"></div>
-          <a href="#" class="nav__link side-nav__link">Photos</a>
+          <nuxt-link class="nav__link side-nav__link" to="/world-news">Photos</nuxt-link>
         </div>
 
         <div class="side-nav__item">
@@ -32,11 +27,7 @@
 
         <div class="side-nav__item">
           <div class="side-nav__user logged-in-user">
-            <img
-              src="../assets/img/blonde_girl.jpg"
-              alt="User photo"
-              class="logged-in-user__photo"
-            />
+            <img src="../assets/img/blonde_girl.jpg" alt="User photo" class="logged-in-user__photo" />
           </div>
           <a href="#" class="nav__link side-nav__link">Profile</a>
         </div>

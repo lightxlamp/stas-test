@@ -5,13 +5,13 @@
       <div class="footer__nav">
         <ul class="nav nav--footer">
           <li class="nav__item">
-            <a href="#" class="nav__link nav__link--footer">Home</a>
+            <nuxt-link class="nav__link nav__link--footer" to="/">Home</nuxt-link>
           </li>
           <li class="nav__item">
-            <a href="#" class="nav__link nav__link--footer">Discovery</a>
+            <nuxt-link class="nav__link nav__link--footer" to="/discovery">Discovery</nuxt-link>
           </li>
           <li class="nav__item">
-            <a href="#" class="nav__link nav__link--footer">Photos</a>
+            <nuxt-link class="nav__link nav__link--footer" to="/world-news">Photos</nuxt-link>
           </li>
           <li class="nav__item">
             <a href="#" class="nav__link nav__link--footer">Contact</a>
