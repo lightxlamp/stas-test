@@ -11,7 +11,7 @@
         </figure>
       </div>
       <div class="card__body">
-        <div class="card__category"></div>
+        <div class="card__category">{{ article.category }}</div>
         <h2 class="card__title">{{ article.title }}</h2>
         <h3 class="card__subtitle">{{ article.text }}</h3>
         <p class="card__copy"></p>

@@ -21,79 +21,10 @@
         <appArticlesList 
           :articles="happening_now_articles_column_2" 
           containerClass="happening-now__column-2" 
+          articlesType="withoutText"
         />
       </div>
     </section>
-
-
-    <!-- <div class="happening-now__content-wrapper">
-      <ArticlesList
-        :articles="happening_now_articles_column_1"
-        modifier="happening-now"
-        withImage="true"
-        containerClass="happening-now__column-1"
-      />
-
-      <ArticlesList
-        :articles="happening_now_articles_column_2"
-        modifier="happening-now-2"
-        withImage="true"
-        containerClass="happening-now__column-2"
-        haveAuthor="true"
-      />
-    </div> -->
-
-    <article class="card card--fullImage">
-      <picture class="card__backgroundImage">
-        <source :srcset="imgSourceset" media="(min-width: 768px)" />
-        <!-- Define an <img> element for browsers that do not support the <picture> element. -->
-        <!-- Lie from W3? :p -->
-        <img :src="imgSourcesetSmall" />
-      </picture>
-
-      <div class="card__header">
-        <figure class="card__figure">
-          <img src="../assets/img/bridge.jpg" alt class="card__image" />
-        </figure>
-      </div>
-      <div class="card__body">
-        <div class="card__category">City</div>
-        <h2 class="card__title">Large article title mobile layout</h2>
-        <h3 class="card__subtitle">
-          Lorem ipsum dolor sit amet, in eam odio amet, vix id nullam detracto,
-          vidit vituperatoribus duo id. Affert detraxit
-        </h3>
-        <p class="card__copy"></p>
-        <div class="card__date">
-          <div class="date-time-author">1h ago</div>
-        </div>
-      </div>
-    </article>
-
-    <article class="card card--withoutText">
-      <picture class="card__backgroundImage">
-        <!-- <source srcset="" media="(min-width: 768px)" /> -->
-        <img src />
-      </picture>
-
-      <div class="card__header">
-        <figure class="card__figure">
-          <img src="../assets/img/elephant.jpg" alt class="card__image" />
-        </figure>
-      </div>
-      <div class="card__body">
-        <div class="card__category">City</div>
-        <h2 class="card__title">Small title</h2>
-        <h3 class="card__subtitle">
-          Lorem ipsum dolor sit amet, in eam odio amet, vix id nullam detracto,
-          vidit vituperatoribus duo id. Affert detraxit
-        </h3>
-        <p class="card__copy"></p>
-        <div class="card__date">
-          <dateTimeAuthor time="1h ago" author="Worldnews"/>
-        </div>
-      </div>
-    </article>
   </div>
 </template>
 
@@ -204,14 +135,6 @@ export default {
     display: flex;
     flex-direction: column;
 
-    & > div:last-child {
-      display: none; // To hide a third card on a lower resolutions
-
-      @media only screen and (min-width: $bp-desktop) {
-        display: block;
-      }
-    }
-
     @media only screen and (min-width: $bp-tablet) {
       flex-direction: row;
 
@@ -223,19 +146,28 @@ export default {
 
     @media only screen and (min-width: $bp-desktop) {
       flex-direction: column;
-      flex-basis: 0;
-      flex-grow: 1;
+      // flex-basis: 0;
+      // flex-grow: 1;
+      margin-left: 4rem;
 
       & > div {
         margin-left: 4rem;
+      }
+    }
+
+    & > div:last-child {
+      display: none; // To hide a third card on a lower resolutions
+
+      @media only screen and (min-width: $bp-desktop) {
+        display: block;
       }
     }
   }
 
   &__column-1 {
     @media only screen and (min-width: $bp-desktop) {
-      flex-basis: 0;
-      flex-grow: 2;
+      // flex-basis: 0;
+      // flex-grow: 2;
     }
   }
 }
@@ -353,10 +285,15 @@ export default {
   position: relative;
   height: 30rem;
 
+  @media only screen and (min-width: $bp-tablet) {
+    width: 60.8rem;
+  }
+
+  @media only screen and (min-width: $bp-desktop) {
+    width: 76rem;
+  }
+
   .card {
-    @media only screen and (min-width: $bp-tablet) {
-      width: 6.08rem;
-    }
     &__image {
       display: none;
     }
@@ -380,6 +317,10 @@ export default {
       color: #fff;
       font-size: 1.6rem;
       line-height: 2.6rem;
+    }
+
+    &__header {
+      height: 43rem;
     }
 
     &__body {
