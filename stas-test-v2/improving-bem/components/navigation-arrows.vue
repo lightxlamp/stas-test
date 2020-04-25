@@ -1,0 +1,51 @@
+<template>
+    <div class="items-navigation">
+        <div class="items-navigation__left-arrow"></div>
+        <div class="items-navigation__right-arrow"></div>
+    </div>
+</template>
+
+<style scoped lang="scss">
+@mixin icon-box-settings {
+  background-size: cover;
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
+@mixin support-settings {
+  -webkit-mask-size: cover; // this allowed us to change height and width from 2 px to 1px and icon still visible
+  background-image: none;
+  mask-size: cover; // mask allow us to see background. (throught specified shape (mask-image))
+}
+.items-navigation {
+  display: flex;
+  cursor: pointer;
+
+  &__left-arrow { 
+    @include icon-box-settings;
+    // We can't change color of icon when we adding it this way. So just leave this for older browsers
+    background-image: url("../assets/img/svg/navigate_before.svg");
+    margin-right: 0.5rem;
+
+    // for newer browsers
+    @supports (-webkit-mask-image: url()) or (mask-image: url()) {
+      -webkit-mask-image: url("../assets/img/svg/navigate_before.svg");
+      @include support-settings;
+      background-color: $color-black;
+      mask-image: url("../assets/img/svg/navigate_before.svg"); // after 3 years mask-image, without prefix, still does not work in chrome
+    }
+  }
+
+  &__right-arrow {
+    @include icon-box-settings;
+    background-image: url("../assets/img/svg/navigate_next.svg");
+
+    @supports (-webkit-mask-image: url()) or (mask-image: url()) {
+      -webkit-mask-image: url("../assets/img/svg/navigate_next.svg");
+      @include support-settings;
+      background-color: $color-black;
+      mask-image: url("../assets/img/svg/navigate_next.svg");
+    }
+  }
+}
+</style>

@@ -22,6 +22,7 @@ export default {
   font-weight: bold;
   line-height: 2rem;
   text-transform: uppercase;
+  cursor: pointer;
 
   &--header {
     color: $color-grey-dark-2;

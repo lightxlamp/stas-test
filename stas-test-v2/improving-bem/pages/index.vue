@@ -1,7 +1,30 @@
 <template>
   <div class="container">
-    <appArticleList />
-    <appArticleList articlesType="fullImage" />
+    <appArticlesList /> 
+    <!-- <appArticleList :articles="trending_articles" containerClass="trending__content" articlesType="fullImage" /> -->
+    <appArticlesList :articles="trending_articles" containerClass="trending__content" title="Trending" />
+
+    <section class="happening-now">
+      <appArticlesList :articles="happening_now_articles_column_1" containerClass="happening-now__content-wrapper" title="Happening Now" />
+      <appArticlesList :articles="happening_now_articles_column_2" containerClass="happening-now__content-wrapper" />
+
+        <!-- <div class="happening-now__content-wrapper">
+          <ArticlesList
+            :articles="happening_now_articles_column_1"
+            modifier="happening-now"
+            withImage="true"
+            containerClass="happening-now__column-1"
+          />
+
+          <ArticlesList
+            :articles="happening_now_articles_column_2"
+            modifier="happening-now-2"
+            withImage="true"
+            containerClass="happening-now__column-2"
+            haveAuthor="true"
+          />
+        </div> -->
+    </section>
 
     <article class="card card--fullImage">
       <picture class="card__backgroundImage">
@@ -50,11 +73,7 @@
         </h3>
         <p class="card__copy"></p>
         <div class="card__date">
-          <div class="date-time-author">
-            <div class="date-time-author__icon"></div>
-            <div class="date-time-author__time">1g ago &nbsp;</div>
-            <span class="date-time-author__author">by Worldwide</span>
-          </div>
+          <dateTimeAuthor time="1h ago" author="Worldnews"/>
         </div>
       </div>
     </article>
@@ -62,11 +81,13 @@
 </template>
 
 <script>
-import appArticleList from '~/components/app-articles-list'
+import appArticlesList from '~/components/app-articles-list'
+import dateTimeAuthor from '~/components/date-time-author'
 
 export default {
   components: {
-    appArticleList
+    appArticlesList,
+    dateTimeAuthor 
   },
   computed: {
     // https://blog.lichter.io/posts/dynamic-images-vue-nuxt/
@@ -75,6 +96,18 @@ export default {
     },
     imgSourcesetSmall() {
       return `${require(`@/assets/img/bridge_300.jpg`)}`
+    },
+    happening_now_articles_column_1() {
+      return this.$store.state.happening_now_articles_column_1;
+    },
+    happening_now_articles_column_2() {
+      return this.$store.state.happening_now_articles_column_2;
+    },
+    more_news_articles() {
+      return this.$store.state.more_news_articles;
+    },
+    trending_articles() {
+      return this.$store.state.trending_articles;
     }
   }
 }
@@ -136,6 +169,7 @@ export default {
 
   &__header {
     height: 154px;
+    overflow: hidden;
   }
 
   &__body {
@@ -230,16 +264,5 @@ export default {
       color: #cbd0d3;
     }
   }
-}
-
-.date-time-author {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 13px;
-  line-height: 24px;
-  //color: #a6adb4;
-  color: inherit;
-  text-align: left;
-  font-weight: normal;
-  margin-top: 5px;
 }
 </style>

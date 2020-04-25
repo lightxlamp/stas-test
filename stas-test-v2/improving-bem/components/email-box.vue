@@ -1,17 +1,17 @@
 <template>
-  <div class="user-email-box">
-    <div class="user-email-box__text-box">
+  <div class="email-box">
+    <div class="email-box__text-box">
       <input class="email-field" type="email" placeholder="Email" />
-      <div class="user-email-box__icon-box"></div>
+      <div class="email-box__icon-box"></div>
     </div>
-    <p class="user-email-box__text">Stay in touch with us for the freshest products!</p>
+    <p class="email-box__text">Stay in touch with us for the freshest products!</p>
   </div>
 </template>
 
 <style scoped lang="scss">
 @import './assets/scss/mixins.scss';
 
-.user-email-box {
+.email-box {
   &__text-box {
     display: flex;
   }
