@@ -6,17 +6,8 @@
 </template>
 
 <style scoped lang="scss">
-@mixin icon-box-settings {
-  background-size: cover;
-  height: 1.5rem;
-  width: 1.5rem;
-}
+@import '../assets/scss/mixins.scss';
 
-@mixin support-settings {
-  -webkit-mask-size: cover; // this allowed us to change height and width from 2 px to 1px and icon still visible
-  background-image: none;
-  mask-size: cover; // mask allow us to see background. (throught specified shape (mask-image))
-}
 .items-navigation {
   display: flex;
   cursor: pointer;

@@ -9,7 +9,7 @@
 </template>
 
 <style scoped lang="scss">
-@import './assets/scss/mixins.scss';
+@import '../assets/scss/mixins.scss';
 
 .email-box {
   &__text-box {

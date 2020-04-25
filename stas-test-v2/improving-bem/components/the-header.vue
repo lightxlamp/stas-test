@@ -1,21 +1,19 @@
 <template>
-  <div>
-    <header class="header">
-      <div class="button-or-menu">
-        <input id="navi-toggle" class="navigation__checkbox" type="checkbox" />
+  <header class="header">
+    <div class="button-or-menu">
+      <input id="navi-toggle" class="navigation__checkbox" type="checkbox" />
 
-        <label for="navi-toggle" class="navigation__button" @click="showSideBar">
-          <span class="navigation__icon">&nbsp;</span>
-        </label>
+      <label for="navi-toggle" class="navigation__button" @click="showSideBar">
+        <span class="navigation__icon">&nbsp;</span>
+      </label>
 
-        <navigationLinks location="header" />
-      </div>
+      <navigationLinks location="header" />
+    </div>
 
-      <logo location="header" />
+    <logo location="header" />
 
-      <loggedInUser />
-    </header>
-  </div>
+    <loggedInUser />
+  </header>
 </template>
 
 <script>

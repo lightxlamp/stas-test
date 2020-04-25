@@ -1,30 +1,47 @@
 <template>
   <div class="container">
-    <appArticlesList /> 
-    <!-- <appArticleList :articles="trending_articles" containerClass="trending__content" articlesType="fullImage" /> -->
-    <appArticlesList :articles="trending_articles" containerClass="trending__content" title="Trending" />
+
+    <section class="trending">
+      <sectionHeader title="Trending"/> 
+      <appArticlesList 
+          :articles="trending_articles" 
+          containerClass="trending__content" 
+      />
+    </section>
 
     <section class="happening-now">
-      <appArticlesList :articles="happening_now_articles_column_1" containerClass="happening-now__content-wrapper" title="Happening Now" />
-      <appArticlesList :articles="happening_now_articles_column_2" containerClass="happening-now__content-wrapper" />
+      <sectionHeader title="Happening Now"/> 
+      <div class="happening-now__content-wrapper">
+        <appArticlesList 
+          :articles="happening_now_articles_column_1" 
+          containerClass="happening-now__column-1" 
+          articlesType="fullImage"
+        />
 
-        <!-- <div class="happening-now__content-wrapper">
-          <ArticlesList
-            :articles="happening_now_articles_column_1"
-            modifier="happening-now"
-            withImage="true"
-            containerClass="happening-now__column-1"
-          />
-
-          <ArticlesList
-            :articles="happening_now_articles_column_2"
-            modifier="happening-now-2"
-            withImage="true"
-            containerClass="happening-now__column-2"
-            haveAuthor="true"
-          />
-        </div> -->
+        <appArticlesList 
+          :articles="happening_now_articles_column_2" 
+          containerClass="happening-now__column-2" 
+        />
+      </div>
     </section>
+
+
+    <!-- <div class="happening-now__content-wrapper">
+      <ArticlesList
+        :articles="happening_now_articles_column_1"
+        modifier="happening-now"
+        withImage="true"
+        containerClass="happening-now__column-1"
+      />
+
+      <ArticlesList
+        :articles="happening_now_articles_column_2"
+        modifier="happening-now-2"
+        withImage="true"
+        containerClass="happening-now__column-2"
+        haveAuthor="true"
+      />
+    </div> -->
 
     <article class="card card--fullImage">
       <picture class="card__backgroundImage">
@@ -83,11 +100,13 @@
 <script>
 import appArticlesList from '~/components/app-articles-list'
 import dateTimeAuthor from '~/components/date-time-author'
+import sectionHeader from "~/components/section-header"
 
 export default {
   components: {
     appArticlesList,
-    dateTimeAuthor 
+    dateTimeAuthor ,
+    sectionHeader
   },
   computed: {
     // https://blog.lichter.io/posts/dynamic-images-vue-nuxt/
@@ -114,25 +133,118 @@ export default {
 </script>
 
 <style lang="scss">
+@import '../assets/scss/mixins.scss';
+
 .container {
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: $color-secondary;
-  border: 5px solid red;
-  width: 500px;
   max-width: 182rem;
   min-height: 100vh;
   resize: horizontal;
   overflow: auto;
 }
 
+.trending {
+  //@include section-padding;
+  @media only screen and (min-width: $bp-tablet) {
+    width: 60.8rem;
+  }
+
+  @media only screen and (min-width: $bp-desktop) {
+    width: 116rem;
+  }
+
+  &__content {
+    & > article:last-child {
+      display: none; // To hide the third card on a lower resolutions
+
+      @media only screen and (min-width: $bp-desktop) {
+        display: inline-flex;
+      }
+    }
+
+    @media only screen and (min-width: $bp-tablet) {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      flex-wrap: wrap;
+
+      & > article:not(:first-child)  {
+        margin-left: 4rem;
+      }
+    }
+  }
+}
+
+.happening-now {
+  //@include section-padding;
+
+  @media only screen and (min-width: $bp-tablet) {
+    width: 60.8rem;
+  }
+
+  @media only screen and (min-width: $bp-desktop) {
+    width: 116rem;
+    flex-direction: column;
+  }
+
+  &__content-wrapper {
+    display: flex;
+    flex-direction: column;
+
+    @media only screen and (min-width: $bp-desktop) {
+      flex-direction: row;
+    }
+  }
+
+  &__column-2 {
+    display: flex;
+    flex-direction: column;
+
+    & > div:last-child {
+      display: none; // To hide a third card on a lower resolutions
+
+      @media only screen and (min-width: $bp-desktop) {
+        display: block;
+      }
+    }
+
+    @media only screen and (min-width: $bp-tablet) {
+      flex-direction: row;
+
+      & > div:not(:first-child) {
+        // nicuuu :P Первый раз осознанно применил, not
+        margin-left: 4rem;
+      }
+    }
+
+    @media only screen and (min-width: $bp-desktop) {
+      flex-direction: column;
+      flex-basis: 0;
+      flex-grow: 1;
+
+      & > div {
+        margin-left: 4rem;
+      }
+    }
+  }
+
+  &__column-1 {
+    @media only screen and (min-width: $bp-desktop) {
+      flex-basis: 0;
+      flex-grow: 2;
+    }
+  }
+}
+
 .card {
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
   background-color: #fff;
-  width: 327px;
+  width: 32.7rem;
   border-radius: 6px;
   overflow: hidden;
   font-family: Arial, Helvetica, sans-serif;
@@ -140,26 +252,34 @@ export default {
   flex-direction: column;
   box-shadow: 0 6px 10px -5px rgba(0, 0, 0, 0.2);
 
+  @media only screen and (min-width: $bp-tablet) {
+    width: 28.4rem;
+  }
+
+  @media only screen and (min-width: $bp-desktop) {
+    width: 36rem;
+  }
+
   &__title {
-    font-size: 16px;
-    line-height: 20px;
+    font-size: 1.6rem;
+    line-height: 2rem;
     color: #202124;
     text-align: left;
     font-weight: bold;
   }
 
   &__subtitle {
-    font-size: 13px;
-    line-height: 23px;
+    font-size: 1.3rem;
+    line-height: 2.3rem;
     color: #a6adb4;
     text-align: left;
     font-weight: normal;
-    margin-top: 5px;
+    margin-top: .5rem;
   }
 
   &__figure {
     height: 100%;
-    height: 154px;
+    height: 15.4rem;
   }
 
   &__image {
@@ -168,13 +288,19 @@ export default {
   }
 
   &__header {
-    height: 154px;
+    height: 15.4rem;
     overflow: hidden;
+     @media only screen and (min-width: $bp-tablet) {
+      height: 18rem;
+    }
   }
 
   &__body {
-    padding: 32px 24px;
-    height: 154px;
+    padding: 3.2rem 2.4rem;
+    height: 15.4rem;
+    @media only screen and (min-width: $bp-tablet) {
+      height: 18rem;
+    }
   }
 
   &__date {
@@ -208,7 +334,7 @@ export default {
     }
 
     &__header {
-      height: 180px;
+      height: 18rem;
     }
 
     &__title {
@@ -216,8 +342,8 @@ export default {
     }
 
     &__body {
-      height: 62px;
-      padding: 20px 0;
+      height: 6.2rem;
+      padding: 2rem 0;
       background-color: $color-secondary;
     }
   }
@@ -225,9 +351,12 @@ export default {
 
 .card--fullImage {
   position: relative;
-  height: 300px;
+  height: 30rem;
 
   .card {
+    @media only screen and (min-width: $bp-tablet) {
+      width: 6.08rem;
+    }
     &__image {
       display: none;
     }
@@ -236,26 +365,26 @@ export default {
       color: #fff;
       text-transform: uppercase;
       font-weight: bold;
-      line-height: 20px;
-      font-size: 16px;
-      margin-bottom: 30px;
+      line-height: 2rem;
+      font-size: 1.6rem;
+      margin-bottom: 3rem;
     }
 
     &__title {
       color: #fff;
-      font-size: 24px;
-      line-height: 34px;
+      font-size: 2.4rem;
+      line-height: 3.4rem;
     }
 
     &__subtitle {
       color: #fff;
-      font-size: 16px;
-      line-height: 26px;
+      font-size: 1.6rem;
+      line-height: 2.6rem;
     }
 
     &__body {
       position: absolute;
-      top: 10px;
+      top: 1rem;
       top: 0px;
       height: 100%;
     }

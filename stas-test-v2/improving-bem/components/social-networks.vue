@@ -8,7 +8,7 @@
 </template>
 
 <style scoped lang="scss">
-@import './assets/scss/mixins.scss';
+@import '../assets/scss/mixins.scss';
 
 .social-networks {
   display: flex;

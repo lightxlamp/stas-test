@@ -74,7 +74,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import './assets/scss/mixins.scss';
+@import '../assets/scss/mixins.scss';
 
 .allLinks {
   display: flex;

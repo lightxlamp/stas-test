@@ -1,5 +1,5 @@
 <template>
-  <div class="d"></div>
+  <div class="side-bar"></div>
   <!-- <div
     class="side-bar"
     v-show="isSideBarVisible"

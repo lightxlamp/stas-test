@@ -1,7 +1,6 @@
 <template>
   <!-- can't read property "length" of undefined - reproduced to me, so I've understood Adilet's advice/concern about v-if :P -->
-  <section :class="containerClass" v-if="articles && articles.length"> 
-    <sectionHeader :title="title"/> 
+  <div :class="containerClass" v-if="articles && articles.length"> 
     <article class="card" :class="articleClass" v-for="article in articles" :key="article.fileName">
       <img src="" alt="" class="card__backimage" />
       <div class="card__header">
@@ -21,17 +20,15 @@
         </div>
       </div>
     </article>
-  </section>
+  </div>
 </template>
 
 <script>
 import dateTimeAuthor from '~/components/date-time-author'
-import sectionHeader from "~/components/section-header"
 
 export default {
   components: {
-    dateTimeAuthor,
-    sectionHeader  
+    dateTimeAuthor
   },
   props: {
     articlesType: {
@@ -46,10 +43,6 @@ export default {
       type: String,
       default: ''
     },
-    title : {
-      type: String, 
-      default: ''
-    }
   },
 
   computed: {
