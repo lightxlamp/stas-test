@@ -30,22 +30,13 @@ export default {
   font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 1.3rem;
   font-style: oblique;
-  line-height: 2.3rem; // change to 2.6 later
-  height: 1.6rem;
-  margin-top: 1rem;
   font-weight: 400;
+  height: 1.6rem;
+  line-height: 2.6rem;
+  margin-top: 1rem;
 
-  &--happening-now {
-    color: $color-grey-dark-1;
-  }
-
-  &--story {
-    display: none;
-
-    @media only screen and (min-width: $bp-tablet) {
-      display: block;
-      padding-top: 3rem;
-    }
+  &__author {
+    text-decoration: underline;
   }
 
   &__icon {
@@ -67,8 +58,17 @@ export default {
     }
   }
 
-  &__author {
-    text-decoration: underline;
+  &--story {
+    display: none;
+
+    @media only screen and (min-width: $bp-tablet) {
+      display: block;
+      padding-top: 3rem;
+    }
   }
+}
+
+.happening-now__column-1 .date-time-author {
+  color: $color-grey-dark-1;
 }
 </style>

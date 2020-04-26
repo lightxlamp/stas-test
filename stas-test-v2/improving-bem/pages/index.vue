@@ -203,12 +203,14 @@ export default {
     padding-bottom: 1rem;
     display: flex;
     flex-direction: column;
+    align-items: center;
     @media only screen and (min-width: $bp-tablet) {
       flex-direction: row;
       justify-content: space-between;
     }
     @media only screen and (min-width: $bp-desktop) {
       flex-direction: column;
+      align-items: flex-start;
     }
   }
 
