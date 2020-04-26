@@ -2,10 +2,10 @@
   <!-- can't read property "length" of undefined - reproduced to me, so I've understood Adilet's advice/concern about v-if :P -->
   <div :class="containerClass" v-if="articles && articles.length"> 
     <article class="card" :class="articleClass" v-for="article in articles" :key="article.fileName">
-      <img :src="require(`../assets/img/${article.imgName}.jpg`)" alt="" class="card__backgroundImage" />
+      <img v-if="withImages == true" :src="require(`../assets/img/${article.imgName}.jpg`)" alt="" class="card__backgroundImage" />
       <div class="card__header">
         <figure class="card__figure">
-          <img class="card__image" :src="require(`../assets/img/${article.imgName}.jpg`)" :alt="article.imgAlt" />
+          <img v-if="withImages == true" class="card__image" :src="require(`../assets/img/${article.imgName}.jpg`)" :alt="article.imgAlt" />
         </figure>
       </div>
       <div class="card__body">
@@ -41,6 +41,10 @@ export default {
       type: String,
       default: ''
     },
+    withImages: {
+      type: Boolean,
+      default: false
+    }
   },
 
   computed: {
@@ -89,6 +93,10 @@ export default {
     margin-top: .5rem;
   }
 
+  &__category {
+    display: none;
+  }
+
   &__figure {
     height: 100%;
     height: 15.4rem;
@@ -121,9 +129,10 @@ export default {
 
   &__body {
     padding: 3.2rem 2.4rem;
-    height: 15.4rem;
+    //height: 15.4rem;
     @media only screen and (min-width: $bp-tablet) {
-      height: 18rem;
+      //height: 18rem;
+      padding: 4rem;
     }
   }
 
@@ -135,10 +144,6 @@ export default {
 .card--withoutText {
   box-shadow: none;
   .card {
-    &__category {
-      display: none;
-    }
-
     &__subtitle {
       display: none;
     }
@@ -162,7 +167,7 @@ export default {
     }
 
     &__body {
-      height: 6.2rem;
+      //height: 6.2rem;
       padding: 2rem 0;
       background-color: $color-secondary;
     }
@@ -193,11 +198,15 @@ export default {
 
     &__category {
       color: #fff;
-      text-transform: uppercase;
+      display: inline-block;
+      font-size: 1.6rem;
       font-weight: bold;
       line-height: 2rem;
-      font-size: 1.6rem;
       margin-bottom: 3rem;
+      text-transform: uppercase;
+      @media only screen and (min-width: $bp-tablet) {
+        margin-bottom: 20rem;
+      }
     }
 
     &__title {
@@ -218,9 +227,6 @@ export default {
 
     &__body {
       position: absolute;
-      top: 1rem;
-      top: 0px;
-      height: 100%;
     }
 
     &__date {

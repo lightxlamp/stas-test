@@ -1,11 +1,25 @@
 <template>
   <div class="container">
 
+    <section class="main-article-and-news">
+      <mainArticle />
+
+      <div class="news">
+        <sectionHeader title="More news"/> 
+
+        <appArticlesList
+          :articles="more_news_articles"
+          containerClass="news__content"
+        />
+      </div>
+    </section>
+
     <section class="trending">
       <sectionHeader title="Trending"/> 
       <appArticlesList 
           :articles="trending_articles" 
           containerClass="trending__content" 
+          :withImages="true"
       />
     </section>
 
@@ -16,12 +30,14 @@
           :articles="happening_now_articles_column_1" 
           containerClass="happening-now__column-1" 
           articlesType="fullImage"
+          :withImages="true"
         />
 
         <appArticlesList 
           :articles="happening_now_articles_column_2" 
           containerClass="happening-now__column-2" 
           articlesType="withoutText"
+          :withImages="true"
         />
       </div>
     </section>
@@ -31,12 +47,14 @@
 <script>
 import appArticlesList from '~/components/app-articles-list'
 import dateTimeAuthor from '~/components/date-time-author'
+import mainArticle from "~/components/main-article"
 import sectionHeader from "~/components/section-header"
 
 export default {
   components: {
     appArticlesList,
     dateTimeAuthor ,
+    mainArticle,
     sectionHeader
   },
   computed: {
@@ -166,6 +184,49 @@ export default {
     @media only screen and (min-width: $bp-desktop) {
       // flex-basis: 0;
       // flex-grow: 2;
+    }
+  }
+}
+
+.main-article-and-news {
+  @media only screen and (min-width: $bp-desktop) {
+    display: flex;
+  }
+}
+
+.news {
+  background-color: $color-white;
+
+  &__content {
+    padding-bottom: 1rem;
+  }
+
+  padding: 0 2rem;
+
+  @media only screen and (min-width: $bp-tablet) {
+    padding: 0 8rem;
+  }
+
+  @media only screen and (min-width: $bp-desktop) {
+    flex-basis: 0;
+    flex-grow: 4;
+    padding: 10rem 6rem 10rem 10rem;
+  }
+
+  @media only screen and (min-width: $bp-tablet) {
+    &__content {
+      display: flex;
+      flex-direction: row;
+    }
+
+    &__content > div {
+      // to set equal width to both news-blocks
+      flex-grow: 1;
+      flex-basis: 0;
+    }
+
+    &__content > div:not(:first-child) {
+      margin-left: 4rem;
     }
   }
 }

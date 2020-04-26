@@ -32,6 +32,8 @@ export default {
   font-style: oblique;
   line-height: 2.3rem; // change to 2.6 later
   padding-top: 0.4rem;
+  height: 1.6rem;
+  margin-top: 1rem;
 
   &--happening-now {
     color: $color-grey-dark-1;
