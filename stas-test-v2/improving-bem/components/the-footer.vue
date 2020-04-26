@@ -56,22 +56,33 @@ export default {
     & > div {
       flex-basis: 0;
       flex-grow: 1;
+      @media only screen and (min-width: $bp-desktop) {
+        flex: 0 0 auto;
+      }
+
       padding: 0 2.4rem 3.4rem 2.4rem;
     }
   }
 
   &__column-2 {
+    display: flex;
+    flex: 1 1 auto;
     align-items: flex-end;
+    justify-content: space-between;
+
     @media only screen and (min-width: $bp-desktop) {
       align-items: flex-start;
     }
-    display: flex;
-    flex: 1 1 auto;
 
     & > div {
-      flex-basis: 0;
-      flex-grow: 1;
-      padding: 0 2.4rem 3.4rem 2.4rem;
+      @media only screen and (min-width: $bp-desktop) {
+        flex-basis: 0;
+        flex-grow: 1;
+      }
+      // padding: 0 2.4rem 3.4rem 2.4rem;
+      // Move to email-box component
+      width: 28.4rem;
+      padding: 0 2.4rem 0 2.4rem;
     }
   }
 }

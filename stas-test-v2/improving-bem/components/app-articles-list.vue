@@ -129,15 +129,47 @@ export default {
 
   &__body {
     padding: 3.2rem 2.4rem;
-    //height: 15.4rem;
     @media only screen and (min-width: $bp-tablet) {
-      //height: 18rem;
-      padding: 4rem;
+      //padding: 4rem;
+      padding: 3.5rem;
     }
   }
 
   &__date {
     color: #a6adb4;
+  }
+}
+
+.card--textOnly {
+  box-shadow: none;
+  width: 32.7rem; // mobile
+  @media only screen and (min-width: $bp-tablet) {
+    width: 28.4rem; 
+  }
+
+  @media only screen and (min-width: $bp-desktop) {
+    width: 42rem; 
+  }
+
+  .card {
+    &__header {
+      display: none;
+    }
+
+    &__body {
+      padding: 0;
+    }
+
+    &__category {
+      display: inline-block;
+      text-transform: uppercase;
+      color: $color-primary;
+      font-size: 1.6rem;
+      line-height: 2rem;
+      text-align: left;
+      font-weight: bold;
+      margin-bottom: 1rem;
+    }
   }
 }
 
@@ -234,4 +266,5 @@ export default {
     }
   }
 }
+
 </style>

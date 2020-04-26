@@ -9,6 +9,7 @@
 
         <appArticlesList
           :articles="more_news_articles"
+          articlesType="textOnly"
           containerClass="news__content"
         />
       </div>
@@ -18,8 +19,8 @@
       <sectionHeader title="Trending"/> 
       <appArticlesList 
           :articles="trending_articles" 
-          containerClass="trending__content" 
           :withImages="true"
+          containerClass="trending__content" 
       />
     </section>
 
@@ -28,16 +29,16 @@
       <div class="happening-now__content-wrapper">
         <appArticlesList 
           :articles="happening_now_articles_column_1" 
-          containerClass="happening-now__column-1" 
-          articlesType="fullImage"
           :withImages="true"
+          articlesType="fullImage"
+          containerClass="happening-now__column-1" 
         />
 
         <appArticlesList 
           :articles="happening_now_articles_column_2" 
-          containerClass="happening-now__column-2" 
-          articlesType="withoutText"
           :withImages="true"
+          articlesType="withoutText"
+          containerClass="happening-now__column-2" 
         />
       </div>
     </section>
@@ -196,12 +197,20 @@ export default {
 
 .news {
   background-color: $color-white;
+  padding: 0 2rem;
 
   &__content {
     padding-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    @media only screen and (min-width: $bp-tablet) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    @media only screen and (min-width: $bp-desktop) {
+      flex-direction: column;
+    }
   }
-
-  padding: 0 2rem;
 
   @media only screen and (min-width: $bp-tablet) {
     padding: 0 8rem;
@@ -210,24 +219,17 @@ export default {
   @media only screen and (min-width: $bp-desktop) {
     flex-basis: 0;
     flex-grow: 4;
-    padding: 10rem 6rem 10rem 10rem;
+    padding: 6rem 6rem 10rem 10rem;
   }
 
-  @media only screen and (min-width: $bp-tablet) {
-    &__content {
-      display: flex;
-      flex-direction: row;
-    }
+  &__content > div {
+    // to set equal width to both news-blocks
+    flex-grow: 1;
+    flex-basis: 0;
+  }
 
-    &__content > div {
-      // to set equal width to both news-blocks
-      flex-grow: 1;
-      flex-basis: 0;
-    }
-
-    &__content > div:not(:first-child) {
-      margin-left: 4rem;
-    }
+  &__content > div:not(:first-child) {
+    margin-left: 4rem;
   }
 }
 </style>
