@@ -95,8 +95,8 @@ export default {
   max-width: 182rem;
   min-width: 34rem;
   min-height: 100vh;
-  resize: horizontal;
   overflow: auto;
+  padding-bottom: 8rem;
 }
 
 .trending {

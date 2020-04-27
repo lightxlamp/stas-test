@@ -104,10 +104,9 @@ export default {
     display: none;
   }
 
-  &__figure {
-    height: 100%;
-    height: 15.4rem;
-  }
+  // &__figure {
+  //   height: 15.4rem;
+  // }
 
   &__image {
     width: 100%;
@@ -127,10 +126,10 @@ export default {
   }
 
   &__header {
-    height: 15.4rem;
+    height: 19.4rem;
     overflow: hidden;
      @media only screen and (min-width: $bp-tablet) {
-      height: 18rem;
+      height: 22rem;
     }
     &--back {
       display: none;

@@ -44,7 +44,8 @@ export default {
   display: flex;
   justify-content: space-between;
   padding: 1.2rem 2rem;
-  width: 100%;
+  max-width: 182rem;
+  margin: 0 auto;
 
   @media only screen and (min-width: $bp-tablet) {
     & > :nth-child(1) {

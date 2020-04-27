@@ -32,7 +32,6 @@ html {
   font-size: 62.5%; // 10px
   font-weight: 300;
   word-spacing: 1px;
-  background-color: $color-secondary;
 }
 
 *,

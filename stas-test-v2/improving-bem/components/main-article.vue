@@ -7,9 +7,18 @@
       particular street — is the place you are living a majority of your life
       in.
     </div>
-    <button class="btn main-article__btn">Learn more</button>
+    <appButton btnText="Learn more" />
   </div>
 </template>
+
+<script>
+import appButton from '~/components/app-button'
+export default {
+  components: {
+    appButton
+  }
+}
+</script>
 
 <style scoped lang="scss">
 .main-article {
