@@ -19,6 +19,7 @@
       <sectionHeader title="Trending"/> 
       <appArticlesList 
           :articles="trending_articles" 
+          articlesType="primary"
           :withImages="true"
           containerClass="trending__content" 
       />

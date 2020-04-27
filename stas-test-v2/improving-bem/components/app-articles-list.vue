@@ -4,9 +4,16 @@
     <article class="card" :class="articleClass" v-for="article in articles" :key="article.fileName">
       <img v-if="withImages == true" :src="require(`../assets/img/${article.imgName}.jpg`)" alt="" class="card__backgroundImage" />
       <div class="card__header">
-        <figure class="card__figure">
-          <img v-if="withImages == true" class="card__image" :src="require(`../assets/img/${article.imgName}.jpg`)" :alt="article.imgAlt" />
-        </figure>
+        <div class="card__header--flipper">
+          <div class="card__header--front">
+            <figure class="card__figure">
+              <img v-if="withImages == true" class="card__image" :src="require(`../assets/img/${article.imgName}.jpg`)" :alt="article.imgAlt" />
+            </figure>
+          </div>
+          <div class="card__header--back">
+            <p class="card__header--text">{{ article.text }}</p>
+          </div>
+        </div>
       </div>
       <div class="card__body">
         <div class="card__category">{{ article.category }}</div>
@@ -125,6 +132,9 @@ export default {
      @media only screen and (min-width: $bp-tablet) {
       height: 18rem;
     }
+    &--back {
+      display: none;
+    }
   }
 
   &__body {
@@ -137,6 +147,14 @@ export default {
 
   &__date {
     color: #a6adb4;
+  }
+}
+
+.card--primary {
+  transition: all 0.3s ease;
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 20px -15px rgba(0, 0, 0, 0.3);
   }
 }
 
@@ -174,7 +192,12 @@ export default {
 }
 
 .card--withoutText {
+  background-color: $color-secondary;
   box-shadow: none;
+  margin-top: 0;
+  margin-bottom: 0;
+  //border: 1px solid red;
+
   .card {
     &__subtitle {
       display: none;
@@ -186,12 +209,72 @@ export default {
 
     &__figure {
       height: 100%;
+      cursor: pointer;
+    }
+
+    &__image {
       border-radius: $border-radius;
-      overflow: hidden;
     }
 
     &__header {
-      height: 18rem;
+      //border-radius: $border-radius;
+      //height: 18rem;
+      //overflow: hidden;
+      cursor: pointer;
+      perspective: 1000;
+      -webkit-perspective: 1000;
+      padding: 2rem 0;
+
+      &--flipper {
+        position: relative;
+        transition: 0.8s ease-in-out;
+        transition: 1s ease-in-out;
+        width: 100%;
+        //height: 100%;
+        transform-style: preserve-3d;
+        height: 15.4rem;
+
+        @media only screen and (min-width: $bp-tablet) {
+          height: 18rem;
+        }
+      }
+
+      &--flipper:hover {
+        transform: rotateY(180deg);
+      }
+
+      &--back, 
+      &--front {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%; 
+        -webkit-perspective: 1000;
+        perspective: 1000;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+      }
+
+      &--back {
+        transform: rotateY(180deg);
+        background: $color-primary;
+        color: $color-white;
+        display: inline-block;
+        text-align: center;
+        border-radius: $border-radius;
+      }
+      &--text {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        height: 50px;
+        margin: auto;
+        padding: 0 3rem;
+        font-size: 1.3rem;
+      }
     }
 
     &__title {
