@@ -9,8 +9,9 @@
   &__photo {
     display: block;
     border-radius: 50%;
-    width: 1.6rem;
+    width: 1.8rem;
     border: .2rem solid transparent;
+    transition: all 0.6s;
     @media only screen and (min-width: $bp-tablet) {
       width: 3rem;
     }

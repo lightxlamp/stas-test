@@ -3,6 +3,12 @@
   <div :class="containerClass" v-if="articles && articles.length"> 
     <article class="card" :class="articleClass" v-for="article in articles" :key="article.fileName">
       <img v-if="withImages == true" :src="require(`../assets/img/${article.imgName}.jpg`)" alt="" class="card__backgroundImage" />
+      <div class="card__overlay"></div>
+      <div class="card__overlay-details fadeIn-top">
+        <h3>Subscribe</h3>
+        <p>To see a full text of the article</p>
+      </div>
+
       <div class="card__header">
         <div class="card__header--flipper">
           <div class="card__header--front">
@@ -104,9 +110,63 @@ export default {
     display: none;
   }
 
-  // &__figure {
-  //   height: 15.4rem;
-  // }
+  &__overlay {
+    display: none;
+    background: rgba(0,0,0,0.7);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0;
+    -webkit-transition: all 0.8s ease-in-out 0s;
+    -moz-transition: all 0.8s ease-in-out 0s;
+    transition: all 0.8s ease-in-out 0s;
+  }
+
+  &__overlay-details {
+    display: none;
+    position: absolute;
+    text-align: center;
+    padding-left: 1em;
+    padding-right: 1em;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    opacity: 0;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    -moz-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+  }
+
+  &:hover &__overlay {
+    opacity: 1;
+  }
+
+  &:hover &__overlay-details{
+    top: 50%;
+    left: 50%;
+    opacity: 1;
+  }
+
+  &__overlay-details h3{
+    font-size: 3rem;
+    color: $color-white;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    margin-bottom: 0.5em;
+    text-transform: uppercase;
+  }
+
+  &__overlay-details p {
+    color: $color-white;
+    font-size: 1.5rem;
+  }
 
   &__image {
     width: 100%;
@@ -292,6 +352,12 @@ export default {
   height: 30rem;
   position: relative;
 
+  &:hover {
+    .card__body {
+      opacity: 0;
+    }
+  }
+
   @media only screen and (min-width: $bp-tablet) {
     height: 43rem;
     width: 60.8rem;
@@ -305,6 +371,7 @@ export default {
     &__image {
       display: none;
     }
+
 
     &__backgroundImage {
       display: inline-block;
@@ -335,18 +402,34 @@ export default {
       line-height: 2.6rem;
     }
 
+    &__overlay {
+      display: block;
+      transition: all 0.8s ease-in-out 0s;
+    }
+
+    &__overlay-details {
+      display: block;
+      transition: all 0.8s ease-in-out 0s;
+    }
+
     &__header {
       height: 43rem;
     }
 
     &__body {
       position: absolute;
+      opacity: 1;
+      transition: all 0.3s ease-in-out 0s;
     }
 
     &__date {
       color: #cbd0d3;
     }
   }
+}
+
+.fadeIn-top{
+  top: 20%;
 }
 
 </style>
