@@ -10,21 +10,21 @@
       <navigationLinks location="header" />
     </div>
 
-    <logo location="header" />
+    <appLogo location="header" />
 
     <loggedInUser />
   </header>
 </template>
 
 <script>
+import appLogo from '~/components/app-logo'
 import loggedInUser from '~/components/logged-in-user'
-import logo from '~/components/logo'
 import navigationLinks from '~/components/navigation-links'
 
 export default {
   components: {
+    appLogo,
     loggedInUser,
-    logo,
     navigationLinks
   },
   methods: {

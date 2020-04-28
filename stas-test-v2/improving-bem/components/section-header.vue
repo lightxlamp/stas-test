@@ -1,10 +1,7 @@
 <template>
   <div class="section-header" v-if="title">
-    <h2 class="section-header__title section-header__title--animation">{{ title }}</h2>
-
-    <div class="section-header__navigation">
-        <navigationArrows />
-    </div>
+    <h2 class="section-header__title">{{ title }}</h2>
+    <navigationArrows />
   </div>
 </template>
 
@@ -12,14 +9,14 @@
 import navigationArrows from "~/components/navigation-arrows";
 
 export default {
-    components: {
-        navigationArrows
-    },
+  components: {
+    navigationArrows
+  },
   props: {
     title: {
       type: String,
       default: ''
-    },
+    }
   }
 };
 </script>
@@ -36,20 +33,16 @@ export default {
     font-weight: bold;
     line-height: 2rem;
     text-transform: uppercase;
-
-    &--animation {
-      background: url('../assets/img/text-bg-emo.png') no-repeat;
-      background-clip: text;
-      -webkit-background-clip: text;
-      color: transparent;
-      animation: moveBg 90s linear infinite;
-      -webkit-animation: moveBg 90s linear infinite;
-    }
+    background: url('../assets/img/text-bg-emo.png') no-repeat;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: moveBackground 90s linear infinite;
+    -webkit-animation: moveBackground 90s linear infinite;
   }
 }
 
-/* Text Background Animation */
-@keyframes moveBg {
+@keyframes moveBackground {
   0% {
     background-position: 0% 30%;
   }

@@ -1,7 +1,7 @@
 <template>
     <div class="items-navigation">
-        <div class="items-navigation__left-arrow"></div>
-        <div class="items-navigation__right-arrow"></div>
+      <i class="items-navigation__left-arrow"></i>
+      <i class="items-navigation__right-arrow"></i>
     </div>
 </template>
 
@@ -14,16 +14,14 @@
 
   &__left-arrow { 
     @include icon-box-settings;
-    // We can't change color of icon when we adding it this way. So just leave this for older browsers
     background-image: url("../assets/img/svg/navigate_before.svg");
     margin-right: 0.5rem;
 
-    // for newer browsers
     @supports (-webkit-mask-image: url()) or (mask-image: url()) {
       -webkit-mask-image: url("../assets/img/svg/navigate_before.svg");
       @include support-settings;
       background-color: $color-black;
-      mask-image: url("../assets/img/svg/navigate_before.svg"); // after 3 years mask-image, without prefix, still does not work in chrome
+      mask-image: url("../assets/img/svg/navigate_before.svg"); 
     }
   }
 

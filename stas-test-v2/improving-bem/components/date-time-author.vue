@@ -1,9 +1,8 @@
 <template>
   <div class="date-time-author">
-    <div class="date-time-author__icon"></div>
-    <div class="date-time-author__time">{{time}}
-      <span class="date-time-author__author" v-if="author">by {{author}}</span>
-    </div>
+    <i class="date-time-author__icon"></i>
+    <p class="date-time-author__time">{{ time }}&nbsp;</p>
+    <p class="date-time-author__author" v-if="author">by {{ author }}</p>
   </div>
 </template>
 
@@ -35,10 +34,6 @@ export default {
   line-height: 2.6rem;
   margin-top: 1rem;
 
-  &__author {
-    text-decoration: underline;
-  }
-
   &__icon {
     background-size: cover;
     height: 1.6rem;
@@ -56,6 +51,11 @@ export default {
       mask-image: url("../assets/img/svg/clock.svg");
       mask-size: cover;
     }
+  }
+
+  &__author {
+    text-decoration: underline;
+    display: inline-block;
   }
 
   &--story {

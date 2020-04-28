@@ -1,20 +1,20 @@
 <template>
-    <a href="#" class="btn btn--animated">{{btnText}}</a>
+  <a href="#" class="app-button app-button--animated">{{ btnText }}</a>
 </template>
 
 <script>
 export default {
-    props: {
-        btnText: {
-            type: String,
-            default: ''
-        }
+  props: {
+    btnText: {
+      type: String,
+      default: ''
     }
+  }
 }
 </script>
 
 <style scoped lang="scss">
-.btn {
+.app-button {
   align-self: flex-start;
   background-color: $color-primary;
   border-radius: $border-radius;
@@ -47,22 +47,19 @@ export default {
   }
 
   &::after {
+      /* to hide new button behind */
+      /* ::after - creates a copy of a button */
       content: "";
       display: inline-block;
       height: 100%;
       width: 100%;
       border-radius: .6rem;
       background-color: $color-primary;
-      /* to hide new button behind */
-      /* ::after - creates a copy of a button */
       position: absolute; 
-      /* position will try to find first ref. The first ref now is "header text and button" div. We need to change it */
-      /* so we added position relative to .btn:link */
       top: 0;
       left: 0;
       z-index: -1;
       transition: .4s;
-      /* https://www.w3schools.com/css/css3_transitions.asp */
   }
 
   &--animated {

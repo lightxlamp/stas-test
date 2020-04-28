@@ -1,27 +1,27 @@
 <template>
   <footer class="footer">
     <div class="footer__column-1">
-      <logo />
+      <appLogo />
       <navigationLinks />
     </div>
 
     <div class="footer__column-2">
-      <emailBox />
+      <appEmail />
       <socialNetworks />
     </div>
   </footer>
 </template>
 
 <script>
-import emailBox from '~/components/email-box'
-import logo from '~/components/logo'
+import appEmail from '~/components/app-email'
+import appLogo from '~/components/app-logo'
 import navigationLinks from '~/components/navigation-links'
 import socialNetworks from '~/components/social-networks'
 
 export default {
   components: {
-    emailBox,
-    logo,
+    appEmail,
+    appLogo,
     navigationLinks,
     socialNetworks
   }

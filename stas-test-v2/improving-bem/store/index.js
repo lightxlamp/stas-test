@@ -82,7 +82,7 @@ class Article {
         "Travel",
         "Desert Elephants",
         "Desert-adapted elephants are not a distinct species of elephant but are African bush elephants",
-        "1h ago by",
+        "1h ago",
         "Worldnews",
         "--happening-now-2"
       ),
@@ -93,7 +93,7 @@ class Article {
         "Travel",
         "Jungle Parrots",
         "So where is the circling jungle parrot? Well, it turns out the bird is flying in a small circle east of the Sky Platform",
-        "1h ago by",
+        "1h ago",
         "Days",
         "--happening-now-2"
       ),
@@ -104,7 +104,7 @@ class Article {
         "Travel",
         "Highest roads of Kyrgyzstan",
         "Kyrgyzstan is a high mountain country located in Central Asia. Over ninety percent of the country is mountainous territory",
-        "1h ago by",
+        "1h ago",
         "Days",
         "--happening-now-2"
       ),
