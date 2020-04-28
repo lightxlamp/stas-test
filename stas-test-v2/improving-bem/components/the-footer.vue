@@ -33,6 +33,8 @@ export default {
   background-color: $color-grey-dark-2;
   display: none;
   padding: 6rem 8rem;
+  max-width: 182rem;
+  margin: 0 auto;
 
   @media only screen and (min-width: $bp-tablet) {
     display: flex;

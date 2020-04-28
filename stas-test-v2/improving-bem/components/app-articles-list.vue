@@ -181,7 +181,7 @@ export default {
       height: 100%;
     }
     @media only screen and (min-width: $bp-desktop) {
-      max-width: 120%; // странный трюк
+      max-width: 120%; // странный трюк - Он решает проблему только в Chrome и Opera. В FF фигня
     }
   }
 
@@ -189,7 +189,7 @@ export default {
     height: 19.4rem;
     overflow: hidden;
      @media only screen and (min-width: $bp-tablet) {
-      height: 22rem;
+      height: 25rem;
     }
     &--back {
       display: none;
@@ -211,6 +211,16 @@ export default {
 
 .card--primary {
   transition: all 0.3s ease;
+
+  .card {
+    &__header {
+      height: 15.4rem;
+      @media only screen and (min-width: $bp-tablet) {
+        height: 18rem;
+      }
+    }
+  }
+ 
   &:hover {
     transform: translateY(-5px);
     box-shadow: 0 20px 20px -15px rgba(0, 0, 0, 0.3);
@@ -273,12 +283,10 @@ export default {
 
     &__image {
       border-radius: $border-radius;
+      height: 21rem;
     }
 
     &__header {
-      //border-radius: $border-radius;
-      //height: 18rem;
-      //overflow: hidden;
       cursor: pointer;
       perspective: 1000;
       -webkit-perspective: 1000;
@@ -286,15 +294,13 @@ export default {
 
       &--flipper {
         position: relative;
-        transition: 0.8s ease-in-out;
         transition: 1s ease-in-out;
         width: 100%;
-        //height: 100%;
         transform-style: preserve-3d;
-        height: 15.4rem;
+        height: 18rem;
 
         @media only screen and (min-width: $bp-tablet) {
-          height: 18rem;
+          height: 21rem;
         }
       }
 
@@ -341,8 +347,7 @@ export default {
     }
 
     &__body {
-      //height: 6.2rem;
-      padding: 2rem 0;
+      padding: 0 0 2rem 0;
       background-color: $color-secondary;
     }
   }

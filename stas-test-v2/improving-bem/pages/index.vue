@@ -200,6 +200,16 @@ export default {
   background-color: $color-white;
   padding: 0 2rem;
 
+  @media only screen and (min-width: $bp-tablet) {
+    padding: 0 8rem;
+  }
+
+  @media only screen and (min-width: $bp-desktop) {
+    flex-basis: 0;
+    flex-grow: 4;
+    padding: 6rem 6rem 10rem 10rem;
+  }
+
   &__content {
     border-top: 2px solid #EBEDED;
     padding-bottom: 1rem;
@@ -220,16 +230,6 @@ export default {
       flex-direction: column;
       align-items: flex-start;
     }
-  }
-
-  @media only screen and (min-width: $bp-tablet) {
-    padding: 0 8rem;
-  }
-
-  @media only screen and (min-width: $bp-desktop) {
-    flex-basis: 0;
-    flex-grow: 4;
-    padding: 6rem 6rem 10rem 10rem;
   }
 
   &__content > div {
