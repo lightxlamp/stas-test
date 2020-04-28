@@ -419,7 +419,7 @@ export default {
     &__body {
       position: absolute;
       opacity: 1;
-      transition: all 0.3s ease-in-out 0s;
+      transition: all .3s linear 0s;
     }
 
     &__date {
