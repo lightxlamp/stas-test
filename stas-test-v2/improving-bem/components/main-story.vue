@@ -12,7 +12,7 @@
         </div>
       </div>
       <div class="main-story__bottom-section">
-        <appAuthor  />
+        <appAuthor authorName="by Steven Voorhees" />
         <nextStory />
       </div>
     </section>
@@ -37,6 +37,7 @@ export default {
   background-size: cover;
   background-position: center;
   padding: 14rem 2.4rem 4rem;
+  width: 100%;
 
   @media only screen and (min-width: $bp-tablet) {
     padding: 11rem 4rem 4rem;
@@ -49,12 +50,15 @@ export default {
   &__title {
     color: $color-white;
     font-size: 3rem;
-    font-size: 5rem; // for desktop
-    font-weight: bold;
     line-height: 4rem;
-    line-height: 6rem; // for desktop
+    font-weight: bold;
     text-align: center;
     text-transform: uppercase;
+
+    @media only screen and (min-width: $bp-desktop) {
+      font-size: 5rem; 
+      line-height: 6rem; 
+    }
   }
 
   &__links {

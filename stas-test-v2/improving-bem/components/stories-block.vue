@@ -20,11 +20,11 @@ export default {
 <style lang="scss" scoped>
 .stories-block {
   @media only screen and (min-width: $bp-tablet) {
-    padding: 6rem 8rem 8rem;
+    padding: 6rem 8rem 0rem;
   }
   @media only screen and (min-width: $bp-desktop) {
     display: flex;
-    padding: 10rem 14rem;
+    padding: 10rem 14rem 0 14rem;
   }
 }
 </style>

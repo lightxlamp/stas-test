@@ -32,22 +32,27 @@
                     fugiat holi nulla parieratur. Excepteur sint occaecat ropukuli uki
                     cupidatat.
                 </div>
-                <div class="article__wrap">
-                    <div class="article__info">
-                        <div class="article__title article__title--story">
-                            Thought Experiment- VR Travel App
-                        </div>
-                        <div class="date-time-author">
-                            <div class="date-time-author__icon"></div>
-                            <div class="date-time-author__time">3h ago &nbsp;</div>
-                            <span class="date-time-author__author">Worldnews</span>
-                        </div>
+
+                <div class="text-only-story__info">
+                    <div class="article__title article__title--story">
+                        Thought Experiment- VR Travel App
                     </div>
+                    <dateTimeAuthor time="3h ago" author="Worldnews" />
                 </div>
             </div>
         </div>
     </section>
 </template>
+
+<script>
+import dateTimeAuthor from '~/components/date-time-author'
+
+export default {
+  components: {
+    dateTimeAuthor
+  }
+}
+</script>
 
 <style lang="scss" scoped>
 .text-only-stories {
@@ -90,6 +95,7 @@
     font-weight: bold;
     line-height: 4.2rem;
     text-align: left;
+    margin-bottom: 2.4rem;
   }
 
   &__text {
@@ -97,8 +103,9 @@
     font-size: 1.4rem;
     font-weight: 400;
     line-height: 2.6rem;
-    padding: 2.4rem 0;
-    text-align: left;
+    padding: 0 0 2.4rem 0;
+    //text-align: left;
+    text-align: justify;
 
     @media only screen and (min-width: $bp-desktop) {
       padding-bottom: 0;
@@ -129,6 +136,16 @@
     & > :first-child {
       border-bottom: 2px dashed $color-grey-light-1;
     }
+  }
+
+  &__info {
+    font-size: 1.6rem;
+    font-family: Acumin Pro;
+    color: #202124;
+    font-weight: 700;
+    line-height: 3.4rem;
+    padding-top: 2rem;
+    z-index: 1;
   }
 }
 </style>

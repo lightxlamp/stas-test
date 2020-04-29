@@ -6,7 +6,7 @@
             class="author__photo"
         />
 
-        <div class="author__name">{{authorName}} {{authorAdditionalClass}}</div>
+        <div class="author__name">{{authorName}}</div>
     </div>
 </template>
 
@@ -51,12 +51,6 @@ export default {
       height: 4rem;
       width: 4rem;
     }
-
-    &--story {
-      border: none;
-      height: 4rem;
-      width: 4rem;
-    }
   }
 
   &__name {
@@ -70,15 +64,25 @@ export default {
     @media only screen and (min-width: $bp-tablet) {
       display: inline-block;
     }
-
-    &--story {
-      color: $color-black;
-      display: inline-block;
-      font-size: 2.4rem;
-      font-weight: bold;
-      line-height: 4.2rem;
-      text-align: left;
-    }
   }
+}
+
+.author--story {
+    .author {
+        &__photo {
+            border: none;
+            height: 4rem;
+            width: 4rem;
+        }
+
+        &__name {
+            color: $color-black;
+            display: inline-block;
+            font-size: 2.4rem;
+            font-weight: bold;
+            line-height: 4.2rem;
+            text-align: left;
+        }
+    }
 }
 </style>

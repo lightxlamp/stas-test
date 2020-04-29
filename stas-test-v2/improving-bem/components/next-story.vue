@@ -99,6 +99,8 @@
       display: inline-block;
       font-size: 1.6rem;
       line-height: 2.6rem;
+      font-weight: 400;
+      padding-top: .5rem;
     }
   }
 }
