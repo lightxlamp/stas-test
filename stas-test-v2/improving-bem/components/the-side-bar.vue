@@ -107,7 +107,6 @@ export default {
   methods: {
     externalClick (event) {
       if(this.isSideBarVisible === true) {
-        console.log('External click. Event: ', event)
         this.$store.commit('hideSideBar')
       }
     }

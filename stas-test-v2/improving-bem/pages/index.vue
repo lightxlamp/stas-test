@@ -1,17 +1,18 @@
 <template>
   <div class="container">
-
     <section class="main-article-and-news">
       <mainArticle />
 
       <div class="news">
-        <sectionHeader title="More news"/> 
+        <div class="news__wrapper">
+          <sectionHeader title="More news"/> 
 
-        <appArticlesList
-          :articles="more_news_articles"
-          articlesType="textOnly"
-          containerClass="news__content"
-        />
+          <appArticlesList
+            :articles="more_news_articles"
+            articlesType="textOnly"
+            containerClass="news__content"
+          />
+        </div>
       </div>
     </section>
 
@@ -101,13 +102,13 @@ export default {
 
 .trending {
   //@include section-padding;
-  @media only screen and (min-width: $bp-tablet) {
-    width: 60.8rem;
-  }
+  // @media only screen and (min-width: $bp-tablet) {
+  //   width: 60.8rem;
+  // }
 
-  @media only screen and (min-width: $bp-desktop) {
-    width: 116rem;
-  }
+  // @media only screen and (min-width: $bp-desktop) {
+  //   width: 116rem;
+  // }
 
   &__content {
     & > article:last-child {
@@ -210,6 +211,19 @@ export default {
     padding: 6rem 6rem 10rem 10rem;
   }
 
+  &__wrapper {
+    width: 32.7rem;
+    margin: 0 auto;
+
+    @media only screen and (min-width: $bp-tablet) {
+      width: 60.8rem;
+    }
+
+    @media only screen and (min-width: $bp-desktop) {
+      width: auto;
+    }
+  }
+
   &__content {
     border-top: 2px solid #EBEDED;
     padding-bottom: 1rem;
@@ -218,7 +232,9 @@ export default {
     align-items: center;
 
     & > article:first-child {
-      margin-right: 6rem;
+      @media only screen and (min-width: $bp-tablet) {
+        margin-right: 6rem;
+      }
     }
     @media only screen and (min-width: $bp-tablet) {
       flex-direction: row;

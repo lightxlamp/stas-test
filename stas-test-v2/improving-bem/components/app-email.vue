@@ -23,7 +23,7 @@
     color: $color-grey-dark-1;
     max-width: 45rem;
     padding: 1rem;
-    //width: 100%;
+    width: 100%;
 
     @media only screen and (min-width: $bp-desktop) {
       width: 26rem;
