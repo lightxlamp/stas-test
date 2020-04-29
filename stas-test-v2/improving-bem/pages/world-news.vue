@@ -1,57 +1,9 @@
 <template>
   <div class="container-world-news-page">
     <div class="container-world-news-page-top">
-      <div class="breadcrumbs">
-        <div class="back-btn"></div>
-        <div class="path-and-settings">
-          <div class="path-and-settings__icon"></div>
-          <div class="path-and-settings__path">
-            <span class="path-and-settings__path--root">
-              Story &nbsp; / &nbsp;</span
-            >
-            <span class="path-and-settings__path--page"> World News </span>
-          </div>
-        </div>
-        <div class="breadcrumbs__settings-icon-wrapper">
-          <div class="breadcrumbs__settings-icon"></div>
-        </div>
-      </div>
+      <appBreadcrumbs />
 
-      <section class="search-news">
-        <div class="search-news-main">
-          <div class="search-news-main__title">World news</div>
-          <div class="search-news-main__line"></div>
-          <div class="search-news-main__text">
-            Stay informed without overdosing on the news vix id nullam detracto
-            vidit.
-          </div>
-          <div class="author">
-            <img
-              src="../assets/img/boy.jpg"
-              alt="Jonathan Walker"
-              class="author__photo"
-            />
-          </div>
-        </div>
-        <div class="search-news-fields">
-          <div class="input-box">
-            <div class="input-box__title">Select a date</div>
-            <input
-              class="input-box__field"
-              type="text"
-              placeholder="Select..."
-            />
-            <div class="input-box__icon input-box__icon--down"></div>
-          </div>
-
-          <div class="input-box">
-            <div class="input-box__title">Enter the first keywords</div>
-            <input class="input-box__field" type="search" />
-          </div>
-
-          <div class="search-news-fields__btn btn">Search</div>
-        </div>
-      </section>
+      <searchNewsH />
 
       <section class="three-columns-section">
         <div class="three-columns-section__col-1">
@@ -107,17 +59,7 @@
         </div>
       </section>
 
-      <section class="pagination">
-        <ul class="pagination__ul">
-          <li class="pagination__li pagination__li--active">01</li>
-          <li class="pagination__li">02</li>
-          <li class="pagination__li">03</li>
-          <li class="pagination__li">04</li>
-          <li class="pagination__li">05</li>
-          <li class="pagination__li">06</li>
-          <li class="pagination__li pagination__li--more"></li>
-        </ul>
-      </section>
+      <appPagination />
     </div>
 
     <Footer />
@@ -125,16 +67,20 @@
 </template>
 
 <script>
-import appArticlesList from '~/components/app-articles-list'
+import appPagination from '~/components/app-pagination'
+import appBreadcrumbs from '~/components/app-breadcrumbs'
 import dateTimeAuthor from '~/components/date-time-author'
 import mainArticle from "~/components/main-article"
 import sectionHeader from "~/components/section-header"
+import searchNewsH from "~/components/search-news-h"
 
 export default {
   components: {
-    appArticlesList,
+    appBreadcrumbs,
+    appPagination,
     dateTimeAuthor,
     mainArticle,
+    searchNewsH,
     sectionHeader
   },
 
@@ -158,3 +104,22 @@ export default {
   }
 };
 </script>
+
+<style lang="scss" scoped>
+.container-world-news-page {
+  background-color: $color-secondary;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  max-width: 182rem;
+  min-height: 100vh;
+}
+
+.container-world-news-page-top {
+  @media only screen and (min-width: $bp-tablet) {
+    padding: 0 8rem 3rem 8rem;
+  }
+  display: flex;
+  flex-direction: column;
+}
+</style>

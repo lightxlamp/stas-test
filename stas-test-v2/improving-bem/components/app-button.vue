@@ -1,5 +1,6 @@
 <template>
-  <a href="#" class="app-button app-button--animated">{{ btnText }}</a>
+  <a href="#" v-if="startPosition === 'down'" class="app-button app-button--animated-down">{{ btnText }}</a>
+  <a href="#" v-else class="app-button app-button--animated-left">{{ btnText }}</a>
 </template>
 
 <script>
@@ -8,6 +9,10 @@ export default {
     btnText: {
       type: String,
       default: ''
+    },
+    startPosition: {
+      type: String,
+      default: 'left'
     }
   }
 }
@@ -62,8 +67,8 @@ export default {
       transition: .4s;
   }
 
-  &--animated {
-    animation: headerButtonAnimation .5s ease-out .75s;
+  &--animated-left {
+    animation: appButtonAnimationLeft .5s ease-out .75s;
     animation-fill-mode: backwards; /* added because after adding delay. 4th animation param*/
     /* The animation-fill-mode property defines what values 
     are applied by an animation outside the time it is executing. 
@@ -73,15 +78,33 @@ export default {
     свойство animation-fill-mode позволяет изменить это поведение и сделать так, чтобы стиль элемента 
     оставался как у последнего ключевого кадра.
     */
+  }  
+  
+  &--animated-down {
+    animation: appButtonAnimationLeft .5s ease-out .75s;
+    animation-fill-mode: backwards;
   }
 }
 
-@keyframes headerButtonAnimation {
+@keyframes appButtonAnimationLeft {
 	0% {
-		opacity: 0;
-		transform: translateX(-10rem);
-    }
-    70% {
+    opacity: 0;
+    transform: translateY(2rem);
+  }
+  70% {
+		transform: translateY(-1rem);
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes appButtonAnimationDown {
+	0% {
+    opacity: 0;
+    transform: translateX(-10rem);
+  }
+  70% {
 		transform: translateX(5rem);
 	}
 	100% {

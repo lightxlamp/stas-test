@@ -61,7 +61,6 @@ export default {
     sectionHeader
   },
   computed: {
-    // https://blog.lichter.io/posts/dynamic-images-vue-nuxt/
     imgSourceset() {
       return `${require(`@/assets/img/bridge.jpg`)}`
     },
@@ -101,15 +100,6 @@ export default {
 }
 
 .trending {
-  //@include section-padding;
-  // @media only screen and (min-width: $bp-tablet) {
-  //   width: 60.8rem;
-  // }
-
-  // @media only screen and (min-width: $bp-desktop) {
-  //   width: 116rem;
-  // }
-
   &__content {
     & > article:last-child {
       display: none; // To hide the third card on a lower resolutions
@@ -129,7 +119,6 @@ export default {
         margin-left: 4rem;
       }
     }
-    
   }
 }
 
