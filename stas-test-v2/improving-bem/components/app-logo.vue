@@ -1,6 +1,6 @@
 <template>
   <div v-if="location === 'header'" class="app-logo app-logo--header">Logo</div>
-  <div v-else-if="location === 'sidebar'" class="lapp-ogo app-logo--sidebar">Logo</div>
+  <div v-else-if="location === 'sidebar'" class="app-logo app-logo--sidebar">Logo</div>
   <div v-else class="app-logo app-logo--footer">Logo</div>
 </template>
 

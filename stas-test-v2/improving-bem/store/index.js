@@ -20,7 +20,7 @@ class Article {
   }
   
   export const state = () => ({
-    isSideBarVisible: false,
+    //isSideBarVisible: true,
   
     trending_articles: [
       new Article(

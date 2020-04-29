@@ -20,7 +20,6 @@
 
   &__item:not(:last-child) {
     margin-right: 3.2rem;
-    display: none;
   }
 
   &__instagram {
