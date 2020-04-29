@@ -20,6 +20,8 @@
 .next-story {
   display: flex;
   justify-content: space-between;
+  transition: all .8s;
+  text-align: left;
 
   @media only screen and (min-width: $bp-tablet) {
     border-radius: $border-radius;
@@ -104,4 +106,9 @@
     }
   }
 }
+
+.next-story:hover {
+  backdrop-filter: blur(10px);
+}
+  
 </style>

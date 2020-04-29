@@ -46,11 +46,16 @@ export default {
     object-fit: cover;
     object-position: 50% 50%;
     width: 2.8rem;
+    transition: all 1s;
 
     @media only screen and (min-width: $bp-tablet) {
       height: 4rem;
       width: 4rem;
     }
+  }
+
+  &__photo:hover {
+       border: 2px solid $color-primary;
   }
 
   &__name {
