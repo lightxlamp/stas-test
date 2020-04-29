@@ -20,7 +20,7 @@ class Article {
   }
   
   export const state = () => ({
-    //isSideBarVisible: true,
+    isSideBarVisible: false,
   
     trending_articles: [
       new Article(
@@ -134,12 +134,12 @@ class Article {
     ],
   });
   
-//   export const mutations = {
-//     showSideBar(state) {
-//       state.isSideBarVisible = true;
-//     },
-//     hideSideBar(state) {
-//       state.isSideBarVisible = false;
-//     },
-//   };
+  export const mutations = {
+    showSideBar(state) {
+      state.isSideBarVisible = true;
+    },
+    hideSideBar(state) {
+      state.isSideBarVisible = false;
+    },
+  };
   

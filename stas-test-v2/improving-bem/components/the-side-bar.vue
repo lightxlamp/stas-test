@@ -3,6 +3,7 @@
   <div
     class="side-bar"
     v-show="isSideBarVisible"
+    v-click-outside="externalClick"
   >
     <div class="side-bar__body">
       <appLogo location="sidebar" />
@@ -81,10 +82,10 @@
 </template>
 
 <script>
-//import vClickOutside from 'v-click-outside'
 import appLogo from '~/components/app-logo'
 import loggedInUser from '~/components/logged-in-user'
 import socialNetworks from '~/components/social-networks'
+import vClickOutside from 'v-click-outside'
 
 export default {
   components: {
@@ -93,30 +94,25 @@ export default {
     socialNetworks
   },
 
-    data: () => ({
-    isSideBarVisible: true,
-  }),
+  computed: {
+    isSideBarVisible() {
+      return this.$store.state.isSideBarVisible
+    }
+  },
 
+  directives: {
+    clickOutside: vClickOutside.directive
+  },
 
-//     directives: {
-//       clickOutside: vClickOutside.directive
-//     },
-
-  // computed: {
-  //   isSideBarVisible() {
-  //     return this.$store.state.isSideBarVisible
-  //   }
-  // },
+  methods: {
+    externalClick (event) {
+      if(this.isSideBarVisible === true) {
+        console.log('External click. Event: ', event)
+        this.$store.commit('hideSideBar')
+      }
+    }
+  }
 }
-
-//   methods: {
-//     onClickOutside() {
-//       if (this.$store.state.isSideBarVisible == true) {
-//         this.$store.commit('hideSideBar')
-//       }
-//     }
-//   }
-// }
 </script>
 
 <style lang="scss" scoped>
