@@ -186,9 +186,9 @@ export default {
   }
 
   &__header {
-    height: 19.4rem;
+    height: 22rem;
     overflow: hidden;
-     @media only screen and (min-width: $bp-tablet) {
+    @media only screen and (min-width: $bp-desktop) {
       height: 25rem;
     }
     &--back {
@@ -283,7 +283,10 @@ export default {
 
     &__image {
       border-radius: $border-radius;
-      height: 21rem;
+      height: 18rem;
+      @media only screen and (min-width: $bp-desktop) {
+        height: 21rem;
+      }
     }
 
     &__header {
@@ -299,7 +302,7 @@ export default {
         transform-style: preserve-3d;
         height: 18rem;
 
-        @media only screen and (min-width: $bp-tablet) {
+        @media only screen and (min-width: $bp-desktop) {
           height: 21rem;
         }
       }
