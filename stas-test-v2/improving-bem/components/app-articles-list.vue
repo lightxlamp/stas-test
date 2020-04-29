@@ -394,7 +394,7 @@ export default {
       margin-bottom: 3rem;
       text-transform: uppercase;
       @media only screen and (min-width: $bp-tablet) {
-        margin-bottom: 20rem;
+        margin-bottom: 21rem;
       }
     }
 
