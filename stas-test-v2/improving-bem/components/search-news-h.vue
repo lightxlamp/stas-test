@@ -30,7 +30,7 @@
 
           <div class="input-box">
             <div class="input-box__title">Enter the first keywords</div>
-            <input class="input-box__field" type="search" />
+            <input class="input-box__field" />
           </div>
           <appButton btnText="Search" startPosition="down" />
         </div>
