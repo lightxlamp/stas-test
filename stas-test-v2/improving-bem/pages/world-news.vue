@@ -7,15 +7,15 @@
 
       <section class="three-columns-section">
         <div class="three-columns-section__col-1">
-          <div class="author author--story">
-            <img
-              src="../assets/img/boy.jpg"
-              alt="Jonathan Walker"
-              class="author__photo author__photo--story"
-            />
-          </div>
+          <appAuthor 
+            avatarFile="boy.jpg"
+            authorName="Jonathan Walker"
+            modifier="story"
+            hideName="true"
+          />
 
           <h2>Phasellus eu nulla malesuada, luctus diam.</h2>
+
         </div>
         <div class="three-columns-section__col-2">
           Lorem ipsum dolor sit amet consectetur adipiscing elit suscipit,
@@ -31,10 +31,7 @@
           habitant sollicitudin, cubilia luctus consequat pharetra natoque
           porta. Sodales tristique habitasse massa ultrices ligula semper
           interdum dictumst.
-          <div class="date-time-author">
-            <div class="date-time-author__icon"></div>
-            <div class="date-time-author__time">2m ago</div>
-          </div>
+          <dateTimeAuthor time="2m ago" />
         </div>
       </section>
 
@@ -67,6 +64,7 @@
 </template>
 
 <script>
+import appAuthor from '~/components/app-author'
 import appPagination from '~/components/app-pagination'
 import appBreadcrumbs from '~/components/app-breadcrumbs'
 import dateTimeAuthor from '~/components/date-time-author'
@@ -76,6 +74,7 @@ import searchNewsH from "~/components/search-news-h"
 
 export default {
   components: {
+    appAuthor,
     appBreadcrumbs,
     appPagination,
     dateTimeAuthor,
@@ -115,11 +114,141 @@ export default {
   min-height: 100vh;
 }
 
+h2 {
+  color: $color-black;
+  //font-family: "Acumin Pro";
+  font-size: 2.4rem;
+  font-weight: bold;
+  line-height: 3.4rem;
+  padding: 1.4rem 0 4rem;
+  text-align: left;
+}
+
 .container-world-news-page-top {
+  display: flex;
+  flex-direction: column;
+  color: $color-grey-dark-2;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 2.6rem;
+
   @media only screen and (min-width: $bp-tablet) {
     padding: 0 8rem 3rem 8rem;
   }
-  display: flex;
-  flex-direction: column;
+
+  @media only screen and (min-width: $bp-desktop) {
+    padding: 0 14rem 3rem 14rem;
+  }
+
+  @media only screen and (min-width: $bp-large-desktop) {
+    padding: 0 32rem 4rem 32rem;
+  }
+ 
+}
+
+.three-columns-section {
+  border-top: 2px solid $color-grey-light-1;
+  margin: 4rem 2.4rem;
+  padding-top: 3rem;
+
+  @media only screen and (min-width: $bp-tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 4rem 0rem;
+  }
+
+  &__col-1 {
+    @media only screen and (min-width: $bp-tablet) {
+      width: 56%;
+    }
+
+    @media only screen and (min-width: $bp-desktop) {
+      width: 30%;
+    }
+  }
+
+  &__col-2 {
+    @media only screen and (min-width: $bp-tablet) {
+      width: 45%;
+    }
+    @media only screen and (min-width: $bp-desktop) {
+      width: 30%;
+    }
+  }
+
+  &__col-3 {
+    margin-top: 2rem;
+
+    @media only screen and (min-width: $bp-tablet) {
+      margin-top: 0;
+      width: 45%;
+    }
+    @media only screen and (min-width: $bp-desktop) {
+      width: 30%;
+    }
+  }
+
+  &__col-3 > div:first-child {
+    margin-top: 1rem;
+  }
+}
+
+.image-and-two-text-block-section {
+  border-top: 2px solid $color-grey-light-1;
+  margin: 0rem 2.4rem 3rem;
+  padding-top: 3rem;
+
+  @media only screen and (min-width: $bp-tablet) {
+    margin: 0rem 0rem 3rem;
+  }
+
+  @media only screen and (min-width: $bp-desktop) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__col-1 {
+    background-image: url("../assets/img/elephant.jpg");
+    background-position: center;
+    background-size: cover;
+    min-height: 18rem;
+    padding-top: 55.04%; /* Aspect Ratio */
+    position: relative;
+    width: 100%;
+
+    @media only screen and (min-width: $bp-tablet) {
+      min-height: 26rem;
+      padding-top: 42.76%; /* Aspect Ratio */
+    }
+
+    @media only screen and (min-width: $bp-desktop) {
+      width: 100%;
+    }
+
+    border-radius: $border-radius;
+    overflow: hidden;
+  }
+
+  &__col-2 {
+    margin: 2.4rem 0;
+    @media only screen and (min-width: $bp-desktop) {
+      width: 70%;
+      padding-right: 3rem;
+    }
+  }
+
+  &__col-3 {
+    color: $color-black;
+    font-size: 1.6rem;
+    font-style: oblique;
+    font-weight: 400;
+    line-height: 3rem;
+
+    @media only screen and (min-width: $bp-desktop) {
+      margin: 2.4rem 0;
+      width: 30%;
+    }
+  }
 }
 </style>

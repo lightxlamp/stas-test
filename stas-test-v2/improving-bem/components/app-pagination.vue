@@ -35,7 +35,7 @@
   }
 
   &__ul > li:not(:first-child) {
-    margin-left: 1rem;
+    margin-left: 2.4rem;
   }
 
   &__li {

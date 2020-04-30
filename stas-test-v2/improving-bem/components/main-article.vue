@@ -7,7 +7,7 @@
       particular street — is the place you are living a majority of your life
       in.
     </p>
-    <appButton btnText="Learn more" />
+    <appButton btnText="Learn more"  />
   </div>
 </template>
 

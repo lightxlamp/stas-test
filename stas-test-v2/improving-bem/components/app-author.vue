@@ -6,7 +6,7 @@
             class="author__photo"
         />
 
-        <div class="author__name">{{authorName}}</div>
+        <div v-if="hideName === false" class="author__name">{{authorName}}</div>
     </div>
 </template>
 
@@ -24,6 +24,10 @@ export default {
         modifier: {
             type: String, 
             default: ''
+        },
+        hideName: {
+            type: Boolean,
+            default: false
         }
     },
     computed: {
@@ -70,6 +74,19 @@ export default {
       display: inline-block;
     }
   }
+}
+
+.author--bordered {
+    .author {
+        &__photo {
+             border: 2px solid $color-white;
+             height: 4rem;
+             width: 4rem;
+        }
+        &__photo:hover {
+             border: 2px solid $color-primary;
+        }
+    }
 }
 
 .author--story {

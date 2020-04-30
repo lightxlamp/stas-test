@@ -81,12 +81,12 @@ export default {
   }  
   
   &--animated-down {
-    animation: appButtonAnimationLeft .5s ease-out .75s;
+    animation: appButtonAnimationDown .5s ease-out .75s;
     animation-fill-mode: backwards;
   }
 }
 
-@keyframes appButtonAnimationLeft {
+@keyframes appButtonAnimationDown {
 	0% {
     opacity: 0;
     transform: translateY(2rem);
@@ -99,7 +99,7 @@ export default {
 	}
 }
 
-@keyframes appButtonAnimationDown {
+@keyframes appButtonAnimationLeft {
 	0% {
     opacity: 0;
     transform: translateX(-10rem);

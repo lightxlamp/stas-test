@@ -1,9 +1,5 @@
 <template>
     <section class="search-news">
-        <!-- <appButton btnText="Search" startPosition="down" />
-         <div class="testDi" style="height: 500px; border: 1px solid red; width: 300px; padding: 7rem;">
-            <appButton btnText="Search" startPosition="down" />
-          </div> -->
 
         <div class="search-news-main">
           <div class="search-news-main__title">World news</div>
@@ -12,14 +8,15 @@
             Stay informed without overdosing on the news vix id nullam detracto
             vidit.
           </div>
-          <div class="author">
-            <img
-              src="../assets/img/boy.jpg"
-              alt="Jonathan Walker"
-              class="author__photo"
-            />
-          </div>
+
+           <appAuthor 
+            avatarFile="boy.jpg"
+            authorName="Jonathan Walker"
+            modifier="bordered"
+            hideName="true"
+          />
         </div>
+
         <div class="search-news-fields">
           <div class="input-box">
             <div class="input-box__title">Select a date</div>
@@ -41,9 +38,11 @@
 </template>
 
 <script>
+import appAuthor from '~/components/app-author'
 import appButton from '~/components/app-button'
 export default {
   components: {
+    appAuthor,
     appButton
   }
 }
@@ -135,7 +134,7 @@ export default {
 
 .input-box {
   color: $color-black;
-  font-family: "Acumin Pro";
+  //font-family: "Acumin Pro";
   font-size: 1.3rem;
   font-weight: bold;
   line-height: 2rem;

@@ -65,4 +65,56 @@
     }
   }
 }
+.back-btn {
+  @media only screen and (min-width: $bp-tablet) {
+    display: none;
+  }
+
+  // We can't change color of icon when we adding it this way. So just leave this for older browsers
+  background-image: url("../assets/img/svg/arrow-left.svg");
+  background-size: cover;
+  height: 2.6rem;
+  margin-right: 3rem;
+  width: 2.6rem;
+
+  @supports (-webkit-mask-image: url()) or (mask-image: url()) {
+    -webkit-mask-image: url("../assets/img/svg/arrow-left.svg");
+    -webkit-mask-size: cover;
+    background-color: $color-black;
+    background-image: none;
+    mask-image: url("../assets/img/svg/arrow-left.svg");
+    mask-size: cover;
+  }
+}
+
+.path-and-settings {
+  display: none;
+
+  @media only screen and (min-width: $bp-tablet) {
+    display: flex;
+  }
+
+  &__path--page {
+    color: $color-grey-dark-2;
+  }
+
+  &__icon {
+    background-size: cover;
+    height: 1.6rem;
+    margin-right: 3rem;
+    width: 1.6rem;
+
+    // We can't change color of icon when we adding it this way. So just leave this for older browsers
+    background-image: url("../assets/img/svg/home.svg");
+
+    @supports (-webkit-mask-image: url()) or (mask-image: url()) {
+      -webkit-mask-image: url("../assets/img/svg/home.svg");
+      -webkit-mask-size: cover;
+      background-color: $color-black;
+      background-image: none;
+      mask-image: url("../assets/img/svg/home.svg");
+      mask-size: cover;
+    }
+  }
+}
 </style>
