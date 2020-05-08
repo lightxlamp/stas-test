@@ -48,18 +48,8 @@
 </template>
 
 <script>
-import appArticlesList from '~/components/app-articles-list'
-import dateTimeAuthor from '~/components/date-time-author'
-import mainArticle from "~/components/main-article"
-import sectionHeader from "~/components/section-header"
-
 export default {
-  components: {
-    appArticlesList,
-    dateTimeAuthor ,
-    mainArticle,
-    sectionHeader
-  },
+  
   computed: {
     imgSourceset() {
       return `${require(`@/assets/img/bridge.jpg`)}`
