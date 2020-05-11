@@ -376,6 +376,18 @@ export default {
 
     &__backgroundImage {
       display: inline-block;
+      position:absolute;
+      top:50%;
+      left:50%;
+
+      /* shifts image so that center of image is in center of container */
+      transform:translateX(-50%) translateY(-50%);
+
+      /* ensures image fully covers the parent element */
+      width:auto;
+      height:auto;
+      min-width:100%;
+      min-height:100%;
     }
 
     &__category {
