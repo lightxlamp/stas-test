@@ -30,7 +30,7 @@ export default {
   font-size: 1.1rem;
   font-weight: bold;
   line-height: 1rem;
-  padding: 1.6rem 3rem;
+  padding: 1.5rem 3rem;
   text-transform: uppercase;
   transition: all 0.2s;
   position: relative;
