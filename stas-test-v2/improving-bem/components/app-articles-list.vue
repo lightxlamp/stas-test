@@ -113,6 +113,7 @@ export default {
   &__overlay {
     display: none;
     background: rgba(0,0,0,0.7);
+    border-radius: $border-radius;
     position: absolute;
     height: 100%;
     width: 100%;
@@ -358,12 +359,6 @@ export default {
   height: 30rem;
   position: relative;
 
-  &:hover {
-    .card__body {
-      opacity: 0;
-    }
-  }
-
   @media only screen and (min-width: $bp-tablet) {
     height: 43rem;
     width: 60.8rem;
@@ -431,6 +426,12 @@ export default {
     &__date {
       color: #cbd0d3;
     }
+  }
+}
+
+.card--fullImage:hover {
+  .card__body {
+    opacity: 0;
   }
 }
 
