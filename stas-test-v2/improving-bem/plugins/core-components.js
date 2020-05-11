@@ -21,3 +21,7 @@ Vue.component('mainStory', mainStory)
 Vue.component('searchNewsH', searchNewsH)
 Vue.component('sectionHeader', sectionHeader)
 Vue.component('storiesBlock', storiesBlock)
+
+// Global registration often isn’t ideal. For example, if you’re using a build system like Webpack, globally 
+// registering all components means that even if you stop using a component, it could still be included in your
+// final build. This unnecessarily increases the amount of JavaScript your users have to download.

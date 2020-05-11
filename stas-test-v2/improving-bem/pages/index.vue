@@ -208,7 +208,6 @@ export default {
     padding-bottom: 1rem;
     display: flex;
     flex-direction: column;
-    align-items: center;
 
     & > article:first-child {
       @media only screen and (min-width: $bp-tablet) {
@@ -217,9 +216,7 @@ export default {
     }
     @media only screen and (min-width: $bp-tablet) {
       flex-direction: row;
-      //justify-content: space-between;
       justify-content: center;
-      align-items: end;
     }
     @media only screen and (min-width: $bp-desktop) {
       flex-direction: column;
