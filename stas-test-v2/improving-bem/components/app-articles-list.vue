@@ -291,8 +291,8 @@ export default {
 
     &__header {
       cursor: pointer;
-      perspective: 1000;
-      -webkit-perspective: 1000;
+      perspective: 100rem;
+      -webkit-perspective: 100rem;
       padding: 2rem 0;
 
       &--flipper {
@@ -318,8 +318,6 @@ export default {
         left: 0;
         width: 100%;
         height: 100%; 
-        -webkit-perspective: 1000;
-        perspective: 1000;
         -webkit-backface-visibility: hidden;
         backface-visibility: hidden;
       }
